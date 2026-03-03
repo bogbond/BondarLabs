@@ -1,14 +1,26 @@
 ---
 layout: layouts/base.njk
-title: Pricing
-description: "Project-based pricing with no fixed minimum. Fast quotes based on material, size, complexity and turnaround."
+title: "3D Printing Pricing"
+description: "How 3D printing pricing works in the UK — project-based quotes for FDM and resin, what affects cost, what’s included, and how to get a fast quote."
 ---
 
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Bondar Labs · Pricing</p>
-    <h1>Project-based pricing</h1>
-    <p class="lead">No fixed minimum. We quote based on your part, material, quality requirements and turnaround.</p>
+    <h1>3D printing pricing — how quotes work</h1>
+    <p class="lead">
+      We don’t use a fixed price list, because every part is different. Instead, we quote per project and can offer options to match
+      your priorities: lowest cost, best finish, fastest turnaround, or maximum accuracy.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+      <a class="btn btn-ghost" href="{{ '/services/' | url }}">Services</a>
+    </div>
+
+    <p class="muted" style="margin-top:10px">
+      No fixed minimum · {{ company.responseTime }}
+    </p>
   </div>
 </section>
 
@@ -16,24 +28,161 @@ description: "Project-based pricing with no fixed minimum. Fast quotes based on 
   <div class="container">
     <div class="card">
       <div class="card-body prose">
-        <h2>How we price</h2>
+        <h2>Why there’s no fixed price list</h2>
+        <p>
+          3D printing is custom, small-batch manufacturing. Two parts that “look similar” can have very different print time,
+          support requirements, failure risk, post-processing effort, and quality targets. Publishing a single “per gram” or
+          “per hour” rate usually makes simple jobs overpriced and complex jobs underquoted.
+        </p>
+        <p>
+          The fastest way to get an accurate price is to send your file(s) and tell us what the part needs to do. We’ll come back
+          with a clear quote — and, if useful, a couple of options (budget vs finish vs speed).
+        </p>
+
+        <h2>What affects the quote</h2>
         <ul>
-          <li><strong>Material</strong> (PLA vs engineering filaments, resin types)</li>
-          <li><strong>Size & complexity</strong> (print time, supports, finishing)</li>
-          <li><strong>Quantity</strong> (batch discounts available)</li>
-          <li><strong>Deadline</strong> (standard vs urgent)</li>
-          <li><strong>Design support</strong> (if you need file fixes or a model created)</li>
+          <li><strong>Material</strong> (PLA/PETG vs engineering filaments; resin types)</li>
+          <li><strong>Print time & geometry</strong> (supports, overhangs, small features, orientation)</li>
+          <li><strong>Quality settings</strong> (layer height / nozzle / resin layer height)</li>
+          <li><strong>Finishing</strong> (basic cleanup vs cosmetic finishing, inserts, assembly, painting)</li>
+          <li><strong>Quantity</strong> (batch planning and repeatable settings; per-unit efficiency for larger runs)</li>
+          <li><strong>Deadline</strong> (standard vs urgent scheduling)</li>
+          <li><strong>QC and documentation</strong> (critical-dimension checks, measurement report if needed)</li>
+          <li><strong>Packaging</strong> (bulk vs individual bagging/labels/kitting)</li>
+          <li><strong>Design/file support</strong> (small fixes vs re-modelling / reverse engineering)</li>
         </ul>
 
-        <h2>Design & file support</h2>
-        <p>CAD/design work is <strong>quoted individually</strong>. Simple adjustments may be included as part of the print job.</p>
+        <h2>What’s included (standard)</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-body">
+              <div class="kicker">FDM</div>
+              <p class="muted" style="margin-top:8px">
+                Setup and slicing · sensible settings for your use case · basic support removal · safe packaging for shipping.
+              </p>
+              <p class="tiny muted">
+                Optional: inserts, hardware, bonding/assembly, cosmetic finishing, measurement reporting, individual packaging.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="kicker">Resin (MSLA)</div>
+              <p class="muted" style="margin-top:8px">
+                Support removal · thorough washing/cleaning · controlled drying · final UV curing · QC + safe packaging.
+              </p>
+              <p class="tiny muted">
+                Optional: hollowing/drainage optimisation (by agreement), cosmetic finishing, priming/painting.
+              </p>
+            </div>
+          </div>
+        </div>
 
-        <h2>Typical project values</h2>
-        <p>Many one-off functional prints and prototypes fall into a typical range of <strong>£30–£90</strong>, depending on requirements. This is not a price list — just a helpful reference point.</p>
+        <h2>Budget-friendly choices (when suitable)</h2>
+        <p>
+          If your priority is cost efficiency, we’ll often recommend <strong>PLA</strong> (for many prototypes and visual/functional parts)
+          or <strong>grey water-washable resin</strong> (for high-detail resin prints with excellent consistency). We’ll always match the choice
+          to your use case — strength, heat, appearance and fit requirements matter more than “the cheapest material”.
+        </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/quote/">Get a Quote</a>
-          <a class="btn btn-ghost" href="/case-studies/">See examples</a>
+          <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+          <a class="btn btn-ghost" href="{{ '/materials/' | url }}">Materials</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <div class="card-body prose">
+        <h2>Example scenarios (no fixed prices)</h2>
+        <p class="muted">
+          These are typical project types to illustrate what drives cost. Exact pricing depends on geometry, settings, finish, and deadline.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top:16px">
+      <div class="card">
+        <div class="card-media">
+          <img src="{{ '/assets/images/Precision-3D-Printed-Gears.webp' | url }}" alt="Precision FDM part example">
+        </div>
+        <div class="card-body prose">
+          <div class="kicker">Budget</div>
+          <h3>Simple functional part (FDM)</h3>
+          <p>PLA or PETG, standard settings, minimal supports, basic cleanup. Great for brackets, spacers, quick prototypes.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-media">
+          <img src="{{ '/assets/images/Functional-Mechanical-Handle.webp' | url }}" alt="FDM fit and assembly example">
+        </div>
+        <div class="card-body prose">
+          <div class="kicker">Balanced</div>
+          <h3>Fit / assembly focused part (FDM)</h3>
+          <p>Clearances, holes, mating interfaces. May include test prints and measured adjustments for reliable fit.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-media">
+          <img src="{{ '/assets/images/12K-MSLA-Resin-Miniature.webp' | url }}" alt="High-detail resin miniature example">
+        </div>
+        <div class="card-body prose">
+          <div class="kicker">Balanced</div>
+          <h3>High-detail small part (Resin)</h3>
+          <p>0.05 mm standard (0.03 mm for fine detail). Wash + dry + UV cure included. Ideal for miniatures, stamps, masters.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-media">
+          <img src="{{ '/assets/images/3D-Printed-Microscope-Mount.webp' | url }}" alt="Large or complex FDM part example">
+        </div>
+        <div class="card-body prose">
+          <div class="kicker">Premium</div>
+          <h3>Large or complex geometry (FDM)</h3>
+          <p>More print time, more supports, and potentially splitting + alignment features for clean assembly.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-media">
+          <img src="{{ '/assets/images/Batch-Production-Example.webp' | url }}" alt="Batch production example">
+        </div>
+        <div class="card-body prose">
+          <div class="kicker">Batch</div>
+          <h3>Commercial batch (50–500+ units)</h3>
+          <p>Repeatable settings, optional first-article sample, packaging/kitting and measurement reporting by agreement.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-media">
+          <img src="{{ '/assets/images/Personalized-Wall-Desk-Plaques.webp' | url }}" alt="Cosmetic finishing example">
+        </div>
+        <div class="card-body prose">
+          <div class="kicker">Premium</div>
+          <h3>Cosmetic / display finish</h3>
+          <p>Extra clean-up, surface work, priming/painting (quoted). Chosen when appearance matters more than speed.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-12">
+      <div class="card-body prose">
+        <h2>Need a fast quote?</h2>
+        <p>
+          Send your file(s), quantity, deadline, and any critical dimensions/fit requirements. If you’re unsure about material or settings,
+          just describe the use case — we’ll recommend the best option and keep the quote transparent.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+          <a class="btn btn-ghost" href="{{ '/services/batch-production/' | url }}">Batch & Commercial Orders</a>
         </div>
       </div>
     </div>

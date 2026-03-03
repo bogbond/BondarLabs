@@ -1,12 +1,19 @@
 {
   "brand": "BONDAR LABS",
   "legalName": "BONDAR LABS LTD",
+  "companyNumber": "17009947",
   "baseUrl": "https://bondarlabs.co.uk",
   "defaultTitle": "Precision 3D Printing & Prototyping",
   "defaultDescription": "Precision 3D printing & prototyping in Cambridgeshire with UK-wide shipping. Engineering-grade materials, fast response, and professional quality checks.",
   "ogImage": "/assets/images/og-preview.jpg",
+  "ogImageWidth": 1200,
+  "ogImageHeight": 630,
+  "ogImageAlt": "Bondar Labs — Precision 3D Printing & Prototyping in the UK",
   "gtmId": "GTM-XXXXXXX",
+  "googleSiteVerification": "",
+  "bingSiteVerification": "",
+  "twitterSite": "",
   "themeColor": "#0b0c0f",
   "locale": "en_GB",
-  "formsubmitEmail": "info@bondarlabs.co.uk"
+  "formsubmitEmail": "1336f2db4c0de9aa1c6d976763c2f3fc"
 }

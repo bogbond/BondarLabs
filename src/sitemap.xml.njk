@@ -3,10 +3,11 @@ permalink: /sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {%- for page in collections.all -%}
-    {%- if page.url and (page.data.noindex != true) and (page.url != "/404/") -%}
+  {%- for p in collections.all -%}
+    {%- if p.url and p.outputPath and p.outputPath.endsWith('.html') and (p.data.noindex != true) and (p.url != "/404/") -%}
     <url>
-      <loc>{{ site.baseUrl }}{{ page.url }}</loc>
+      <loc>{{ site.baseUrl }}{{ p.url | url }}</loc>
+      <lastmod>{{ (p.data.lastmod or p.date) | isoDate }}</lastmod>
     </url>
     {%- endif -%}
   {%- endfor -%}

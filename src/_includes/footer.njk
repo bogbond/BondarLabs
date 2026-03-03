@@ -1,14 +1,14 @@
 <footer class="site-footer" role="contentinfo">
   <div class="container footer-grid">
     <div>
-      <a class="footer-brand" href="/" aria-label="{{ site.brand }} home">
+      <a class="footer-brand" href="{{ '/' | url }}" aria-label="{{ site.brand }} home">
         <picture class="footer-logo-light">
-          <source srcset="/assets/images/brand/logo.webp" type="image/webp">
-          <img class="footer-logo-img" src="/assets/images/brand/logo.png" alt="{{ site.brand }}" width="220" height="124" decoding="async" />
+          <source srcset="{{ '/assets/images/brand/logo.webp' | url }}" type="image/webp">
+          <img class="footer-logo-img" src="{{ '/assets/images/brand/logo.png' | url }}" alt="{{ site.brand }}" width="220" height="124" decoding="async" />
         </picture>
         <picture class="footer-logo-dark">
-          <source srcset="/assets/images/brand/logo-dark.webp" type="image/webp">
-          <img class="footer-logo-img" src="/assets/images/brand/logo-dark.png" alt="{{ site.brand }}" width="220" height="124" decoding="async" />
+          <source srcset="{{ '/assets/images/brand/logo-dark.webp' | url }}" type="image/webp">
+          <img class="footer-logo-img" src="{{ '/assets/images/brand/logo-dark.png' | url }}" alt="{{ site.brand }}" width="220" height="124" decoding="async" />
         </picture>
       </a>
       <p class="muted">Precision 3D Printing &amp; Prototyping for Business and Individuals.</p>
@@ -20,26 +20,26 @@
       <ul class="footer-links">
         <li><a href="mailto:{{ company.email }}" data-track="email_click">{{ company.email }}</a></li>
         <li><a href="tel:{{ company.phoneE164 }}" data-track="phone_click">{{ company.phone }}</a></li>
-        <li><a href="{{ company.whatsappUrl }}" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp</a></li>
+        <li><a href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a></li>
       </ul>
     </div>
 
     <div>
       <div class="footer-title">Quick links</div>
       <ul class="footer-links">
-        <li><a href="/services/">Services</a></li>
-        <li><a href="/materials/">Materials</a></li>
-        <li><a href="/case-studies/">Portfolio</a></li>
-        <li><a href="/delivery/">Delivery</a></li>
-        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="{{ '/services/' | url }}">Services</a></li>
+        <li><a href="{{ '/materials/' | url }}">Materials</a></li>
+        <li><a href="{{ '/case-studies/' | url }}">Portfolio</a></li>
+        <li><a href="{{ '/delivery/' | url }}">Delivery</a></li>
+        <li><a href="{{ '/faq/' | url }}">FAQ</a></li>
       </ul>
     </div>
 
     <div>
       <div class="footer-title">Legal</div>
       <ul class="footer-links">
-        <li><a href="/privacy/">Privacy policy</a></li>
-        <li><a href="/terms/">Terms</a></li>
+        <li><a href="{{ '/privacy/' | url }}">Privacy policy</a></li>
+        <li><a href="{{ '/terms/' | url }}">Terms</a></li>
         <li><button class="linklike" type="button" data-open-cookie-settings>Cookie settings</button></li>
       </ul>
       <p class="tiny muted">© {{ year }} {{ site.legalName }}. All rights reserved.</p>

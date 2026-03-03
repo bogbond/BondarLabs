@@ -16,8 +16,8 @@ description: "FDM and resin 3D printing, 3D design & file support, and batch pro
   <div class="container">
     <div class="grid grid-2">
       {% for s in collections.services %}
-        <a class="card card-link" href="{{ s.url }}">
-          <div class="card-media"><img src="{{ s.data.coverImage }}" alt="{{ s.data.title }}" loading="lazy"></div>
+        <a class="card card-link" href="{{ s.url | url }}">
+          <div class="card-media"><img src="{{ s.data.coverImage | url }}" alt="{{ s.data.title }}" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="kicker">{{ s.data.kicker }}</div>
             <h2 class="h3">{{ s.data.title }}</h2>
@@ -36,8 +36,8 @@ description: "FDM and resin 3D printing, 3D design & file support, and batch pro
           <li><strong>Post-processing</strong>: sanding, basic finishing and assembly support available depending on the project.</li>
         </ul>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/quote/">Get a Quote</a>
-          <a class="btn btn-ghost" href="/delivery/">Delivery options</a>
+          <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+          <a class="btn btn-ghost" href="{{ '/delivery/' | url }}">Delivery options</a>
         </div>
       </div>
     </div>

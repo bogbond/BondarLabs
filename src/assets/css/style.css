@@ -1,4 +1,6 @@
 :root{
+  /* Helps native form controls (select popovers, file buttons, etc.) match the theme. */
+  color-scheme: light;
   /* Light theme (default). If user has no explicit choice, we follow prefers-color-scheme below. */
   --bg:#f7f8fb;
   --panel:#ffffff;
@@ -23,7 +25,7 @@
   --radius-sm: 12px;
   --container: 1120px;
 
-  --bg-glow: radial-gradient(1200px 800px at 70% -10%, rgba(255,98,0,.10), transparent 55%);
+  --bg-glow: radial-gradient(1100px 650px at 50% 0%, rgba(255,98,0,.12), transparent 65%), linear-gradient(180deg, rgba(255,98,0,.05), transparent 70%);
   --header-bg: rgba(247,248,251,.78);
   /* Mobile nav overlay should be readable (not see-through). */
   --nav-overlay-bg: rgba(255,255,255,.98);
@@ -48,6 +50,8 @@
 }
 
 :root[data-theme="dark"]{
+  /* Make native controls render in dark mode when user toggles the dark theme. */
+  color-scheme: dark;
   --bg:#0b0c0f;
   --panel:#12131a;
   --panel-2:#171826;
@@ -65,7 +69,7 @@
 
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 
-  --bg-glow: radial-gradient(1200px 800px at 70% -10%, rgba(255,98,0,.18), transparent 55%);
+  --bg-glow: radial-gradient(1100px 680px at 50% 0%, rgba(255,98,0,.24), transparent 65%), linear-gradient(180deg, rgba(255,98,0,.10), transparent 70%);
   --header-bg: rgba(11,12,15,.68);
   --nav-overlay-bg: var(--bg);
   --dropdown-bg: rgba(18,19,26,.98);
@@ -90,6 +94,8 @@
 
 @media (prefers-color-scheme: dark){
   :root:not([data-theme]){
+    /* If user has no explicit theme choice, match native controls to system dark mode. */
+    color-scheme: dark;
     --bg:#0b0c0f;
     --panel:#12131a;
     --panel-2:#171826;
@@ -107,7 +113,7 @@
 
     --shadow: 0 10px 30px rgba(0,0,0,.35);
 
-    --bg-glow: radial-gradient(1200px 800px at 70% -10%, rgba(255,98,0,.18), transparent 55%);
+    --bg-glow: radial-gradient(1100px 680px at 50% 0%, rgba(255,98,0,.24), transparent 65%), linear-gradient(180deg, rgba(255,98,0,.10), transparent 70%);
     --header-bg: rgba(11,12,15,.68);
     --nav-overlay-bg: var(--bg);
     --dropdown-bg: rgba(18,19,26,.98);
@@ -137,8 +143,8 @@ body{height:100%}
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: var(--bg-glow), var(--bg);
-  color:var(--text);
+  background: var(--bg);
+color:var(--text);
   line-height:1.65;
   font-size:16px;
   -webkit-font-smoothing:antialiased;
@@ -185,6 +191,20 @@ img{max-width:100%; height:auto; display:block}
 }
 
 .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+
+/* Skip link (keyboard accessibility) */
+.skip-link{
+  position:absolute;
+  left:12px; top:12px;
+  transform:translateY(-220%);
+  background:var(--panel-strong);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:10px 12px;
+  z-index:400;
+}
+.skip-link:focus{transform:translateY(0)}
+
 
 /* Small utility helpers (avoid inline styles) */
 .mt-16{margin-top:16px}
@@ -418,7 +438,9 @@ body.nav-open .site-header{
 }
 
 /* Sections */
-.site-main{padding-bottom:40px}
+.site-main{padding-bottom:40px; position:relative}
+.site-main::before{content:""; position:absolute; left:0; right:0; top:0; height:clamp(420px, 60vh, 760px); background:var(--bg-glow); pointer-events:none; z-index:0}
+.site-main > *{position:relative; z-index:1}
 .section{padding:clamp(44px, 6vw, 72px) 0}
 .section-muted{background:var(--section-muted-bg)}
 
@@ -601,6 +623,62 @@ h1{font-size:clamp(32px, 4.2vw, 44px); line-height:1.1; margin:0 0 14px}
 .textarea{min-height:130px; resize:vertical}
 .input:focus,.select:focus,.textarea:focus{border-color:rgba(255,98,0,.55); box-shadow:0 0 0 4px rgba(255,98,0,.12)}
 .help{font-size:13px; color:var(--muted)}
+
+/*
+  Dark theme: make native <select> popovers readable.
+  (Styling support varies by browser; color-scheme + these rules cover most cases.)
+*/
+:root[data-theme="dark"] .select option,
+:root[data-theme="dark"] .select optgroup{
+  background-color: var(--panel);
+  color: var(--text);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme]) .select option,
+  :root:not([data-theme]) .select optgroup{
+    background-color: var(--panel);
+    color: var(--text);
+  }
+}
+
+/* File input — align the "Choose File" button with site buttons */
+.input[type="file"]{
+  padding:10px 12px;
+}
+.input[type="file"]::file-selector-button{
+  margin-right:12px;
+  border:1px solid var(--border);
+  background:var(--ghost-bg);
+  color:var(--text);
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .12s ease, background .12s ease, border-color .12s ease;
+}
+.input[type="file"]::file-selector-button:hover{
+  transform:translateY(-1px);
+  border-color:var(--border-strong);
+}
+.input[type="file"]::file-selector-button:active{transform:translateY(0)}
+
+/* Safari (older) */
+.input[type="file"]::-webkit-file-upload-button{
+  margin-right:12px;
+  border:1px solid var(--border);
+  background:var(--ghost-bg);
+  color:var(--text);
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .12s ease, background .12s ease, border-color .12s ease;
+}
+.input[type="file"]::-webkit-file-upload-button:hover{
+  transform:translateY(-1px);
+  border-color:var(--border-strong);
+}
+.input[type="file"]::-webkit-file-upload-button:active{transform:translateY(0)}
 
 /* Footer */
 .site-footer{border-top:1px solid var(--border); padding:40px 0; background:var(--footer-bg)}

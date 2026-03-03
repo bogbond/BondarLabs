@@ -11,8 +11,8 @@ noindex: true
     <h1>Page not found</h1>
     <p class="lead">The page you’re looking for doesn’t exist. Try the links below.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="/">Home</a>
-      <a class="btn btn-ghost" href="/quote/">Get a Quote</a>
+      <a class="btn btn-primary" href="{{ '/' | url }}">Home</a>
+      <a class="btn btn-ghost" href="{{ '/quote/' | url }}">Get a Quote</a>
     </div>
   </div>
 </section>
@@ -20,9 +20,9 @@ noindex: true
 <section class="section">
   <div class="container">
     <div class="grid grid-3">
-      <a class="card card-link" href="/services/"><div class="card-body"><h2 class="h3">Services</h2><p class="muted">FDM, resin and production support.</p></div></a>
-      <a class="card card-link" href="/materials/"><div class="card-body"><h2 class="h3">Materials</h2><p class="muted">Choose the right filament/resin.</p></div></a>
-      <a class="card card-link" href="/case-studies/"><div class="card-body"><h2 class="h3">Portfolio</h2><p class="muted">Recent examples.</p></div></a>
+      <a class="card card-link" href="{{ '/services/' | url }}"><div class="card-body"><h2 class="h3">Services</h2><p class="muted">FDM, resin and production support.</p></div></a>
+      <a class="card card-link" href="{{ '/materials/' | url }}"><div class="card-body"><h2 class="h3">Materials</h2><p class="muted">Choose the right filament/resin.</p></div></a>
+      <a class="card card-link" href="{{ '/case-studies/' | url }}"><div class="card-body"><h2 class="h3">Portfolio</h2><p class="muted">Recent examples.</p></div></a>
     </div>
   </div>
 </section>

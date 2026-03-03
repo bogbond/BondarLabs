@@ -1,56 +1,210 @@
 ---
 layout: layouts/base.njk
 title: Delivery
-description: "Local Cambridgeshire delivery from £5 (same-day on request) and UK-wide shipping from £2.75 with tracked options available."
+description: "Tracked UK and international shipping for custom 3D printed parts. Local collection near Cambridge (Huntingdon area) and same-day local delivery by arrangement."
 ---
 
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Bondar Labs · Delivery</p>
-    <h1>Delivery options</h1>
-    <p class="lead">Local delivery across Cambridgeshire and UK-wide shipping — with tracked options available.</p>
+    <h1>Delivery, shipping & collection</h1>
+    <p class="lead">
+      Based near Cambridge (Huntingdon area). Collection in Brampton (PE28 4SU) by appointment, same-day local delivery by car on request,
+      and tracked UK & international shipping — packed safely and sent with the right service for your part.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+      <a class="btn btn-ghost" href="{{ '/contact/' | url }}">Ask a question</a>
+    </div>
+
+    <p class="muted" style="margin-top:10px">
+      Delivery is charged <strong>at courier cost</strong> (no markup). Options and lead times are confirmed before we start.
+    </p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
+
     <div class="grid grid-3">
+
       <div class="card">
         <div class="card-body prose">
-          <h2>Local delivery</h2>
-          <p><strong>Local delivery from £5.</strong> Same-day options available on request (subject to workload and part complexity).</p>
+          <h2>Local collection</h2>
+          <p>
+            Collection is available <strong>by appointment</strong> in <strong>Brampton, Huntingdon</strong> (postcode area <strong>PE28 4SU</strong>).
+            For safety and privacy, the exact pickup details are shared after we confirm a time.
+          </p>
           <ul>
-            <li>Cambridgeshire (Brampton / Huntingdon / nearby areas)</li>
-            <li>Collection by arrangement is also available</li>
+            <li>Convenient for local customers and quick handovers</li>
+            <li>Ideal for larger batches or fragile parts</li>
+            <li>Payment and timing confirmed in advance</li>
           </ul>
         </div>
       </div>
 
       <div class="card">
         <div class="card-body prose">
-          <h2>UK shipping</h2>
-          <p><strong>From £2.75</strong> (Royal Mail large letter). Tracked options available.</p>
+          <h2>Same-day local delivery</h2>
+          <p>
+            If timing allows, we can deliver by car the <strong>same day</strong> in the local area
+            (Cambridgeshire / Huntingdon / Cambridge / Peterborough direction). This depends on workload,
+            print completion time and the delivery distance.
+          </p>
           <ul>
-            <li>Packaging suitable for delicate parts</li>
-            <li>Tracking available where needed</li>
+            <li>Great for urgent prototypes and deadlines</li>
+            <li>We’ll confirm availability before production</li>
+            <li>Route and cost agreed upfront</li>
           </ul>
         </div>
       </div>
 
       <div class="card">
         <div class="card-body prose">
-          <h2>International</h2>
-          <p>International shipping can be arranged depending on the item size and destination.</p>
-          <ul>
-            <li>Quote includes packaging and shipping options</li>
-            <li>Customs/VAT may apply depending on destination</li>
-          </ul>
+          <h2>UK-wide tracked shipping</h2>
+          <p>
+            We ship across the UK with tracking. Typical carriers include <strong>Royal Mail</strong>, <strong>Evri</strong> and <strong>DPD</strong>
+            (with UPS or Yodel in special cases).
+          </p>
+          <p class="muted">
+            By default, we choose a balanced option (reputation / delivery time / price). If you prefer a specific service,
+            we can arrange it — including express options such as <strong>Royal Mail Special Delivery (by 1pm)</strong> or <strong>DPD Next Day</strong>.
+          </p>
         </div>
+      </div>
+
+    </div>
+
+    <div class="card mt-16">
+      <div class="card-body prose">
+        <h2>International shipping</h2>
+        <p>
+          International shipping is available on request and is always sent with tracking. Most international orders go via
+          <strong>Royal Mail</strong> or <strong>UPS</strong>, depending on size, destination and value.
+        </p>
+        <p class="muted">
+          Import taxes, VAT and customs fees are the buyer’s responsibility. If a courier requires duties/taxes to be prepaid,
+          we’ll let you know in advance and confirm how you’d like to handle it before dispatch.
+        </p>
+      </div>
+    </div>
+
+    <div class="card mt-16">
+      <div class="card-body prose">
+        <h2>Packaging & protection (with a practical eco approach)</h2>
+        <p>
+          Parts are packed to match the job — small items may go in padded mailers to keep shipping affordable, while larger or more fragile
+          prints are boxed and protected with filler to prevent damage in transit.
+        </p>
+        <p>
+          We also use a clean and practical <strong>upcycling approach</strong>: strong boxes and protective materials from 3D printing supplies
+          are reused when appropriate. This reduces waste without compromising protection.
+        </p>
+        <p class="muted">
+          Need something specific for business orders (individual bagging, labels, kitting, branded packaging)? That can be arranged by agreement.
+          See <a href="{{ '/services/batch-production/' | url }}">Batch & Commercial Orders</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="card mt-16">
+      <div class="card-body prose">
+        <h2>Issues in transit: loss or damage</h2>
+        <p>
+          These are custom, made-to-order parts, so we don’t accept returns for “change of mind”. However, customers are protected if something
+          goes wrong in transit.
+        </p>
+        <ul>
+          <li>
+            <strong>Lost shipments:</strong> if a tracked parcel hasn’t arrived within <strong>10 working days</strong> after dispatch,
+            we’ll offer either a <strong>full refund</strong> (including shipping) or a <strong>reprint and reship</strong>.
+          </li>
+          <li>
+            <strong>Damaged shipments:</strong> if parts arrive with significant damage affecting use or appearance, please contact us as soon as possible
+            with photos of the box and the items. We’ll agree the best outcome — replacement or refund.
+          </li>
+        </ul>
+        <p class="muted">
+          The exact handling depends on the shipping service and the nature of the damage, but the goal is always the same: a fair, fast resolution.
+        </p>
       </div>
     </div>
 
     <div class="mt-16">
       {% include "partials/cta-wide.njk" %}
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="card">
+      <div class="card-body prose">
+        <h2>Delivery FAQ</h2>
+
+        <h3>Do you ship across the UK?</h3>
+        <p>Yes — UK-wide shipping is standard, and shipments are sent with tracking.</p>
+
+        <h3>Can I choose the courier or service?</h3>
+        <p>
+          Yes. We usually pick a balanced option (reputation / time / price), but if you prefer Royal Mail, Evri, DPD,
+          or an express service like Special Delivery (by 1pm) or DPD Next Day, just tell us during quoting.
+        </p>
+
+        <h3>How is shipping priced?</h3>
+        <p>
+          Shipping is charged separately from the part price and is billed <strong>at courier cost</strong> — no markup.
+          The final cost depends on packed size, weight and service level.
+        </p>
+
+        <h3>Do you offer same-day delivery?</h3>
+        <p>
+          Same-day local delivery by car is possible in the local area if timing allows (workload, print completion time and distance).
+          We’ll confirm availability before starting.
+        </p>
+
+        <h3>Can I collect locally?</h3>
+        <p>
+          Yes — collection is available by appointment in Brampton, Huntingdon (postcode area PE28 4SU).
+          Exact pickup details are shared after we confirm the time.
+        </p>
+
+        <h3>Do you ship internationally?</h3>
+        <p>
+          Yes — international shipping is available on request and is sent with tracking (typically Royal Mail or UPS, depending on the job).
+        </p>
+
+        <h3>Will I need to pay customs, VAT or import fees?</h3>
+        <p>
+          Possibly, depending on your country. Import taxes/customs fees are the buyer’s responsibility.
+          If prepayment is required for your shipment, we’ll confirm it before dispatch.
+        </p>
+
+        <h3>How are parts packaged?</h3>
+        <p>
+          Packaging is selected to protect the part and match the order. Small parts may ship in padded mailers to reduce costs,
+          while larger or fragile items are boxed with protective filler. We also reuse clean, strong boxes from 3D printing supplies where appropriate.
+        </p>
+
+        <h3>Can you do individual packaging, labels or kitting for business orders?</h3>
+        <p>
+          Yes — bagging, labeling and kitting can be arranged upfront. This is common for commercial batches.
+        </p>
+
+        <h3>What if my parcel is lost or damaged?</h3>
+        <p>
+          If a tracked parcel hasn’t arrived within 10 working days after dispatch, we’ll offer a full refund (including shipping) or a reprint and reship.
+          If items arrive damaged, contact us with photos and we’ll agree a fair solution (replacement or refund).
+        </p>
+
+        <h3>Where should I send files?</h3>
+        <p>
+          For quotes and files, please use the <a href="{{ '/quote/' | url }}">quote form</a>. The contact form is best for general questions.
+        </p>
+
+      </div>
     </div>
   </div>
 </section>

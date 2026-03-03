@@ -1,14 +1,14 @@
 <header class="site-header" role="banner">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label="{{ site.brand }} home">
+    <a class="brand" href="{{ '/' | url }}" aria-label="{{ site.brand }} home">
       <span class="brand-mark" aria-hidden="true">
         <picture class="brand-mark-light">
-          <source srcset="/assets/images/brand/mark.webp" type="image/webp">
-          <img class="brand-mark-img" src="/assets/images/brand/mark.png" width="26" height="26" alt="" decoding="async" />
+          <source srcset="{{ '/assets/images/brand/mark.webp' | url }}" type="image/webp">
+          <img class="brand-mark-img" src="{{ '/assets/images/brand/mark.png' | url }}" width="26" height="26" alt="" decoding="async" />
         </picture>
         <picture class="brand-mark-dark">
-          <source srcset="/assets/images/brand/mark-dark.webp" type="image/webp">
-          <img class="brand-mark-img" src="/assets/images/brand/mark-dark.png" width="26" height="26" alt="" decoding="async" />
+          <source srcset="{{ '/assets/images/brand/mark-dark.webp' | url }}" type="image/webp">
+          <img class="brand-mark-img" src="{{ '/assets/images/brand/mark-dark.png' | url }}" width="26" height="26" alt="" decoding="async" />
         </picture>
       </span>
       <span class="brand-text">{{ site.brand }}</span>
@@ -26,7 +26,7 @@
         {% for item in nav.items %}
           <li class="nav-item {% if item.children %}has-dropdown{% endif %}">
             <div class="nav-item-row">
-              <a class="nav-link" href="{{ item.url }}">{{ item.label }}</a>
+              <a class="nav-link" href="{{ item.url | url }}">{{ item.label }}</a>
               {% if item.children %}
                 <button class="nav-caret" type="button" aria-label="Toggle {{ item.label }} submenu" aria-expanded="false"></button>
               {% endif %}
@@ -35,7 +35,7 @@
             {% if item.children %}
               <ul class="dropdown" aria-label="{{ item.label }} submenu">
                 {% for child in item.children %}
-                  <li><a class="dropdown-link" href="{{ child.url }}">{{ child.label }}</a></li>
+                  <li><a class="dropdown-link" href="{{ child.url | url }}">{{ child.label }}</a></li>
                 {% endfor %}
               </ul>
             {% endif %}
@@ -43,7 +43,7 @@
         {% endfor %}
 
         <li class="nav-item nav-cta">
-          <a class="btn btn-primary" href="{{ nav.cta.url }}">{{ nav.cta.label }}</a>
+          <a class="btn btn-primary" href="{{ nav.cta.url | url }}">{{ nav.cta.label }}</a>
         </li>
       </ul>
     </nav>

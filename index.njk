@@ -1,0 +1,270 @@
+---
+layout: layouts/base.njk
+title: "Precision 3D Printing & Prototyping"
+description: "Studio-grade 3D printing in the UK — FDM and high-detail resin printing for functional parts, prototypes and small-batch production. Near Cambridge with tracked UK and worldwide shipping."
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Near Cambridge (Huntingdon) · Tracked UK &amp; worldwide shipping</p>
+      <h1>Studio‑grade 3D printing for functional parts, prototypes &amp; high‑detail models.</h1>
+      <p class="lead">FDM and MSLA resin printing with material guidance, quality checks, and fast turnaround — {{ company.responseTime }}.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+        <a class="btn btn-ghost" href="{{ '/case-studies/' | url }}">View Projects</a>
+      </div>
+
+      <div class="badges">
+        <div class="badge"><span class="dot green"></span>FDM + resin printing</div>
+        <div class="badge"><span class="dot gray"></span>No minimum order</div>
+        <div class="badge"><span class="dot"></span>QC checks &amp; fit iterations</div>
+        <div class="badge"><span class="dot"></span>Local collection &amp; delivery options</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="kicker">Quick contact</div>
+        <p class="muted" style="margin:10px 0 12px">Send a message, photo, or file link — we’ll point you in the right direction.</p>
+        <div class="grid gap-10">
+          <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:{{ company.phoneE164 }}" data-track="phone_click">Call {{ company.phone }}</a>
+          <a class="btn btn-ghost" href="mailto:{{ company.email }}" data-track="email_click">Email {{ company.email }}</a>
+        </div>
+        <p class="tiny muted" style="margin:12px 0 0">{{ company.locationShort }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <h2 class="h2">How it works</h2>
+    <p class="muted">Simple, fast, and transparent — from first message to delivered parts.</p>
+
+    <div class="grid grid-3 mt-16">
+      <div class="card">
+        <div class="card-body">
+          <div class="kicker">Step 1</div>
+          <h3 class="h3">Send your file (or a brief)</h3>
+          <p class="muted">Upload to the quote form, or message us on WhatsApp. No file yet? A sketch/photos + key dimensions is enough to start.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="kicker">Step 2</div>
+          <h3 class="h3">Confirm the spec and quote</h3>
+          <p class="muted">We’ll recommend process and material, confirm finish expectations and lead time, then send a clear project-based quote.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="kicker">Step 3</div>
+          <h3 class="h3">Print, QC-check, deliver</h3>
+          <p class="muted">Parts are produced with repeatable settings and checked before dispatch. Resin orders include washing, controlled drying and UV curing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16">
+      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Upload files &amp; get a quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="h2">Services</h2>
+    <p class="muted">A small, professional production partner — flexible on one-offs, reliable on repeat runs.</p>
+
+    <div class="grid grid-4 mt-16">
+      <a class="card card-link" href="{{ '/services/fdm/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/Precision-3D-Printed-Gears.webp' | url }}" alt="FDM 3D printing example" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">FDM</div>
+          <h3 class="h3">FDM 3D Printing</h3>
+          <p class="muted">Functional parts, fixtures, housings and prototypes in practical engineering materials.</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="{{ '/services/resin/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/12K-MSLA-Resin-Miniature.webp' | url }}" alt="Resin 3D printing example" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">Resin</div>
+          <h3 class="h3">Resin 3D Printing</h3>
+          <p class="muted">High-detail prints shipped fully washed, dried and UV-cured — ready to use or paint.</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="{{ '/services/design-support/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/Reverse-Engineered-Tripod-Joint.webp' | url }}" alt="3D design and file support example" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">CAD</div>
+          <h3 class="h3">3D Design &amp; File Support</h3>
+          <p class="muted">Edits, fit tweaks, and reverse-engineered replacements for practical geometry-based parts.</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="{{ '/services/batch-production/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/Batch-Production-Example.webp' | url }}" alt="Batch production example" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">Business</div>
+          <h3 class="h3">Batch &amp; Commercial Orders</h3>
+          <p class="muted">First-article samples, repeatable reorders, QC options, packaging and measurement reporting by agreement.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-16">
+      <a class="btn btn-ghost" href="{{ '/services/' | url }}">View all services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <h2 class="h2">Why clients choose Bondar Labs</h2>
+    <p class="muted">Clear communication, practical recommendations, and a workflow built for reliable results.</p>
+
+    <div class="grid grid-4 mt-16">
+      <div class="card">
+        <div class="card-body">
+          <div class="kicker">Guidance</div>
+          <h3 class="h3">Material and process advice</h3>
+          <p class="muted">Tell us what the part needs to do and we’ll recommend the best route (FDM vs resin) and a sensible material.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="kicker">Quality</div>
+          <h3 class="h3">Checks before dispatch</h3>
+          <p class="muted">Visual QC is standard. For tighter requirements, critical-dimension checks and measurement reporting can be arranged.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="kicker">Resin workflow</div>
+          <h3 class="h3">Finished resin parts</h3>
+          <p class="muted">Resin orders are not shipped “fresh”. Support removal, washing, controlled drying and UV curing are included.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="kicker">Business-friendly</div>
+          <h3 class="h3">Batches and reorders</h3>
+          <p class="muted">From pilots to hundreds of parts. Invoices available, first-article samples and packaging/kitting by agreement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16">
+      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Start a quote</a>
+      <a class="btn btn-ghost" href="{{ '/business/' | url }}">For Business</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="h2">Materials</h2>
+    <p class="muted">Practical guidance — the right material for strength, heat, flexibility and finish.</p>
+
+    <div class="grid grid-3 mt-16">
+      <a class="card card-link" href="{{ '/materials/' | url }}" aria-label="Materials overview">
+        <div class="card-body">
+          <div class="kicker">Guide</div>
+          <h3 class="h3">Choose the right material</h3>
+          <p class="muted">Plain-English guides for PLA, PETG, ABS/ASA, TPU, Nylon and composites — plus resin options.</p>
+        </div>
+      </a>
+      <a class="card card-link" href="{{ '/materials/pla/' | url }}">
+        <div class="card-body">
+          <div class="kicker">Budget-friendly</div>
+          <h3 class="h3">PLA for fast prototypes</h3>
+          <p class="muted">Great detail, wide colour choice, and quick turnaround for many everyday parts.</p>
+        </div>
+      </a>
+      <a class="card card-link" href="{{ '/materials/resin/' | url }}">
+        <div class="card-body">
+          <div class="kicker">High detail</div>
+          <h3 class="h3">Resin options</h3>
+          <p class="muted">Grey water-washable resin by default, with ABS-like and flexible options on request.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-16">
+      <a class="btn btn-ghost" href="{{ '/materials/' | url }}">Explore all materials</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="h2">Projects &amp; examples</h2>
+    <p class="muted">A small gallery of typical outputs and approaches. Real client projects will be expanded in the next iteration.</p>
+
+    <div class="grid grid-3 mt-16">
+      {% for cs in collections.caseStudies | slice(0, 6) %}
+        <a class="card card-link" href="{{ cs.url | url }}">
+          <div class="card-media"><img src="{{ cs.data.coverImage | url }}" alt="{{ cs.data.title }}" loading="lazy" decoding="async"></div>
+          <div class="card-body">
+            <div class="kicker">{{ cs.data.tech }}{% if cs.data.material %} · {{ cs.data.material }}{% endif %}</div>
+            <h3 class="h3">{{ cs.data.title }}</h3>
+            <p class="muted">{{ cs.data.summary }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+
+    <div class="mt-16">
+      <a class="btn btn-ghost" href="{{ '/case-studies/' | url }}">View all projects</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <h2 class="h2">Quick answers</h2>
+    <p class="muted">A few common questions — more in the full FAQ.</p>
+
+    <div class="grid grid-2 mt-16">
+      <a class="card card-link" href="{{ '/faq/' | url }}#getting-a-quote">
+        <div class="card-body">
+          <h3 class="h3">What files do you accept?</h3>
+          <p class="muted">stl, step, 3mf, obj — and we’ll help if you only have a sketch or measurements.</p>
+        </div>
+      </a>
+      <a class="card card-link" href="{{ '/faq/' | url }}#shipping-delivery--collection">
+        <div class="card-body">
+          <h3 class="h3">Do you ship across the UK?</h3>
+          <p class="muted">Yes — tracked UK shipping is standard, with local collection and international shipping on request.</p>
+        </div>
+      </a>
+      <a class="card card-link" href="{{ '/faq/' | url }}#lead-times--scheduling">
+        <div class="card-body">
+          <h3 class="h3">How fast can you deliver?</h3>
+          <p class="muted">Small orders are typically 2–3 business days. Same-day can be possible when feasible.</p>
+        </div>
+      </a>
+      <a class="card card-link" href="{{ '/services/design-support/' | url }}">
+        <div class="card-body">
+          <h3 class="h3">I don’t have a print-ready file</h3>
+          <p class="muted">We can help with CAD adjustments, fit tweaks and practical file preparation for printing.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-16">
+      <a class="btn btn-ghost" href="{{ '/faq/' | url }}">Read the FAQ</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "partials/cta-wide.njk" %}
+  </div>
+</section>

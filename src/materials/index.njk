@@ -1,22 +1,119 @@
 ---
 layout: layouts/base.njk
-title: Materials
-description: "Explore our FDM and resin materials — from PLA and PETG to nylon, TPU, carbon-fibre composites and high-detail resins."
+title: "3D Printing Materials"
+description: "Explore our FDM and resin materials — PLA, PETG, ABS/ASA, Nylon, TPU, carbon-filled filaments and high-detail resins. UK-based printing with material guidance."
 ---
 
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Bondar Labs · Materials</p>
-    <h1>Materials</h1>
-    <p class="lead">Engineering-grade materials available. We’ll recommend the best option based on strength, heat resistance, flexibility and finish.</p>
+    <h1>3D printing materials</h1>
+    <p class="lead">
+      Choosing the right material matters as much as the model. We’ll recommend the best option based on strength, heat exposure,
+      flexibility, surface finish and how the part will be used.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+      <a class="btn btn-ghost" href="{{ '/services/' | url }}">Explore Services</a>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="grid grid-3">
+    <div class="grid grid-2">
+
+      <div class="card">
+        <div class="card-body prose">
+          <h2>Quick material picker</h2>
+          <p class="muted">
+            Not sure where to start? This is a practical guide. If your use case is unusual, send the brief and we’ll recommend the best match.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Use case</th>
+                <th>Typical choice</th>
+                <th>Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fast prototypes / visual parts</td>
+                <td>PLA</td>
+                <td>Clean print quality, great detail, wide colour choice</td>
+              </tr>
+              <tr>
+                <td>Everyday functional parts</td>
+                <td>PETG</td>
+                <td>Tougher feel than PLA, good all-round performance</td>
+              </tr>
+              <tr>
+                <td>Outdoor / UV exposure</td>
+                <td>ASA</td>
+                <td>Better weather and UV resistance for outdoor components</td>
+              </tr>
+              <tr>
+                <td>Wear / fatigue / mechanical use</td>
+                <td>Nylon</td>
+                <td>Engineering material for demanding functional parts (geometry dependent)</td>
+              </tr>
+              <tr>
+                <td>Flexible parts</td>
+                <td>TPU</td>
+                <td>Rubber-like flexibility for grips, bumpers and seals</td>
+              </tr>
+              <tr>
+                <td>High detail & smooth surfaces</td>
+                <td>Resin (MSLA)</td>
+                <td>Excellent detail for miniatures, stamps, masters and small precision parts</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="muted">
+            Looking for the lowest-cost option where suitable? PLA (FDM) and grey water-washable resin (MSLA) are often great starting points.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body prose">
+          <h2>Colours and sourcing</h2>
+          <p>
+            We keep a wide stock of popular colours and can source specific materials on request.
+          </p>
+          <ul>
+            <li><strong>PLA:</strong> large in-stock colour range (around 50 shades).</li>
+            <li><strong>PETG:</strong> a core range of common colours (around 10).</li>
+            <li><strong>Engineering filaments (ABS/ASA/Nylon/TPU):</strong> typically stocked in black/white/natural; other options can be sourced.</li>
+            <li><strong>Resin:</strong> water-washable grey by default (also black/white/clear stocked); other colours on request.</li>
+          </ul>
+          <p class="muted">
+            If colour or brand matters, mention it in your quote request — we’ll confirm availability and lead time before printing.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+            <a class="btn btn-ghost" href="{{ '/services/fdm/' | url }}">FDM Printing</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card mt-16">
+      <div class="card-body prose">
+        <h2>Materials we offer</h2>
+        <p class="muted">
+          These pages keep things practical: when to choose a material, what to expect, and common trade-offs.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top:16px">
       {% for m in collections.materials %}
-        <a class="card card-link" href="{{ m.url }}">
+        <a class="card card-link" href="{{ m.url | url }}">
           <div class="card-body">
             <div class="kicker">{{ m.data.category }}</div>
             <h2 class="h3">{{ m.data.title }}</h2>

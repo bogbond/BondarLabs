@@ -20,7 +20,7 @@ description: "Upload your file (up to 10MB) or share a link and get a fast quote
           <input type="hidden" name="_subject" value="New quote request — Bondar Labs" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-          <input type="hidden" name="_next" value="{{ site.baseUrl }}/quote/thanks/" />
+          <input type="hidden" name="_next" value="{{ site.baseUrl }}{{ '/quote/thanks/' | url }}" />
 
           <div class="grid grid-2">
             <div class="field">
@@ -102,7 +102,7 @@ description: "Upload your file (up to 10MB) or share a link and get a fast quote
           <div class="grid grid-2">
             <div class="field">
               <label class="label" for="q-file">Upload file (max 10MB)</label>
-              <input class="input" id="q-file" type="file" name="attachment" />
+              <input class="input" id="q-file" type="file" name="attachment" accept=".stl,.3mf,.step,.stp,.obj,.zip,.rar,.7z,.pdf,.png,.jpg,.jpeg" />
               <div class="help">STL / 3MF / STEP / OBJ recommended. If the upload fails, use the link field.</div>
             </div>
             <div class="field">
@@ -114,10 +114,10 @@ description: "Upload your file (up to 10MB) or share a link and get a fast quote
 
           <div class="hero-actions">
             <button class="btn btn-primary" type="submit">Send request</button>
-            <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener" data-track="whatsapp_click">Message on WhatsApp</a>
+            <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">Message on WhatsApp</a>
           </div>
 
-          <p class="tiny muted">By sending this form you agree that we may use your contact details to respond to your request, in line with our <a href="/privacy/">privacy policy</a>.</p>
+          <p class="tiny muted">By sending this form you agree that we may use your contact details to respond to your request, in line with our <a href="{{ '/privacy/' | url }}">privacy policy</a>.</p>
         </form>
       </div>
     </div>

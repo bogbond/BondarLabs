@@ -1,13 +1,20 @@
 {#
-  Page variables expected:
+  Page variables expected (front matter):
   - title
-  - description
-  - image (optional)
+  - description (optional)
+  - summary / intro (optional)
+  - image / coverImage (optional)
+  - ogType (optional)
+  - ogImageWidth / ogImageHeight / ogImageAlt (optional)
   - noindex (optional)
 #}
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="{{ site.themeColor }}" />
+<meta name="color-scheme" content="dark light" />
+<meta name="application-name" content="{{ site.brand }}" />
+<meta name="apple-mobile-web-app-title" content="{{ site.brand }}" />
+<meta name="author" content="{{ site.legalName }}" />
 
 {# Apply saved theme early to avoid a flash. #}
 <script>
@@ -31,41 +38,82 @@
   })();
 </script>
 
-{# Nunjucks uses ~ for string concatenation. #}
-{% set pageTitle = site.brand %}
+{# Title / description fallbacks #}
+{% set baseTitle = site.defaultTitle or site.brand %}
+{% set pageTitle = baseTitle ~ " | " ~ site.brand %}
 {% if title %}{% set pageTitle = title ~ " | " ~ site.brand %}{% endif %}
-{% set pageDescription = description or site.defaultDescription %}
-{% set canonicalUrl = site.baseUrl ~ page.url %}
-{% set ogImage = (image or site.ogImage) %}
+
+{% set pageDescription = description or summary or intro or site.defaultDescription %}
+{% set canonicalUrl = site.baseUrl ~ (page.url | url) %}
+
+{# OpenGraph/Twitter image: allow per-page overrides via image or coverImage #}
+{% set ogImagePath = image or coverImage or site.ogImage %}
+{% set ogImageUrl = site.baseUrl ~ (ogImagePath | url) %}
+
+{# OG type: treat case studies as articles (good for sharing previews) #}
+{% set computedOgType = ogType or "website" %}
+{% if page.url and (page.url.indexOf('/case-studies/') == 0) and (page.url != '/case-studies/') %}
+  {% set computedOgType = 'article' %}
+{% endif %}
+
+{# OG image dimensions (defaults match /assets/images/og-preview.jpg = 1200x630) #}
+{% set ogW = ogImageWidth or site.ogImageWidth or 1200 %}
+{% set ogH = ogImageHeight or site.ogImageHeight or 630 %}
+{% set ogAlt = ogImageAlt or site.ogImageAlt or pageTitle %}
 
 <title>{{ pageTitle }}</title>
 <meta name="description" content="{{ pageDescription }}" />
 <link rel="canonical" href="{{ canonicalUrl }}" />
 
+{# Indexing rules #}
 {% if noindex %}
 <meta name="robots" content="noindex, nofollow" />
+{% else %}
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 {% endif %}
 
-<link rel="icon" href="/assets/images/favicon.ico" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/icons/icon-32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/icons/icon-16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/brand/icons/icon-180.png" />
-<link rel="manifest" href="/assets/site.webmanifest" />
-<link rel="stylesheet" href="/assets/css/style.css" />
+{# Site verification (set values in src/_data/site.json when ready) #}
+{% if site.googleSiteVerification %}
+<meta name="google-site-verification" content="{{ site.googleSiteVerification }}" />
+{% endif %}
+{% if site.bingSiteVerification %}
+<meta name="msvalidate.01" content="{{ site.bingSiteVerification }}" />
+{% endif %}
 
+{# Icons / PWA #}
+<link rel="icon" href="{{ '/assets/images/favicon.ico' | url }}" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/brand/icons/icon-32.png' | url }}" />
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/brand/icons/icon-16.png' | url }}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/brand/icons/icon-180.png' | url }}" />
+<link rel="manifest" href="{{ '/assets/site.webmanifest' | url }}" />
+<meta name="msapplication-TileColor" content="{{ site.themeColor }}" />
+<meta name="msapplication-config" content="{{ '/browserconfig.xml' | url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}" />
+
+{# OpenGraph #}
 <meta property="og:site_name" content="{{ site.brand }}" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="{{ computedOgType }}" />
 <meta property="og:title" content="{{ pageTitle }}" />
 <meta property="og:description" content="{{ pageDescription }}" />
 <meta property="og:url" content="{{ canonicalUrl }}" />
-<meta property="og:image" content="{{ site.baseUrl ~ ogImage }}" />
+<meta property="og:image" content="{{ ogImageUrl }}" />
+<meta property="og:image:secure_url" content="{{ ogImageUrl }}" />
+<meta property="og:image:width" content="{{ ogW }}" />
+<meta property="og:image:height" content="{{ ogH }}" />
+<meta property="og:image:alt" content="{{ ogAlt }}" />
 <meta property="og:locale" content="{{ site.locale }}" />
 
+{# Twitter #}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ pageTitle }}" />
 <meta name="twitter:description" content="{{ pageDescription }}" />
-<meta name="twitter:image" content="{{ site.baseUrl ~ ogImage }}" />
+<meta name="twitter:image" content="{{ ogImageUrl }}" />
+<meta name="twitter:image:alt" content="{{ ogAlt }}" />
+{% if site.twitterSite %}
+<meta name="twitter:site" content="{{ site.twitterSite }}" />
+{% endif %}
 
+{# Basic runtime config for JS (analytics, links, etc.) #}
 <script>
   window.BONDAR_SITE = {
     baseUrl: "{{ site.baseUrl }}",
@@ -76,14 +124,26 @@
   window.dataLayer = window.dataLayer || [];
 </script>
 
-{# LocalBusiness schema (service-area business; no street address) #}
+{# Structured data: LocalBusiness + WebSite #}
+{% set logoUrl = site.baseUrl ~ ('/assets/images/brand/logo.png' | url) %}
+{% set sameAs = [] %}
+{% if company.social %}
+  {% for k, v in company.social %}
+    {% if v %}
+      {% set sameAs = sameAs.concat([v]) %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 <script type="application/ld+json">
 {{ {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   "name": site.legalName,
-  "url": site.baseUrl,
-  "telephone": company.phone,
+  "url": site.baseUrl ~ ("/" | url),
+  "logo": logoUrl,
+  "image": [ogImageUrl],
+  "telephone": company.phoneE164,
   "email": company.email,
   "areaServed": company.serviceArea,
   "address": {
@@ -91,6 +151,30 @@
     "addressLocality": "Brampton",
     "addressRegion": "Cambridgeshire",
     "addressCountry": "GB"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Company number",
+    "value": site.companyNumber
+  },
+  "sameAs": sameAs
+} | json(2) | safe }}
+</script>
+
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": site.brand,
+  "url": site.baseUrl ~ ("/" | url),
+  "publisher": {
+    "@type": "Organization",
+    "name": site.legalName,
+    "url": site.baseUrl ~ ("/" | url),
+    "logo": {
+      "@type": "ImageObject",
+      "url": logoUrl
+    }
   }
 } | json(2) | safe }}
 </script>

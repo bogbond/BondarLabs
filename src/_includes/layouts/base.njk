@@ -4,6 +4,7 @@
     {% include "head.njk" %}
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     {% include "partials/cookie-banner.njk" %}
     {% include "header.njk" %}
 
@@ -13,6 +14,6 @@
 
     {% include "footer.njk" %}
 
-    <script src="/assets/js/main.js" defer></script>
+    <script src="{{ '/assets/js/main.js' | url }}" defer></script>
   </body>
 </html>

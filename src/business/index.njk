@@ -1,67 +1,173 @@
 ---
 layout: layouts/base.njk
-title: For Business
-description: "A flexible 3D production partner for UK businesses — batch discounts, sample approval, QC checks, invoices and PO support."
+title: "3D Printing for Business"
+description: "Commercial-friendly 3D printing in the UK — small-batch production, invoices, optional QC measurement reports, and repeatable reorders. Near Cambridge with UK-wide shipping."
 ---
 
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Bondar Labs · For Business</p>
-    <h1>For Business</h1>
-    <p class="lead">A professional multi-printer setup with the flexibility of a small partner — fast iterations, reliable repeat runs, and clear communication.</p>
+    <p class="eyebrow">BONDAR LABS LTD · Company No. 17009947</p>
+    <h1>3D Printing for Business in the UK</h1>
+    <p class="lead">
+      A practical 3D printing partner for small and growing teams — consistent batches, clear specs, optional first-article samples,
+      and quality checks you can rely on. Based near Cambridge with UK-wide shipping.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+      <a class="btn btn-ghost" href="{{ '/services/batch-production/' | url }}">Batch & Commercial Orders</a>
+    </div>
+    <p class="muted" style="margin-top:10px">
+      Response time: {{ company.responseTime }} · Invoices available · Not VAT registered
+    </p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="grid grid-2">
+
       <div class="card">
         <div class="card-body prose">
-          <h2>What we support</h2>
+          <h2>Who this is for</h2>
+          <p>
+            Startups, product teams, small manufacturers, labs/universities, agencies and makers who need
+            reliable parts without the overhead of a large bureau.
+          </p>
+
+          <h2>Typical work</h2>
           <ul>
-            <li>Invoices provided</li>
-            <li>Purchase orders accepted</li>
-            <li>NDA available on request</li>
-            <li>Sample approval available</li>
-            <li>Repeat production supported</li>
-            <li>Batch discounts available</li>
-            <li>Quality checks before dispatch</li>
+            <li>Pilot runs and short production batches (often <strong>50–500+ units</strong>, depending on part complexity)</li>
+            <li>Enclosures, brackets, mounts, spacers, jigs and fixtures</li>
+            <li>Replacement parts and short-run manufacturing</li>
+            <li>High-detail resin parts for masters, stamps and small precision components</li>
           </ul>
 
-          <h2>Use cases</h2>
-          <ul>
-            <li>Prototype iterations and fit validation</li>
-            <li>Fixtures, jigs, housings and functional parts</li>
-            <li>Small-batch production for product lines</li>
-          </ul>
+          <h2>Processes and materials</h2>
+          <p>
+            We support both <strong>FDM</strong> (functional parts, larger components, great value for volume) and
+            <strong>MSLA resin</strong> (high-detail small parts with smooth surfaces).
+          </p>
+          <p class="muted">
+            For larger batches, we often recommend PLA or PETG for predictable throughput and cost efficiency.
+            Engineering materials are available where required, with feasibility confirmed upfront.
+          </p>
 
-          <p class="muted">Thousands of completed prints across multiple product lines.</p>
+          <p>
+            For full details on batch production workflows, see
+            <a href="{{ '/services/batch-production/' | url }}">Batch & Commercial Orders</a>.
+          </p>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-body">
+        <div class="card-body prose">
           <div class="kicker">Fast start</div>
-          <h2 class="h3">Send a file and requirements</h2>
-          <p class="muted">We’ll recommend the best process/material and quote quickly. If you don’t have a file, we can help design or recreate it.</p>
+          <h2 class="h3">Send an RFQ (request for quote)</h2>
+          <p class="muted">
+            The quickest way to get an accurate quote is to send files and a short brief.
+            If you’re unsure about material or settings, we’ll recommend options with clear trade-offs.
+          </p>
+
+          <ul>
+            <li><strong>Files</strong> (stl/step/3mf/obj) + notes on what must not change</li>
+            <li><strong>Quantity</strong> (and whether you expect repeat reorders)</li>
+            <li><strong>Deadline</strong> (ideal and latest acceptable)</li>
+            <li><strong>Finish expectations</strong> (cosmetic vs functional; visible faces)</li>
+            <li><strong>Critical dimensions</strong> and fit requirements (holes, mating interfaces, clearances)</li>
+            <li><strong>Packaging</strong> needs (bulk, individual bagging, labels, kitting)</li>
+            <li><strong>QC</strong> expectations (visual only vs measured features; report needed or not)</li>
+          </ul>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="/quote/">Get a Quote</a>
-            <a class="btn btn-ghost" href="/services/batch-production/">Batch production</a>
+            <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+            <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a>
           </div>
 
           <div class="card mt-12">
             <div class="card-body">
-              <div class="kicker">Need a call?</div>
-              <p class="muted" style="margin:8px 0 12px">Call or WhatsApp to discuss requirements and timelines.</p>
+              <div class="kicker">Call</div>
+              <p class="muted" style="margin:8px 0 12px">
+                Prefer a quick discussion? Call or WhatsApp to confirm requirements and timelines.
+              </p>
               <div class="hero-actions">
                 <a class="btn btn-ghost" href="tel:{{ company.phoneE164 }}" data-track="phone_click">Call</a>
-                <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp</a>
+                <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a>
               </div>
             </div>
           </div>
+
         </div>
       </div>
+
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2">
+
+      <div class="card">
+        <div class="card-body prose">
+          <h2>Quality checks and measurement reporting</h2>
+          <p>
+            For business orders, consistency matters. We can agree a clear spec (material, finish, critical dimensions),
+            then run a repeatable workflow for reorders and revisions.
+          </p>
+          <p>
+            Visual QC is standard. For tighter requirements, we can measure agreed critical features using precision callipers.
+            If your project needs documentation, we can provide a simple measurement pack by agreement:
+          </p>
+          <ul>
+            <li>Photos showing how key dimensions are measured</li>
+            <li>Annotated measurement points (e.g., A–B, C–D)</li>
+            <li>A table (Excel/CSV) with measured values</li>
+            <li>Optional comparison vs CAD with deviation (%) where relevant</li>
+          </ul>
+          <p class="muted">
+            Scope is agreed upfront (which features, how many samples per batch, and what “acceptable” looks like).
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body prose">
+          <h2>Procurement-friendly and confidential</h2>
+          <ul>
+            <li><strong>Invoices</strong> available for commercial orders</li>
+            <li><strong>Purchase orders (PO)</strong> supported by agreement where applicable (tell us your process and we’ll confirm)</li>
+            <li><strong>Confidential handling</strong> by default; NDA / customer NDA available on request</li>
+            <li><strong>First-article samples</strong> available before the full batch (recommended for larger runs)</li>
+            <li><strong>Packaging options</strong> by agreement: individual bagging, labels, kitting, boxes</li>
+          </ul>
+
+          <h2>Delivery</h2>
+          <p>
+            Based near Cambridge (Huntingdon area, close to Peterborough).
+            UK-wide shipping is standard, with international shipping available on request.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card mt-12">
+      <div class="card-body prose">
+        <h2>Ready to quote?</h2>
+        <p>
+          Send your files and requirements and we’ll come back with a clear recommendation and a transparent quote.
+          If you expect repeat orders, mention it — we can help keep reorders consistent with revision tracking.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+          <a class="btn btn-ghost" href="{{ '/services/batch-production/' | url }}">Batch & Commercial Orders</a>
+        </div>
+        <p class="muted" style="margin-top:10px">
+          BONDAR LABS LTD · Company No. 17009947
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>

@@ -1,14 +1,22 @@
 ---
 layout: layouts/base.njk
-title: Portfolio / Case Studies
-description: "A selection of recent 3D prints and prototypes by Bondar Labs — FDM, resin, file support, and batch production examples."
+title: Projects & Examples
+description: "Representative examples of Bondar Labs work — FDM, resin, file support and small-batch production. Real-world projects vary; request a quote for an accurate spec and price."
 ---
 
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Bondar Labs · Portfolio</p>
-    <h1>Portfolio / Case Studies</h1>
-    <p class="lead">Short, technical summaries — what it was, how it was made, and what mattered.</p>
+    <h1>Projects & examples</h1>
+    <p class="lead">
+      Representative examples of typical work — what it is, how it’s made, and what mattered.
+      Your exact results depend on geometry, material choice and requirements.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+      <a class="btn btn-ghost" href="{{ '/services/' | url }}">Explore Services</a>
+    </div>
   </div>
 </section>
 
@@ -16,14 +24,14 @@ description: "A selection of recent 3D prints and prototypes by Bondar Labs — 
   <div class="container">
     <div class="grid grid-3">
       {% for cs in collections.caseStudies %}
-        <a class="card card-link" href="{{ cs.url }}">
-          <div class="card-media"><img src="{{ cs.data.coverImage }}" alt="{{ cs.data.title }}" loading="lazy"></div>
+        <a class="card card-link" href="{{ cs.url | url }}">
+          <div class="card-media"><img src="{{ cs.data.coverImage | url }}" alt="{{ cs.data.title }}" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="kicker">{{ cs.data.tech }} · {{ cs.data.material }}</div>
             <h2 class="h3">{{ cs.data.title }}</h2>
             <p class="muted">{{ cs.data.summary }}</p>
-            {% if cs.data.typicalValue %}
-              <p class="tiny muted" style="margin:10px 0 0">Typical project value: <strong>{{ cs.data.typicalValue }}</strong></p>
+            {% if cs.data.note %}
+              <p class="tiny muted" style="margin:10px 0 0">{{ cs.data.note }}</p>
             {% endif %}
           </div>
         </a>
