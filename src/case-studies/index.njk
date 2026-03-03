@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: Portfolio / Case Studies
+description: "A selection of recent 3D prints and prototypes by Bondar Labs — FDM, resin, file support, and batch production examples."
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Bondar Labs · Portfolio</p>
+    <h1>Portfolio / Case Studies</h1>
+    <p class="lead">Short, technical summaries — what it was, how it was made, and what mattered.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-3">
+      {% for cs in collections.caseStudies %}
+        <a class="card card-link" href="{{ cs.url }}">
+          <div class="card-media"><img src="{{ cs.data.coverImage }}" alt="{{ cs.data.title }}" loading="lazy"></div>
+          <div class="card-body">
+            <div class="kicker">{{ cs.data.tech }} · {{ cs.data.material }}</div>
+            <h2 class="h3">{{ cs.data.title }}</h2>
+            <p class="muted">{{ cs.data.summary }}</p>
+            {% if cs.data.typicalValue %}
+              <p class="tiny muted" style="margin:10px 0 0">Typical project value: <strong>{{ cs.data.typicalValue }}</strong></p>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

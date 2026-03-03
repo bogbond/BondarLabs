@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    {% include "head.njk" %}
+  </head>
+  <body>
+    {% include "partials/cookie-banner.njk" %}
+    {% include "header.njk" %}
+
+    <main id="main" class="site-main">
+      {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>

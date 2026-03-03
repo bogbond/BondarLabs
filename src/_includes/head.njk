@@ -1,0 +1,96 @@
+{#
+  Page variables expected:
+  - title
+  - description
+  - image (optional)
+  - noindex (optional)
+#}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="{{ site.themeColor }}" />
+
+{# Apply saved theme early to avoid a flash. #}
+<script>
+  (function () {
+    const KEY = "bl_theme_v1";
+    const meta = document.querySelector('meta[name="theme-color"]');
+    const DARK = "#0b0c0f";
+    const LIGHT = "#f7f8fb";
+
+    try {
+      const saved = localStorage.getItem(KEY);
+      if (saved === "light" || saved === "dark") {
+        document.documentElement.setAttribute("data-theme", saved);
+        if (meta) meta.setAttribute("content", saved === "light" ? LIGHT : DARK);
+        return;
+      }
+    } catch (e) {}
+
+    // No saved choice: default to dark (the <html> tag already has data-theme="dark").
+    if (meta) meta.setAttribute("content", DARK);
+  })();
+</script>
+
+{# Nunjucks uses ~ for string concatenation. #}
+{% set pageTitle = site.brand %}
+{% if title %}{% set pageTitle = title ~ " | " ~ site.brand %}{% endif %}
+{% set pageDescription = description or site.defaultDescription %}
+{% set canonicalUrl = site.baseUrl ~ page.url %}
+{% set ogImage = (image or site.ogImage) %}
+
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDescription }}" />
+<link rel="canonical" href="{{ canonicalUrl }}" />
+
+{% if noindex %}
+<meta name="robots" content="noindex, nofollow" />
+{% endif %}
+
+<link rel="icon" href="/assets/images/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/brand/icons/icon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/brand/icons/icon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/brand/icons/icon-180.png" />
+<link rel="manifest" href="/assets/site.webmanifest" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+
+<meta property="og:site_name" content="{{ site.brand }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:description" content="{{ pageDescription }}" />
+<meta property="og:url" content="{{ canonicalUrl }}" />
+<meta property="og:image" content="{{ site.baseUrl ~ ogImage }}" />
+<meta property="og:locale" content="{{ site.locale }}" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ pageTitle }}" />
+<meta name="twitter:description" content="{{ pageDescription }}" />
+<meta name="twitter:image" content="{{ site.baseUrl ~ ogImage }}" />
+
+<script>
+  window.BONDAR_SITE = {
+    baseUrl: "{{ site.baseUrl }}",
+    gtmId: "{{ site.gtmId }}",
+    brand: "{{ site.brand }}",
+    phoneE164: "{{ company.phoneE164 }}"
+  };
+  window.dataLayer = window.dataLayer || [];
+</script>
+
+{# LocalBusiness schema (service-area business; no street address) #}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": site.legalName,
+  "url": site.baseUrl,
+  "telephone": company.phone,
+  "email": company.email,
+  "areaServed": company.serviceArea,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Brampton",
+    "addressRegion": "Cambridgeshire",
+    "addressCountry": "GB"
+  }
+} | json(2) | safe }}
+</script>

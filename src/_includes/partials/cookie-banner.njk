@@ -1,0 +1,50 @@
+<div class="cookie" data-cookie hidden>
+  <div class="container">
+    <div class="cookie-inner">
+      <div class="cookie-copy">
+        <p class="cookie-title">Cookies</p>
+        <p class="cookie-text muted">We use essential cookies to run this site. With your permission, we also use analytics to improve performance.</p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn btn-primary" type="button" data-cookie-accept>Accept</button>
+        <button class="btn btn-ghost" type="button" data-cookie-manage>Manage</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" data-cookie-modal hidden>
+  <div class="modal-backdrop" data-cookie-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="cookie-title">
+    <div class="modal-header">
+      <h2 id="cookie-title" class="h3">Cookie preferences</h2>
+      <button class="icon-btn" type="button" aria-label="Close" data-cookie-close>×</button>
+    </div>
+    <div class="modal-body">
+      <div class="pref-row">
+        <div>
+          <div class="pref-title">Essential</div>
+          <div class="muted">Always on. Required for basic site functionality.</div>
+        </div>
+        <div class="pill pill-on">On</div>
+      </div>
+
+      <div class="pref-row">
+        <div>
+          <div class="pref-title">Analytics</div>
+          <div class="muted">Helps us understand usage and improve the website.</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" data-cookie-analytics />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <p class="tiny muted">You can change these settings any time from the footer.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" type="button" data-cookie-reject>Reject analytics</button>
+      <button class="btn btn-primary" type="button" data-cookie-save>Save</button>
+    </div>
+  </div>
+</div>

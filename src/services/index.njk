@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: Services
+description: "FDM and resin 3D printing, 3D design & file support, and batch production for business and individuals."
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Bondar Labs · Services</p>
+    <h1>Services</h1>
+    <p class="lead">From one-off functional parts to repeat batch production — with engineering-grade materials and careful quality checks.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2">
+      {% for s in collections.services %}
+        <a class="card card-link" href="{{ s.url }}">
+          <div class="card-media"><img src="{{ s.data.coverImage }}" alt="{{ s.data.title }}" loading="lazy"></div>
+          <div class="card-body">
+            <div class="kicker">{{ s.data.kicker }}</div>
+            <h2 class="h3">{{ s.data.title }}</h2>
+            <p class="muted">{{ s.data.summary }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+
+    <div class="card mt-16">
+      <div class="card-body">
+        <h2 class="h3">Extra options</h2>
+        <ul class="muted">
+          <li><strong>Same-day local</strong>: available on request for Cambridgeshire (subject to schedule and part complexity).</li>
+          <li><strong>Reverse engineering</strong>: can be included as part of file support if you only have photos/measurements.</li>
+          <li><strong>Post-processing</strong>: sanding, basic finishing and assembly support available depending on the project.</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/quote/">Get a Quote</a>
+          <a class="btn btn-ghost" href="/delivery/">Delivery options</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

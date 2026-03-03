@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "label": "Services",
+      "url": "/services/",
+      "children": [
+        { "label": "All services", "url": "/services/" },
+        { "label": "FDM 3D Printing", "url": "/services/fdm/" },
+        { "label": "Resin 3D Printing", "url": "/services/resin/" },
+        { "label": "3D Design & File Support", "url": "/services/design-support/" },
+        { "label": "Batch & Commercial Production", "url": "/services/batch-production/" }
+      ]
+    },
+    {
+      "label": "Materials",
+      "url": "/materials/",
+      "children": [
+        { "label": "All materials", "url": "/materials/" },
+        { "label": "PLA", "url": "/materials/pla/" },
+        { "label": "PETG", "url": "/materials/petg/" },
+        { "label": "ABS", "url": "/materials/abs/" },
+        { "label": "ASA", "url": "/materials/asa/" },
+        { "label": "TPU", "url": "/materials/tpu/" },
+        { "label": "Nylon", "url": "/materials/nylon/" },
+        { "label": "Carbon-fibre composites", "url": "/materials/carbon-fibre-composites/" },
+        { "label": "Resin (MSLA)", "url": "/materials/resin/" }
+      ]
+    },
+    { "label": "Pricing", "url": "/pricing/" },
+    { "label": "Portfolio", "url": "/case-studies/" },
+    { "label": "For\u00A0Business", "url": "/business/" },
+    { "label": "Delivery", "url": "/delivery/" },
+    { "label": "FAQ", "url": "/faq/" },
+    { "label": "Contact", "url": "/contact/" }
+  ],
+  "cta": { "label": "Get a Quote", "url": "/quote/" }
+}

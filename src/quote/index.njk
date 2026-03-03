@@ -1,0 +1,125 @@
+---
+layout: layouts/base.njk
+title: Get a Quote
+description: "Upload your file (up to 10MB) or share a link and get a fast quote."
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Bondar Labs · Quote</p>
+    <h1>Get a Quote</h1>
+    <p class="lead">Upload your file (up to 10MB) or share a link. We’ll reply fast with options and a clear quote.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <form class="form" method="POST" action="https://formsubmit.co/{{ site.formsubmitEmail }}" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="New quote request — Bondar Labs" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_next" value="{{ site.baseUrl }}/quote/thanks/" />
+
+          <div class="grid grid-2">
+            <div class="field">
+              <label class="label" for="q-name">Name *</label>
+              <input class="input" id="q-name" name="Name" type="text" autocomplete="name" autocapitalize="words" required />
+            </div>
+
+            <div class="field">
+              <label class="label" for="q-email">Email *</label>
+              <input class="input" id="q-email" type="email" name="Email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required />
+            </div>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="field">
+              <label class="label" for="q-deadline">Deadline *</label>
+              <input class="input" id="q-deadline" name="Deadline" autocomplete="off" placeholder="e.g. ASAP / by Friday / specific date" required />
+            </div>
+
+            <div class="field">
+              <label class="label" for="q-qty">Quantity *</label>
+              <input class="input" id="q-qty" name="Quantity" inputmode="numeric" autocomplete="off" placeholder="e.g. 1 / 10 / 100" required />
+            </div>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="field">
+              <label class="label" for="q-material">Material *</label>
+              <select class="select" id="q-material" name="Material" required>
+                <option value="">Select…</option>
+                <optgroup label="FDM">
+                  <option>PLA</option>
+                  <option>PETG</option>
+                  <option>ABS</option>
+                  <option>ASA</option>
+                  <option>TPU</option>
+                  <option>Nylon</option>
+                  <option>Carbon-fibre composites</option>
+                </optgroup>
+                <optgroup label="Resin (MSLA)">
+                  <option>Water-washable (grey)</option>
+                  <option>ABS-like resin</option>
+                  <option>Flexible (F80 type)</option>
+                  <option>Transparent (on request)</option>
+                </optgroup>
+                <option>Not sure (please advise)</option>
+              </select>
+              <div class="help">Engineering-grade materials available. If you’re unsure, choose “Not sure”.</div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="q-delivery">Delivery option</label>
+              <select class="select" id="q-delivery" name="Delivery option">
+                <option value="">Select…</option>
+                <option>UK shipping (Royal Mail)</option>
+                <option>Local delivery (Cambridgeshire)</option>
+                <option>Collection (by arrangement)</option>
+              </select>
+              <div class="help">Local delivery from £5. Same-day options available on request.</div>
+            </div>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="field">
+              <label class="label" for="q-phone">Phone</label>
+              <input class="input" id="q-phone" name="Phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Optional" />
+            </div>
+            <div class="field">
+              <label class="label" for="q-colour">Colour</label>
+              <input class="input" id="q-colour" name="Colour" placeholder="Optional" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="q-desc">Description *</label>
+            <textarea class="textarea" id="q-desc" name="Description" required placeholder="What is the part used for? Any dimensions, tolerances, finish requirements, strength/heat needs?"></textarea>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="field">
+              <label class="label" for="q-file">Upload file (max 10MB)</label>
+              <input class="input" id="q-file" type="file" name="attachment" />
+              <div class="help">STL / 3MF / STEP / OBJ recommended. If the upload fails, use the link field.</div>
+            </div>
+            <div class="field">
+              <label class="label" for="q-link">File link (Drive/Dropbox/WeTransfer)</label>
+              <input class="input" id="q-link" name="File link" type="url" autocomplete="url" inputmode="url" autocapitalize="none" spellcheck="false" placeholder="https://…" />
+              <div class="help">Optional backup if your file is larger than 10MB.</div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="submit">Send request</button>
+            <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener" data-track="whatsapp_click">Message on WhatsApp</a>
+          </div>
+
+          <p class="tiny muted">By sending this form you agree that we may use your contact details to respond to your request, in line with our <a href="/privacy/">privacy policy</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

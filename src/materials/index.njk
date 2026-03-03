@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: Materials
+description: "Explore our FDM and resin materials — from PLA and PETG to nylon, TPU, carbon-fibre composites and high-detail resins."
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Bondar Labs · Materials</p>
+    <h1>Materials</h1>
+    <p class="lead">Engineering-grade materials available. We’ll recommend the best option based on strength, heat resistance, flexibility and finish.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-3">
+      {% for m in collections.materials %}
+        <a class="card card-link" href="{{ m.url }}">
+          <div class="card-body">
+            <div class="kicker">{{ m.data.category }}</div>
+            <h2 class="h3">{{ m.data.title }}</h2>
+            <p class="muted">{{ m.data.summary }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "partials/cta-wide.njk" %}
+  </div>
+</section>

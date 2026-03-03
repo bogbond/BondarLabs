@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+title: Contact
+description: "Contact Bondar Labs — Brampton, Huntingdon, Cambridgeshire. UK-wide shipping, local delivery available."
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Bondar Labs · Contact</p>
+    <h1>Contact</h1>
+    <p class="lead">Fast response — {{ company.responseTime }}.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="h3">Details</h2>
+          <p class="muted">{{ company.locationShort }}</p>
+          <ul class="muted">
+            <li>Email: <a href="mailto:{{ company.email }}" data-track="email_click">{{ company.email }}</a></li>
+            <li>Phone: <a href="tel:{{ company.phoneE164 }}" data-track="phone_click">{{ company.phone }}</a></li>
+            <li><a href="{{ company.whatsappUrl }}" target="_blank" rel="noopener" data-track="whatsapp_click">Message on WhatsApp</a></li>
+          </ul>
+
+          <div class="card mt-12">
+            <div class="card-body">
+              <div class="kicker">Delivery</div>
+              <p class="muted" style="margin:8px 0 0">Local delivery from £5 (same-day on request). UK shipping from £2.75 via Royal Mail large letter. Tracked options available.</p>
+              <div class="hero-actions">
+                <a class="btn btn-ghost" href="/delivery/">See delivery options</a>
+                <a class="btn btn-primary" href="/quote/">Get a Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2 class="h3">Send a message</h2>
+          <form class="form" method="POST" action="https://formsubmit.co/{{ site.formsubmitEmail }}">
+            <input type="hidden" name="_subject" value="New message — Bondar Labs" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="field">
+              <label class="label" for="c-name">Name</label>
+              <input class="input" id="c-name" name="Name" type="text" autocomplete="name" autocapitalize="words" />
+            </div>
+            <div class="field">
+              <label class="label" for="c-email">Email *</label>
+              <input class="input" id="c-email" type="email" name="Email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required />
+            </div>
+            <div class="field">
+              <label class="label" for="c-message">Message *</label>
+              <textarea class="textarea" id="c-message" name="Message" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send</button>
+            <p class="tiny muted">For quotes with files, please use the <a href="/quote/">quote form</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
