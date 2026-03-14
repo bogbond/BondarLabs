@@ -8,7 +8,7 @@ order: 4
 serviceNav: true
 kicker: "Business"
 summary: "From pilot runs to hundreds of parts — repeatable batches, QC checks, business paperwork, and UK-wide shipping."
-coverImage: "/assets/images/batch-production-cover.webp"
+coverImage: "/assets/images/Batch-Production-Example.webp"
 ---
 
 ## At a glance

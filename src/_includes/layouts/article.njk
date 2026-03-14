@@ -15,8 +15,16 @@ layout: layouts/base.njk
 </section>
 
 <section class="section">
-  <div class="container prose">
-    {{ content | safe }}
+  <div class="container">
+    {% if coverImage %}
+      <div class="page-media">
+        <img src="{{ coverImage | url }}" alt="{{ coverAlt or title }}" loading="eager" decoding="async">
+      </div>
+    {% endif %}
+
+    <div class="prose">
+      {{ content | safe }}
+    </div>
   </div>
 </section>
 

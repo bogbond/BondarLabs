@@ -121,24 +121,54 @@ description: "Precision 3D printing & prototyping for business and individuals. 
 
 <section class="section">
   <div class="container">
-    <h2 class="h2">Portfolio</h2>
-    <p class="muted">A selection of recent prints and prototype work.</p>
+    <div class="carousel" data-carousel>
+      <div class="carousel-head">
+        <div class="carousel-copy">
+          <h2 class="h2">Portfolio</h2>
+          <p class="muted">A selection of recent prints and prototype work.</p>
+        </div>
 
-    <div class="grid grid-3 mt-16">
-      {% for cs in collections.caseStudies | slice(0, 6) %}
-        <a class="card card-link" href="{{ cs.url | url }}">
-          <div class="card-media"><img src="{{ cs.data.coverImage | url }}" alt="{{ cs.data.title }}" loading="lazy" decoding="async"></div>
+        <div class="carousel-controls" aria-label="Portfolio carousel controls">
+          <button class="carousel-btn" type="button" data-carousel-prev aria-label="Scroll portfolio left">
+            <span aria-hidden="true">←</span>
+          </button>
+          <button class="carousel-btn" type="button" data-carousel-next aria-label="Scroll portfolio right">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel-track" data-carousel-track aria-label="Case studies" tabindex="0">
+        {# NOTE: Nunjucks `slice` filter is *not* array slicing (it chunks into N slices).
+           So we limit items via loop.index0 to reliably show up to 10 case cards. #}
+        {% for cs in collections.caseStudies %}
+          {% if loop.index0 < 10 %}
+            <a class="card card-link carousel-item" href="{{ cs.url | url }}">
+              <div class="card-media"><img src="{{ (cs.data.listingImage or cs.data.coverImage) | url }}" alt="{{ cs.data.listingAlt or cs.data.coverAlt or cs.data.title }}" loading="lazy" decoding="async"></div>
+              <div class="card-body">
+                <div class="kicker">{{ cs.data.tech }}</div>
+                <h3 class="h3">{{ cs.data.title }}</h3>
+                <p class="muted">{{ cs.data.summary }}</p>
+              </div>
+            </a>
+          {% endif %}
+        {% endfor %}
+
+        <a class="card card-link carousel-item case-card-all" href="{{ '/case-studies/' | url }}" aria-label="View all case studies">
+          <div class="case-card-all-media" aria-hidden="true">
+            <span class="case-card-all-arrow">→</span>
+          </div>
           <div class="card-body">
-            <div class="kicker">{{ cs.data.tech }}</div>
-            <h3 class="h3">{{ cs.data.title }}</h3>
-            <p class="muted">{{ cs.data.summary }}</p>
+            <div class="kicker">Explore</div>
+            <h3 class="h3">View all case studies</h3>
+            <p class="muted">Open the full portfolio</p>
           </div>
         </a>
-      {% endfor %}
-    </div>
+      </div>
 
-    <div class="mt-16">
-      <a class="btn btn-ghost" href="{{ '/case-studies/' | url }}">View all case studies</a>
+      <div class="mt-16">
+        <a class="btn btn-ghost" href="{{ '/case-studies/' | url }}">View all case studies</a>
+      </div>
     </div>
   </div>
 </section>

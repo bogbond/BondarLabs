@@ -45,6 +45,7 @@
 
 {% set pageDescription = description or summary or intro or site.defaultDescription %}
 {% set canonicalUrl = site.baseUrl ~ (page.url | url) %}
+{% set breadcrumbItems = page.url | breadcrumbs(title or pageTitle) %}
 
 {# OpenGraph/Twitter image: allow per-page overrides via image or coverImage #}
 {% set ogImagePath = image or coverImage or site.ogImage %}
@@ -178,3 +179,74 @@
   }
 } | json(2) | safe }}
 </script>
+
+{% if not noindex and breadcrumbItems and (breadcrumbItems | length) > 1 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for crumb in breadcrumbItems %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "name": {{ crumb.name | json | safe }},
+      "item": {{ crumb.url | json | safe }}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% if faqItems and (faqItems | length) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in faqItems %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | json | safe }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | json | safe }}
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{# Structured data: Article for case studies #}
+{% if computedOgType == 'article' %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title or pageTitle,
+  "description": pageDescription,
+  "image": [ogImageUrl],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl
+  },
+  "author": {
+    "@type": "Organization",
+    "name": site.legalName
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": site.legalName,
+    "logo": {
+      "@type": "ImageObject",
+      "url": logoUrl
+    }
+  },
+  "datePublished": (published or lastmod or page.date) | isoDate,
+  "dateModified": (lastmod or page.date) | isoDate
+} | json(2) | safe }}
+</script>
+{% endif %}

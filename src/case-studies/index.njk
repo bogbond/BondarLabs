@@ -25,7 +25,7 @@ description: "Representative examples of Bondar Labs work — FDM, resin, file s
     <div class="grid grid-3">
       {% for cs in collections.caseStudies %}
         <a class="card card-link" href="{{ cs.url | url }}">
-          <div class="card-media"><img src="{{ cs.data.coverImage | url }}" alt="{{ cs.data.title }}" loading="lazy" decoding="async"></div>
+          <div class="card-media"><img src="{{ (cs.data.listingImage or cs.data.coverImage) | url }}" alt="{{ cs.data.listingAlt or cs.data.coverAlt or cs.data.title }}" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="kicker">{{ cs.data.tech }} · {{ cs.data.material }}</div>
             <h2 class="h3">{{ cs.data.title }}</h2>

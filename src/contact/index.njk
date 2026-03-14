@@ -44,6 +44,7 @@ description: "Contact Bondar Labs — Brampton, Huntingdon, Cambridgeshire. UK-w
           <form class="form" method="POST" action="https://formsubmit.co/{{ site.formsubmitEmail }}">
             <input type="hidden" name="_subject" value="New message — Bondar Labs" />
             <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="{{ site.baseUrl }}{{ '/contact/thanks/' | url }}" />
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="field">
               <label class="label" for="c-name">Name</label>

@@ -395,4 +395,59 @@
     const ev = fire.getAttribute('data-fire-event');
     if (ev) track(ev);
   }
+
+  // Simple horizontal carousels (e.g. home portfolio)
+  $$('[data-carousel]').forEach((carousel) => {
+    const track = $('[data-carousel-track]', carousel);
+    if (!track) return;
+
+    const btnPrev = $('[data-carousel-prev]', carousel);
+    const btnNext = $('[data-carousel-next]', carousel);
+
+    function getStep() {
+      const first = track.querySelector('.carousel-item');
+      const styles = getComputedStyle(track);
+      const gapRaw = styles.columnGap || styles.gap || '16px';
+      const gap = parseFloat(gapRaw) || 16;
+      if (first) {
+        const w = first.getBoundingClientRect().width;
+        return Math.max(120, Math.round(w + gap));
+      }
+      return Math.max(120, Math.round(track.clientWidth * 0.9));
+    }
+
+    function updateButtons() {
+      const max = track.scrollWidth - track.clientWidth;
+      const x = track.scrollLeft;
+      const atStart = x <= 1;
+      const atEnd = x >= max - 1;
+      if (btnPrev) btnPrev.disabled = atStart;
+      if (btnNext) btnNext.disabled = atEnd;
+    }
+
+    function scrollByDir(dir) {
+      track.scrollBy({ left: dir * getStep(), behavior: 'smooth' });
+    }
+
+    btnPrev?.addEventListener('click', () => scrollByDir(-1));
+    btnNext?.addEventListener('click', () => scrollByDir(1));
+
+    track.addEventListener('scroll', () => {
+      window.requestAnimationFrame(updateButtons);
+    }, { passive: true });
+
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        scrollByDir(1);
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        scrollByDir(-1);
+      }
+    });
+
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+  });
 })();
