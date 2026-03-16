@@ -3,6 +3,9 @@ layout: layouts/article.njk
 title: Carbon-fibre composites
 category: FDM
 summary: "Stiffer, more dimensionally stable parts for tooling, fixtures and functional components — with a premium matte finish."
+description: "Carbon-fibre composite 3D printing for stiff trays, tooling, fixtures and matte-finish functional parts where rigidity matters."
+image: "/assets/images/og/carbon-fibre-asa-tray.jpg"
+ogImageAlt: "Matte black carbon-fibre ASA tray printed with a clean layered finish."
 intro: "Carbon‑fibre reinforced filaments are chosen when stiffness and stability matter more than flexibility — ideal for jigs, fixtures and rigid brackets."
 order: 7
 ---

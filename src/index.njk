@@ -1,131 +1,317 @@
 ---
 layout: layouts/base.njk
-title: "Precision 3D Printing & Prototyping"
-description: "Precision 3D printing & prototyping for business and individuals. Engineering-grade materials, fast response, local Cambridgeshire delivery and UK-wide shipping."
+title: "Custom 3D Printed Parts, Prototypes & Small-Batch Production"
+description: "Custom 3D printed parts, prototypes and small-batch production for businesses and individuals. Based near Cambridge with local delivery and UK-wide shipping."
 ---
 
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">Brampton, Huntingdon · UK-wide shipping</p>
-      <h1>Precision 3D Printing &amp; Prototyping for Business and Individuals.</h1>
-      <p class="lead">Engineering-grade materials, careful quality checks, and a fast response — usually within 1 hour during working hours.</p>
+      <p class="eyebrow">Based near Cambridge · Local delivery &amp; UK-wide shipping</p>
+      <h1 class="hero-title">Custom 3D Printed Parts,<br class="hero-title-break"> Prototypes &amp; Small-Batch<br class="hero-title-break"> Production</h1>
+      <p class="lead">Bondar Labs turns files, sketches or ideas into functional parts and prototypes for businesses and individuals — from one-off replacement parts to repeat batch orders, with the right process, material and finish.</p>
+
+      <div class="badges hero-use-cases">
+        <div class="badge"><span class="dot"></span>Replacement parts</div>
+        <div class="badge"><span class="dot"></span>Prototype parts</div>
+        <div class="badge"><span class="dot"></span>Enclosures &amp; brackets</div>
+        <div class="badge"><span class="dot"></span>Small-batch orders</div>
+        <div class="badge"><span class="dot"></span>High-detail resin</div>
+        <div class="badge"><span class="dot green"></span>No file? We can help</div>
+      </div>
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
-        <a class="btn btn-ghost" href="{{ '/services/' | url }}">Explore Services</a>
+        <a class="btn btn-ghost" href="#portfolio">View Portfolio</a>
       </div>
 
-      <div class="badges">
-        <div class="badge"><span class="dot gray"></span>Project-based pricing</div>
-        <div class="badge"><span class="dot green"></span>Engineering-grade materials</div>
-        <div class="badge"><span class="dot"></span>Local delivery from £5</div>
-        <div class="badge"><span class="dot"></span>UK shipping from £2.75</div>
+      <p class="hero-contact-line tiny">
+        Prefer to message?
+        <a href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a>
+        <span class="sep">·</span>
+        <a href="tel:{{ company.phoneE164 }}" data-track="phone_click">Call</a>
+        <span class="sep">·</span>
+        <a href="mailto:{{ company.email }}" data-track="email_click">Email</a>
+      </p>
+
+      <div class="hero-trust">
+        <span>Usually replies within 1 hour during working hours</span>
+        <span>No minimum order</span>
+        <span>Engineering-grade materials</span>
+        <span>Invoices available for business orders</span>
       </div>
     </div>
 
-    <div class="card">
+    <aside class="card hero-proof-card" data-proof-slider aria-label="What we make examples">
       <div class="card-body">
-        <div class="kicker">Quick contact</div>
-        <p class="muted" style="margin:10px 0 12px">Prefer to message?</p>
-        <div class="grid gap-10">
-          <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a>
-          <a class="btn btn-ghost" href="tel:{{ company.phoneE164 }}" data-track="phone_click">Call {{ company.phone }}</a>
-          <a class="btn btn-ghost" href="mailto:{{ company.email }}" data-track="email_click">Email {{ company.email }}</a>
+        <div class="hero-proof-head">
+          <div class="hero-proof-head-main">
+            <div class="kicker">What we make</div>
+            <p class="muted">Typical jobs covering repairs, repeat batches, design support and detail-led resin work.</p>
+          </div>
+
+          <div class="hero-proof-controls" aria-label="Browse what we make examples">
+            <button class="carousel-btn hero-proof-btn" type="button" data-proof-prev aria-label="Show previous what we make examples">
+              <span aria-hidden="true">←</span>
+            </button>
+            <button class="carousel-btn hero-proof-btn" type="button" data-proof-next aria-label="Show more what we make examples">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
         </div>
-        <p class="tiny muted" style="margin:12px 0 0">{{ company.locationShort }}</p>
+
+        <div class="hero-proof-pages">
+          <div class="hero-proof-page is-active" data-proof-page>
+            <a class="hero-proof-item" href="{{ '/case-studies/reverse-engineered-radio-front-cover/' | url }}">
+              <div class="hero-proof-thumb">
+                <img src="{{ '/assets/images/projects/reverse-engineered-radio-front-cover/cover.webp' | url }}" alt="Reverse-engineered replacement radio front cover" loading="eager" decoding="async">
+              </div>
+              <div class="hero-proof-text">
+                <div class="hero-proof-title">Replacement parts</div>
+                <p>Reverse-engineered covers, clips and hard-to-find components.</p>
+              </div>
+            </a>
+
+            <a class="hero-proof-item" href="{{ '/case-studies/departure-board-enclosure-batch/' | url }}">
+              <div class="hero-proof-thumb">
+                <img src="{{ '/assets/images/projects/departure-board-enclosure-batch/cover.webp' | url }}" alt="Batch production example with repeatable enclosure housings" loading="eager" decoding="async">
+              </div>
+              <div class="hero-proof-text">
+                <div class="hero-proof-title">Batch production</div>
+                <p>Repeatable runs for products, brands and internal-use parts.</p>
+              </div>
+            </a>
+
+            <a class="hero-proof-item" href="{{ '/case-studies/resin-coil-bobbins/' | url }}">
+              <div class="hero-proof-thumb">
+                <img src="{{ '/assets/images/projects/resin-coil-bobbins/cover.webp' | url }}" alt="Precision resin parts produced for custom coil bobbins" loading="eager" decoding="async">
+              </div>
+              <div class="hero-proof-text">
+                <div class="hero-proof-title">Precision resin</div>
+                <p>High-detail parts with clean features for specialist applications.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="hero-proof-page" data-proof-page aria-hidden="true">
+            <a class="hero-proof-item" href="{{ '/case-studies/aston-martin-crystal-key-buttons/' | url }}">
+              <div class="hero-proof-thumb">
+                <img src="{{ '/assets/images/projects/aston-martin-crystal-key-buttons/cover.webp' | url }}" alt="Replacement Aston Martin key buttons created with CAD and FDM" loading="lazy" decoding="async">
+              </div>
+              <div class="hero-proof-text">
+                <div class="hero-proof-title">Design support</div>
+                <p>CAD edits, fit checks and print-ready prep before production.</p>
+              </div>
+            </a>
+
+            <a class="hero-proof-item" href="{{ '/case-studies/branded-mini-scrapers-dreamy-cake-batch/' | url }}">
+              <div class="hero-proof-thumb">
+                <img src="{{ '/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/cover.webp' | url }}" alt="Branded mini scrapers produced as a repeat batch" loading="lazy" decoding="async">
+              </div>
+              <div class="hero-proof-text">
+                <div class="hero-proof-title">Branded batches</div>
+                <p>Promotional and branded items produced in repeatable short runs.</p>
+              </div>
+            </a>
+
+            <a class="hero-proof-item" href="{{ '/case-studies/personalised-led-brake-disc-lamp/' | url }}">
+              <div class="hero-proof-thumb">
+                <img src="{{ '/assets/images/projects/personalised-led-brake-disc-lamp/cover.webp' | url }}" alt="Personalised LED brake disc display lamp" loading="lazy" decoding="async">
+              </div>
+              <div class="hero-proof-text">
+                <div class="hero-proof-title">Personalised builds</div>
+                <p>One-off display and gift pieces with custom details and finishes.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="hero-proof-page" data-proof-page aria-hidden="true">
+            <a class="hero-proof-item" href="{{ '/case-studies/custom-74mm-intake-flow-straightener/' | url }}">
+              <div class="hero-proof-thumb">
+                <img src="{{ '/assets/images/projects/custom-74mm-intake-flow-straightener/cover.webp' | url }}" alt="Functional automotive prototype with honeycomb flow straightener" loading="lazy" decoding="async">
+              </div>
+              <div class="hero-proof-text">
+                <div class="hero-proof-title">Functional prototypes</div>
+                <p>Trial parts for airflow, fit, assembly and real-world testing.</p>
+              </div>
+            </a>
+
+            <a class="hero-proof-item" href="{{ '/case-studies/armmed-designs-hanging-sign/' | url }}">
+              <div class="hero-proof-thumb">
+                <img src="{{ '/assets/images/projects/armmed-designs-hanging-sign/cover.webp' | url }}" alt="3D printed branded hanging sign" loading="lazy" decoding="async">
+              </div>
+              <div class="hero-proof-text">
+                <div class="hero-proof-title">Decorative signage</div>
+                <p>Clean presentation pieces, signage and branded display work.</p>
+              </div>
+            </a>
+
+            <a class="hero-proof-item" href="{{ '/case-studies/sunny-miami-sunny-atlantis-resin-miniatures/' | url }}">
+              <div class="hero-proof-thumb">
+                <img src="{{ '/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/cover.webp' | url }}" alt="Fine-detail resin miniatures for a client in Denmark" loading="lazy" decoding="async">
+              </div>
+              <div class="hero-proof-text">
+                <div class="hero-proof-title">Miniature detail</div>
+                <p>Fine-detail resin figures and small showcase parts.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-proof-footer">
+          <div class="hero-proof-dots" aria-label="What we make pages">
+            <button class="hero-proof-dot is-active" type="button" data-proof-dot aria-label="Show page 1 of what we make highlights" aria-pressed="true"></button>
+            <button class="hero-proof-dot" type="button" data-proof-dot aria-label="Show page 2 of what we make highlights" aria-pressed="false"></button>
+            <button class="hero-proof-dot" type="button" data-proof-dot aria-label="Show page 3 of what we make highlights" aria-pressed="false"></button>
+          </div>
+
+          <a class="hero-proof-link" href="#portfolio">View Portfolio</a>
+        </div>
+
+        <p class="hero-proof-note">No final file yet? Send a sketch, sample or reference photos and we’ll guide the next step.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="services-overview">
+  <div class="container">
+    <div class="overview">
+      <div class="section-head">
+        <h2 class="h2">Services</h2>
+        <p class="muted">From one-off replacements to repeatable commercial runs — the main ways clients typically use Bondar Labs.</p>
+      </div>
+
+      <div class="overview-grid">
+        {% for service in collections.services %}
+          <a class="card card-link overview-card overview-card--service overview-card--{{ service.fileSlug }}" href="{{ service.url | url }}">
+            <div class="card-media overview-card-media"><img src="{{ service.data.coverImage | url }}" alt="{{ service.data.coverAlt or service.data.title }}" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <div class="kicker">{{ service.data.kicker }}</div>
+              <h3 class="h3">{{ service.data.title }}</h3>
+              <p class="muted">{{ service.data.summary }}</p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+
+      <div class="overview-foot">
+        <p class="overview-note">Not sure which route fits your job? Send the brief and we’ll point you to the right process.</p>
+        <a class="btn btn-ghost" href="{{ '/services/' | url }}">View all services</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section section-muted" id="how-it-works">
   <div class="container">
-    <h2 class="h2">Services</h2>
-    <p class="muted">A small, professional production partner — flexible on one-offs, reliable on repeat runs.</p>
-
-    <div class="grid grid-4 mt-16">
-      <a class="card card-link" href="{{ '/services/fdm/' | url }}">
-        <div class="card-media"><img src="{{ '/assets/images/Precision-3D-Printed-Gears.webp' | url }}" alt="FDM 3D printing example" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="kicker">FDM</div>
-          <h3 class="h3">FDM 3D Printing</h3>
-          <p class="muted">Functional parts, fixtures, housings and prototypes in engineering-grade materials.</p>
-        </div>
-      </a>
-
-      <a class="card card-link" href="{{ '/services/resin/' | url }}">
-        <div class="card-media"><img src="{{ '/assets/images/12K-MSLA-Resin-Miniature.webp' | url }}" alt="Resin 3D printing example" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="kicker">Resin</div>
-          <h3 class="h3">Resin 3D Printing</h3>
-          <p class="muted">High-detail prints for miniatures, prototypes, and precision components.</p>
-        </div>
-      </a>
-
-      <a class="card card-link" href="{{ '/services/design-support/' | url }}">
-        <div class="card-media"><img src="{{ '/assets/images/Reverse-Engineered-Tripod-Joint.webp' | url }}" alt="Reverse engineered 3D part example" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="kicker">CAD</div>
-          <h3 class="h3">3D Design &amp; File Support</h3>
-          <p class="muted">Don’t have a file? We can design, adjust, or recreate parts for print.</p>
-        </div>
-      </a>
-
-      <a class="card card-link" href="{{ '/services/batch-production/' | url }}">
-        <div class="card-media"><img src="{{ '/assets/images/Batch-Production-Example.webp' | url }}" alt="Batch production example" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="kicker">B2B</div>
-          <h3 class="h3">Batch &amp; Commercial Production</h3>
-          <p class="muted">Repeat runs, sample approval, QC checks and batch discounts.</p>
-        </div>
-      </a>
+    <div class="section-head">
+      <h2 class="h2">How it works</h2>
+      <p class="muted">Simple for one-off parts, clear enough for repeat business orders and reorders.</p>
     </div>
 
-    <div class="mt-16">
-      <a class="btn btn-ghost" href="{{ '/services/' | url }}">View all services</a>
+    <div class="grid process-grid mt-16">
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 1</div>
+          <h3 class="h3">Send a file, sketch or photo</h3>
+          <p class="muted">STL, STEP and 3MF are ideal — but measurements, reference photos or a rough brief also work.</p>
+        </div>
+      </div>
+
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 2</div>
+          <h3 class="h3">Get a practical recommendation</h3>
+          <p class="muted">We suggest the right process, material and finish, then confirm price and lead time before production starts.</p>
+        </div>
+      </div>
+
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 3</div>
+          <h3 class="h3">Approve and we print</h3>
+          <p class="muted">Once approved, the job is scheduled, produced and checked so the parts arrive ready for real use.</p>
+        </div>
+      </div>
+
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 4</div>
+          <h3 class="h3">Collect, receive or reorder</h3>
+          <p class="muted">Choose local delivery or UK-wide shipping. Repeat orders can be rerun with the same agreed setup.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-actions mt-16">
+      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Send a file or brief</a>
+      <a class="btn btn-ghost" href="{{ '/contact/' | url }}">Ask a question</a>
     </div>
   </div>
 </section>
 
-<section class="section section-muted">
+<section class="section" id="materials-overview">
   <div class="container">
-    <h2 class="h2">Materials</h2>
-    <p class="muted">PLA, PETG, ABS, ASA, TPU, Nylon, carbon-fibre composites, and precision resin options.</p>
+    <div class="overview">
+      <div class="section-head">
+        <h2 class="h2">Materials</h2>
+        <p class="muted">Start with the result you need — fast prototypes, tougher functional parts, outdoor durability or fine-detail resin work.</p>
+      </div>
 
-    <div class="grid grid-3 mt-16">
-      <a class="card card-link" href="{{ '/materials/' | url }}" aria-label="Materials overview">
-        <div class="card-body">
-          <div class="kicker">Guide</div>
-          <h3 class="h3">Choose the right material</h3>
-          <p class="muted">A simple guide to strength, heat resistance, flexibility, and surface finish.</p>
-        </div>
-      </a>
-      <a class="card card-link" href="{{ '/materials/resin/' | url }}">
-        <div class="card-body">
-          <div class="kicker">MSLA</div>
-          <h3 class="h3">Resin options</h3>
-          <p class="muted">Water-washable grey by default, ABS-like, flexible, and transparent on request.</p>
-        </div>
-      </a>
-      <a class="card card-link" href="{{ '/quote/' | url }}">
-        <div class="card-body">
-          <div class="kicker">Not sure?</div>
-          <h3 class="h3">We’ll help you decide</h3>
-          <p class="muted">Describe your part and we’ll recommend material and process.</p>
-        </div>
-      </a>
+      <div class="overview-grid">
+        <a class="card card-link overview-card overview-card--material overview-card--pla" href="{{ '/materials/pla/' | url }}">
+          <div class="card-media overview-card-media"><img src="{{ '/assets/images/materials/pla-branded-threaded-caps.webp' | url }}" alt="Colourful branded PLA threaded caps with knurled grip arranged in rows" loading="lazy" decoding="async"></div>
+          <div class="card-body">
+            <div class="kicker">Everyday prototypes</div>
+            <h3 class="h3">PLA</h3>
+            <p class="muted">Clean prototypes, branded caps, cosmetic parts and everyday prints with sharp detail and fast turnaround.</p>
+          </div>
+        </a>
+
+        <a class="card card-link overview-card overview-card--material overview-card--asa" href="{{ '/materials/asa/' | url }}">
+          <div class="card-media overview-card-media"><img src="{{ '/assets/images/materials/asa-intake-flow-straighteners.webp' | url }}" alt="Two black ASA intake flow straighteners with honeycomb cells shown close up" loading="lazy" decoding="async"></div>
+          <div class="card-body">
+            <div class="kicker">Heat &amp; outdoors</div>
+            <h3 class="h3">ABS &amp; ASA</h3>
+            <p class="muted">A stronger choice for warm environments, engine-bay parts, workshop use and outdoor exposure where PLA is not ideal.</p>
+          </div>
+        </a>
+
+        <a class="card card-link overview-card overview-card--material overview-card--carbon" href="{{ '/materials/carbon-fibre-composites/' | url }}">
+          <div class="card-media overview-card-media"><img src="{{ '/assets/images/materials/carbon-fibre-asa-tray.webp' | url }}" alt="Matte black carbon-fibre ASA tray with tall side walls and layered finish" loading="lazy" decoding="async"></div>
+          <div class="card-body">
+            <div class="kicker">High stiffness</div>
+            <h3 class="h3">Carbon-filled composites</h3>
+            <p class="muted">Stiffer matte-finish trays, tooling, brackets and functional parts where rigidity matters more than flex.</p>
+          </div>
+        </a>
+
+        <a class="card card-link overview-card overview-card--material overview-card--resin" href="{{ '/materials/resin/' | url }}">
+          <div class="card-media overview-card-media"><img src="{{ '/assets/images/materials/resin-grey-mechanical-parts.webp' | url }}" alt="Grey resin mechanical parts including housings, gears and small lever components" loading="lazy" decoding="async"></div>
+          <div class="card-body">
+            <div class="kicker">Fine detail</div>
+            <h3 class="h3">Resin options</h3>
+            <p class="muted">Smooth surfaces, crisp edges and small mechanical parts with a full wash, dry and UV-cure workflow included.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="overview-foot">
+        <p class="overview-note">Not sure which material fits? Tell us what the part needs to do and we’ll recommend the safest option.</p>
+        <a class="btn btn-ghost" href="{{ '/materials/' | url }}">View material guide</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="portfolio">
   <div class="container">
     <div class="carousel" data-carousel>
       <div class="carousel-head">
         <div class="carousel-copy">
           <h2 class="h2">Portfolio</h2>
-          <p class="muted">A selection of recent prints and prototype work.</p>
+          <p class="muted">Selected repairs, prototype parts and repeat production work.</p>
         </div>
 
         <div class="carousel-controls" aria-label="Portfolio carousel controls">
@@ -138,9 +324,7 @@ description: "Precision 3D printing & prototyping for business and individuals. 
         </div>
       </div>
 
-      <div class="carousel-track" data-carousel-track aria-label="Case studies" tabindex="0">
-        {# NOTE: Nunjucks `slice` filter is *not* array slicing (it chunks into N slices).
-           So we limit items via loop.index0 to reliably show up to 10 case cards. #}
+      <div class="carousel-track" data-carousel-track aria-label="Portfolio examples" tabindex="0">
         {% for cs in collections.caseStudies %}
           {% if loop.index0 < 10 %}
             <a class="card card-link carousel-item" href="{{ cs.url | url }}">
@@ -154,20 +338,20 @@ description: "Precision 3D printing & prototyping for business and individuals. 
           {% endif %}
         {% endfor %}
 
-        <a class="card card-link carousel-item case-card-all" href="{{ '/case-studies/' | url }}" aria-label="View all case studies">
+        <a class="card card-link carousel-item case-card-all" href="{{ '/case-studies/' | url }}" aria-label="View portfolio">
           <div class="case-card-all-media" aria-hidden="true">
             <span class="case-card-all-arrow">→</span>
           </div>
           <div class="card-body">
             <div class="kicker">Explore</div>
-            <h3 class="h3">View all case studies</h3>
+            <h3 class="h3">View Portfolio</h3>
             <p class="muted">Open the full portfolio</p>
           </div>
         </a>
       </div>
 
       <div class="mt-16">
-        <a class="btn btn-ghost" href="{{ '/case-studies/' | url }}">View all case studies</a>
+        <a class="btn btn-ghost" href="{{ '/case-studies/' | url }}">View Portfolio</a>
       </div>
     </div>
   </div>

@@ -3,6 +3,9 @@ layout: layouts/article.njk
 title: PLA
 category: FDM
 summary: "Clean-looking, cost‑effective prints for prototypes and everyday parts — with the widest colour choice."
+description: "PLA 3D printing for branded caps, prototypes and everyday parts with clean detail, wide colour choice and fast turnaround."
+image: "/assets/images/og/pla-branded-threaded-caps.jpg"
+ogImageAlt: "Colourful branded PLA threaded caps with knurled grip."
 intro: "PLA is the go-to filament for fast prototypes and great-looking parts when high heat and harsh outdoor exposure aren’t required."
 order: 1
 ---

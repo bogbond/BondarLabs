@@ -1,21 +1,5 @@
 {
-  "/assets/images/12K-MSLA-Resin-Miniature.webp": {
-    "width": 600,
-    "height": 450
-  },
   "/assets/images/3D-Printed-Microscope-Mount.webp": {
-    "width": 600,
-    "height": 450
-  },
-  "/assets/images/8K-SLA-Scale-Model-Audi-S1.webp": {
-    "width": 600,
-    "height": 425
-  },
-  "/assets/images/Batch-Production-Example.webp": {
-    "width": 600,
-    "height": 450
-  },
-  "/assets/images/Designer-Hobby-Prints-Bunny.webp": {
     "width": 600,
     "height": 450
   },
@@ -26,18 +10,6 @@
   "/assets/images/Personalized-Wall-Desk-Plaques.webp": {
     "width": 600,
     "height": 450
-  },
-  "/assets/images/Precision-3D-Printed-Gears.webp": {
-    "width": 600,
-    "height": 450
-  },
-  "/assets/images/Reverse-Engineered-Tripod-Joint.webp": {
-    "width": 600,
-    "height": 450
-  },
-  "/assets/images/brand/icons/icon-128.png": {
-    "width": 128,
-    "height": 128
   },
   "/assets/images/brand/icons/icon-150.png": {
     "width": 150,
@@ -55,29 +27,13 @@
     "width": 192,
     "height": 192
   },
-  "/assets/images/brand/icons/icon-256.png": {
-    "width": 256,
-    "height": 256
-  },
   "/assets/images/brand/icons/icon-32.png": {
     "width": 32,
     "height": 32
   },
-  "/assets/images/brand/icons/icon-48.png": {
-    "width": 48,
-    "height": 48
-  },
   "/assets/images/brand/icons/icon-512.png": {
     "width": 512,
     "height": 512
-  },
-  "/assets/images/brand/icons/icon-64.png": {
-    "width": 64,
-    "height": 64
-  },
-  "/assets/images/brand/icons/icon-96.png": {
-    "width": 96,
-    "height": 96
   },
   "/assets/images/brand/logo-dark.png": {
     "width": 800,
@@ -115,11 +71,27 @@
     "width": 1600,
     "height": 916
   },
-  "/assets/images/og-preview.jpg": {
+  "/assets/images/materials/asa-intake-flow-straighteners.webp": {
+    "width": 900,
+    "height": 675
+  },
+  "/assets/images/materials/carbon-fibre-asa-tray.webp": {
+    "width": 900,
+    "height": 675
+  },
+  "/assets/images/materials/pla-branded-threaded-caps.webp": {
+    "width": 900,
+    "height": 675
+  },
+  "/assets/images/materials/resin-grey-mechanical-parts.webp": {
+    "width": 900,
+    "height": 675
+  },
+  "/assets/images/og/armmed-designs-hanging-sign.jpg": {
     "width": 1200,
     "height": 630
   },
-  "/assets/images/og/armmed-designs-hanging-sign.jpg": {
+  "/assets/images/og/asa-intake-flow-straighteners.jpg": {
     "width": 1200,
     "height": 630
   },
@@ -127,7 +99,15 @@
     "width": 1200,
     "height": 630
   },
+  "/assets/images/og/batch-commercial-mini-scrapers.jpg": {
+    "width": 1200,
+    "height": 630
+  },
   "/assets/images/og/branded-mini-scrapers-dreamy-cake-batch.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/assets/images/og/carbon-fibre-asa-tray.jpg": {
     "width": 1200,
     "height": 630
   },
@@ -139,6 +119,10 @@
     "width": 1200,
     "height": 630
   },
+  "/assets/images/og/fdm-printed-gears.jpg": {
+    "width": 1200,
+    "height": 630
+  },
   "/assets/images/og/personalised-candle-jars.jpg": {
     "width": 1200,
     "height": 630
@@ -147,7 +131,19 @@
     "width": 1200,
     "height": 630
   },
+  "/assets/images/og/pla-branded-threaded-caps.jpg": {
+    "width": 1200,
+    "height": 630
+  },
   "/assets/images/og/resin-coil-bobbins.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/assets/images/og/resin-grey-mechanical-parts.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/assets/images/og/resin-miniature-figure.jpg": {
     "width": 1200,
     "height": 630
   },
@@ -155,13 +151,17 @@
     "width": 1200,
     "height": 630
   },
+  "/assets/images/og/reverse-engineered-tripod-joint.jpg": {
+    "width": 1200,
+    "height": 630
+  },
   "/assets/images/og/sunny-miami-sunny-atlantis-resin-miniatures.jpg": {
     "width": 1200,
     "height": 630
   },
-  "/assets/images/projects/armmed-designs-hanging-sign/01-front-hanging-dark-wood.webp": {
-    "width": 2000,
-    "height": 1500
+  "/assets/images/og-preview.jpg": {
+    "width": 1200,
+    "height": 630
   },
   "/assets/images/projects/armmed-designs-hanging-sign/02-front-hanging-light-wood.webp": {
     "width": 2000,
@@ -187,23 +187,11 @@
     "width": 1500,
     "height": 2000
   },
-  "/assets/images/projects/aston-martin-crystal-key-buttons/02-buttons-with-plungers.webp": {
-    "width": 1500,
-    "height": 2000
-  },
-  "/assets/images/projects/aston-martin-crystal-key-buttons/03-prototype-paired-buttons.webp": {
-    "width": 1500,
-    "height": 2000
-  },
   "/assets/images/projects/aston-martin-crystal-key-buttons/04-test-fit-white-buttons.webp": {
     "width": 1500,
     "height": 2000
   },
   "/assets/images/projects/aston-martin-crystal-key-buttons/05-installed-buttons-in-hand.webp": {
-    "width": 1500,
-    "height": 2000
-  },
-  "/assets/images/projects/aston-martin-crystal-key-buttons/06-installed-buttons-on-table.webp": {
     "width": 1500,
     "height": 2000
   },
@@ -218,10 +206,6 @@
   "/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/01-220-mini-scrapers-front-batch.webp": {
     "width": 1500,
     "height": 2000
-  },
-  "/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/02-220-mini-scrapers-rear-batch.webp": {
-    "width": 2000,
-    "height": 1500
   },
   "/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/03-four-mini-scrapers-front-view.webp": {
     "width": 1500,
@@ -240,10 +224,6 @@
     "height": 500
   },
   "/assets/images/projects/custom-74mm-intake-flow-straightener/01-two-flow-straighteners-front.webp": {
-    "width": 1500,
-    "height": 1500
-  },
-  "/assets/images/projects/custom-74mm-intake-flow-straightener/02-two-flow-straighteners-angled.webp": {
     "width": 1500,
     "height": 1500
   },
@@ -291,19 +271,11 @@
     "width": 800,
     "height": 500
   },
-  "/assets/images/projects/personalised-candle-jars/01-gold-candles-stacked.webp": {
-    "width": 1500,
-    "height": 2000
-  },
   "/assets/images/projects/personalised-candle-jars/02-gold-candles-row.webp": {
     "width": 1500,
     "height": 2000
   },
   "/assets/images/projects/personalised-candle-jars/03-blue-candle-with-lid.webp": {
-    "width": 1500,
-    "height": 1500
-  },
-  "/assets/images/projects/personalised-candle-jars/04-gold-silver-candles-lids.webp": {
     "width": 1500,
     "height": 1500
   },
@@ -315,19 +287,11 @@
     "width": 1500,
     "height": 1500
   },
-  "/assets/images/projects/personalised-candle-jars/07-black-candle-and-lid.webp": {
-    "width": 1500,
-    "height": 1500
-  },
   "/assets/images/projects/personalised-candle-jars/cover.webp": {
     "width": 800,
     "height": 500
   },
   "/assets/images/projects/personalised-led-brake-disc-lamp/01-brake-disc-print-bed-with-supports.webp": {
-    "width": 1500,
-    "height": 1500
-  },
-  "/assets/images/projects/personalised-led-brake-disc-lamp/02-removing-supports-from-caliper.webp": {
     "width": 1500,
     "height": 1500
   },
@@ -351,10 +315,6 @@
     "width": 1500,
     "height": 2000
   },
-  "/assets/images/projects/personalised-led-brake-disc-lamp/08-finished-lamp-close-up.webp": {
-    "width": 1500,
-    "height": 2000
-  },
   "/assets/images/projects/personalised-led-brake-disc-lamp/cover.webp": {
     "width": 2000,
     "height": 1500
@@ -371,14 +331,6 @@
     "width": 1500,
     "height": 2000
   },
-  "/assets/images/projects/resin-coil-bobbins/03-square-resin-bobbins-batch.webp": {
-    "width": 1500,
-    "height": 1500
-  },
-  "/assets/images/projects/resin-coil-bobbins/04-rectangular-bobbin-detail.webp": {
-    "width": 1500,
-    "height": 1500
-  },
   "/assets/images/projects/resin-coil-bobbins/05-clear-resin-bobbin.webp": {
     "width": 1500,
     "height": 2000
@@ -392,10 +344,6 @@
     "height": 500
   },
   "/assets/images/projects/reverse-engineered-radio-front-cover/01-old-and-new-front-comparison.webp": {
-    "width": 2000,
-    "height": 1500
-  },
-  "/assets/images/projects/reverse-engineered-radio-front-cover/02-old-and-new-rear-comparison.webp": {
     "width": 2000,
     "height": 1500
   },
@@ -423,14 +371,6 @@
     "width": 2000,
     "height": 1500
   },
-  "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/02-sunny-atlantis-back.webp": {
-    "width": 2000,
-    "height": 1500
-  },
-  "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/03-sunny-atlantis-with-microsd-for-scale.webp": {
-    "width": 2000,
-    "height": 1500
-  },
   "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/04-sunny-miami-front-view.webp": {
     "width": 2000,
     "height": 1500
@@ -450,5 +390,21 @@
   "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/preview.webp": {
     "width": 800,
     "height": 500
+  },
+  "/assets/images/services/batch-commercial-mini-scrapers.webp": {
+    "width": 900,
+    "height": 675
+  },
+  "/assets/images/services/fdm-printed-gears.webp": {
+    "width": 900,
+    "height": 675
+  },
+  "/assets/images/services/resin-miniature-figure.webp": {
+    "width": 900,
+    "height": 675
+  },
+  "/assets/images/services/reverse-engineered-tripod-joint.webp": {
+    "width": 900,
+    "height": 675
   }
 }

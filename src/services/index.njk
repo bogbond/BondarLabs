@@ -1,14 +1,14 @@
 ---
 layout: layouts/base.njk
 title: Services
-description: "FDM and resin 3D printing, 3D design & file support, and batch production for business and individuals."
+description: "FDM and resin 3D printing, 3D design & file support, and batch & commercial orders for business and individuals."
 ---
 
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Bondar Labs · Services</p>
     <h1>Services</h1>
-    <p class="lead">From one-off functional parts to repeat batch production — with engineering-grade materials and careful quality checks.</p>
+    <p class="lead">From one-off functional parts to repeat commercial runs — with engineering-grade materials and careful quality checks.</p>
   </div>
 </section>
 
@@ -17,7 +17,7 @@ description: "FDM and resin 3D printing, 3D design & file support, and batch pro
     <div class="grid grid-2">
       {% for s in collections.services %}
         <a class="card card-link" href="{{ s.url | url }}">
-          <div class="card-media"><img src="{{ s.data.coverImage | url }}" alt="{{ s.data.title }}" loading="lazy" decoding="async"></div>
+          <div class="card-media"><img src="{{ s.data.coverImage | url }}" alt="{{ s.data.coverAlt or s.data.title }}" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="kicker">{{ s.data.kicker }}</div>
             <h2 class="h3">{{ s.data.title }}</h2>

@@ -1,173 +1,322 @@
 ---
 layout: layouts/base.njk
-title: "3D Printing for Business"
-description: "Commercial-friendly 3D printing in the UK — small-batch production, invoices, optional QC measurement reports, and repeatable reorders. Near Cambridge with UK-wide shipping."
+title: "3D Printing for Business in the UK"
+seoTitle: "3D Printing for Business in the UK | RFQs, Repeat Orders & Small-Batch Supply"
+description: "Commercial-friendly 3D printing for UK businesses — RFQs, repeat orders, invoices, first-article samples and practical quality checks from a supplier near Cambridge."
+image: "/assets/images/og/batch-commercial-mini-scrapers.jpg"
+ogImageAlt: "Pastel-coloured branded mini scrapers laid out as a commercial batch order."
+faqItems:
+  - question: "Do you provide invoices for business orders?"
+    answer: "Yes. Bondar Labs can issue invoices for commercial orders. The business page explains how to send an RFQ and what information helps produce an accurate quote quickly."
+  - question: "Can you support repeat orders from a fixed specification?"
+    answer: "Yes. Once a part, material and workflow are agreed, reorders can be supplied against the same confirmed specification, with revision changes discussed before production starts."
+  - question: "Do you offer first-article samples before a larger batch?"
+    answer: "Yes. For larger or more sensitive orders, a first-article or pilot sample can be produced before the main run so fit, finish and function can be checked early."
+  - question: "Can you work with purchase orders or an NDA?"
+    answer: "PO-style ordering can be supported by agreement where it matches the client’s process, and confidentiality can be covered by an NDA or a customer-provided agreement when needed."
+  - question: "Can you measure critical dimensions or provide a simple QC report?"
+    answer: "Visual QC is standard. Where required, agreed critical features can be measured with precision callipers and documented in a simple measurement report."
+  - question: "What if our file is not fully ready?"
+    answer: "That is common. Files, rough CAD, photos, sketches and key measurements can all be enough to start. If more work is needed, design support can be folded into the job."
 ---
 
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">BONDAR LABS LTD · Company No. 17009947</p>
-    <h1>3D Printing for Business in the UK</h1>
-    <p class="lead">
-      A practical 3D printing partner for small and growing teams — consistent batches, clear specs, optional first-article samples,
-      and quality checks you can rely on. Based near Cambridge with UK-wide shipping.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
-      <a class="btn btn-ghost" href="{{ '/services/batch-production/' | url }}">Batch & Commercial Orders</a>
-    </div>
-    <p class="muted" style="margin-top:10px">
-      Response time: {{ company.responseTime }} · Invoices available · Not VAT registered
-    </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="grid grid-2">
-
-      <div class="card">
-        <div class="card-body prose">
-          <h2>Who this is for</h2>
-          <p>
-            Startups, product teams, small manufacturers, labs/universities, agencies and makers who need
-            reliable parts without the overhead of a large bureau.
-          </p>
-
-          <h2>Typical work</h2>
-          <ul>
-            <li>Pilot runs and short production batches (often <strong>50–500+ units</strong>, depending on part complexity)</li>
-            <li>Enclosures, brackets, mounts, spacers, jigs and fixtures</li>
-            <li>Replacement parts and short-run manufacturing</li>
-            <li>High-detail resin parts for masters, stamps and small precision components</li>
-          </ul>
-
-          <h2>Processes and materials</h2>
-          <p>
-            We support both <strong>FDM</strong> (functional parts, larger components, great value for volume) and
-            <strong>MSLA resin</strong> (high-detail small parts with smooth surfaces).
-          </p>
-          <p class="muted">
-            For larger batches, we often recommend PLA or PETG for predictable throughput and cost efficiency.
-            Engineering materials are available where required, with feasibility confirmed upfront.
-          </p>
-
-          <p>
-            For full details on batch production workflows, see
-            <a href="{{ '/services/batch-production/' | url }}">Batch & Commercial Orders</a>.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body prose">
-          <div class="kicker">Fast start</div>
-          <h2 class="h3">Send an RFQ (request for quote)</h2>
-          <p class="muted">
-            The quickest way to get an accurate quote is to send files and a short brief.
-            If you’re unsure about material or settings, we’ll recommend options with clear trade-offs.
-          </p>
-
-          <ul>
-            <li><strong>Files</strong> (stl/step/3mf/obj) + notes on what must not change</li>
-            <li><strong>Quantity</strong> (and whether you expect repeat reorders)</li>
-            <li><strong>Deadline</strong> (ideal and latest acceptable)</li>
-            <li><strong>Finish expectations</strong> (cosmetic vs functional; visible faces)</li>
-            <li><strong>Critical dimensions</strong> and fit requirements (holes, mating interfaces, clearances)</li>
-            <li><strong>Packaging</strong> needs (bulk, individual bagging, labels, kitting)</li>
-            <li><strong>QC</strong> expectations (visual only vs measured features; report needed or not)</li>
-          </ul>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
-            <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a>
-          </div>
-
-          <div class="card mt-12">
-            <div class="card-body">
-              <div class="kicker">Call</div>
-              <p class="muted" style="margin:8px 0 12px">
-                Prefer a quick discussion? Call or WhatsApp to confirm requirements and timelines.
-              </p>
-              <div class="hero-actions">
-                <a class="btn btn-ghost" href="tel:{{ company.phoneE164 }}" data-track="phone_click">Call</a>
-                <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="grid grid-2">
-
-      <div class="card">
-        <div class="card-body prose">
-          <h2>Quality checks and measurement reporting</h2>
-          <p>
-            For business orders, consistency matters. We can agree a clear spec (material, finish, critical dimensions),
-            then run a repeatable workflow for reorders and revisions.
-          </p>
-          <p>
-            Visual QC is standard. For tighter requirements, we can measure agreed critical features using precision callipers.
-            If your project needs documentation, we can provide a simple measurement pack by agreement:
-          </p>
-          <ul>
-            <li>Photos showing how key dimensions are measured</li>
-            <li>Annotated measurement points (e.g., A–B, C–D)</li>
-            <li>A table (Excel/CSV) with measured values</li>
-            <li>Optional comparison vs CAD with deviation (%) where relevant</li>
-          </ul>
-          <p class="muted">
-            Scope is agreed upfront (which features, how many samples per batch, and what “acceptable” looks like).
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body prose">
-          <h2>Procurement-friendly and confidential</h2>
-          <ul>
-            <li><strong>Invoices</strong> available for commercial orders</li>
-            <li><strong>Purchase orders (PO)</strong> supported by agreement where applicable (tell us your process and we’ll confirm)</li>
-            <li><strong>Confidential handling</strong> by default; NDA / customer NDA available on request</li>
-            <li><strong>First-article samples</strong> available before the full batch (recommended for larger runs)</li>
-            <li><strong>Packaging options</strong> by agreement: individual bagging, labels, kitting, boxes</li>
-          </ul>
-
-          <h2>Delivery</h2>
-          <p>
-            Based near Cambridge (Huntingdon area, close to Peterborough).
-            UK-wide shipping is standard, with international shipping available on request.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="card mt-12">
-      <div class="card-body prose">
-        <h2>Ready to quote?</h2>
-        <p>
-          Send your files and requirements and we’ll come back with a clear recommendation and a transparent quote.
-          If you expect repeat orders, mention it — we can help keep reorders consistent with revision tracking.
+    <div class="page-hero-grid">
+      <div class="page-hero-copy">
+        <p class="eyebrow">Bondar Labs · For Business</p>
+        <h1>3D Printing for Business in the UK</h1>
+        <p class="lead">
+          A commercial-friendly 3D printing supplier for product teams, labs, agencies and small manufacturers —
+          with clear RFQs, repeat-order control, first-article samples and UK-wide delivery, without the overhead of a large bureau.
         </p>
+
         <div class="hero-actions">
           <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
-          <a class="btn btn-ghost" href="{{ '/services/batch-production/' | url }}">Batch & Commercial Orders</a>
+          <a class="btn btn-ghost" href="{{ '/services/batch-production/' | url }}">See Batch &amp; Commercial Orders</a>
         </div>
-        <p class="muted" style="margin-top:10px">
-          BONDAR LABS LTD · Company No. 17009947
-        </p>
+
+        <div class="badges mt-16">
+          <span class="badge"><span class="dot"></span>Invoices available</span>
+          <span class="badge"><span class="dot"></span>First-article samples</span>
+          <span class="badge"><span class="dot"></span>Repeat-order specs</span>
+          <span class="badge"><span class="dot"></span>Near Cambridge · UK-wide shipping</span>
+        </div>
+
+        <p class="muted tiny mt-10">BONDAR LABS LTD · Company No. {{ site.companyNumber }} · Not VAT registered</p>
       </div>
+
+      <aside class="card callout-card" aria-label="Fast RFQ starter">
+        <div class="card-body">
+          <div class="kicker">Fast RFQ starter</div>
+          <h2 class="h3">What to send for an accurate quote</h2>
+          <ul class="check-list">
+            <li><strong>Files or references</strong> — STL, STEP, 3MF, photos, measurements or a short brief.</li>
+            <li><strong>Quantity + reorder plan</strong> — one run, pilot run, or ongoing repeat supply.</li>
+            <li><strong>Deadline</strong> — ideal date and latest acceptable delivery date.</li>
+            <li><strong>Critical dimensions / finish</strong> — fit points, visible faces, packaging or QC notes.</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="{{ '/quote/' | url }}">Send an RFQ</a>
+            <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a>
+          </div>
+          <p class="muted tiny">Need the service mechanics rather than the business workflow? See <a href="{{ '/services/batch-production/' | url }}">Batch &amp; Commercial Orders</a>.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Built for practical commercial orders</h2>
+      <p class="muted">
+        This page is about the working relationship: how a team sends an RFQ, approves a sample when needed,
+        receives parts with the right paperwork, and comes back later for a consistent reorder.
+      </p>
     </div>
 
+    <div class="grid grid-3 mt-16">
+      <div class="card callout-card">
+        <div class="card-body">
+          <div class="kicker">Quoting</div>
+          <h3 class="h3">RFQs with clear trade-offs</h3>
+          <p class="muted">We quote against the real priorities of the job — speed, unit cost, finish, strength, fit and quantity — instead of assuming every order needs the same spec.</p>
+          <ul class="check-list">
+            <li>Material/process guidance when you are still deciding.</li>
+            <li>Clear note of what affects price, lead time and finish.</li>
+            <li>Practical feedback if a file needs changing before production.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card callout-card">
+        <div class="card-body">
+          <div class="kicker">Repeat supply</div>
+          <h3 class="h3">Reorders from a confirmed spec</h3>
+          <p class="muted">Once the part, material and finish are agreed, repeat orders can follow the same setup rather than starting from zero each time.</p>
+          <ul class="check-list">
+            <li>Revision / version tracking for changed parts.</li>
+            <li>Locked material and finish notes where consistency matters.</li>
+            <li>Helpful for recurring accessories, fixtures and small product batches.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card callout-card">
+        <div class="card-body">
+          <div class="kicker">Risk control</div>
+          <h3 class="h3">Samples, QC and agreed checkpoints</h3>
+          <p class="muted">For more sensitive orders, we can validate fit or finish before the whole run is made, then measure agreed critical features where required.</p>
+          <ul class="check-list">
+            <li>First-article / pilot samples available.</li>
+            <li>Visual QC as standard before dispatch.</li>
+            <li>Simple measurement reporting by agreement.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Typical business jobs</h2>
+      <p class="muted">Most B2B orders fall into a few practical categories. The goal is usually not “a cool print” — it is a part, batch or workflow that solves a real operational need.</p>
+    </div>
+
+    <div class="grid grid-4 mt-16">
+      <div class="card callout-card">
+        <div class="card-body">
+          <h3 class="h3">Pilot runs</h3>
+          <p class="muted">Short production runs that let a team validate fit, packaging or demand before committing to a larger manufacturing route.</p>
+        </div>
+      </div>
+
+      <div class="card callout-card">
+        <div class="card-body">
+          <h3 class="h3">Internal tooling</h3>
+          <p class="muted">Jigs, brackets, holders, covers and workshop aids that need to arrive fast and be easy to update when the workflow changes.</p>
+        </div>
+      </div>
+
+      <div class="card callout-card">
+        <div class="card-body">
+          <h3 class="h3">Replacement parts</h3>
+          <p class="muted">Short-run replacements for broken or unavailable components, often where lead time matters more than perfect catalogue-style finish.</p>
+        </div>
+      </div>
+
+      <div class="card callout-card">
+        <div class="card-body">
+          <h3 class="h3">Branded or packaged batches</h3>
+          <p class="muted">Retail inserts, branded accessories and other repeat jobs where packaging, bagging or labelling may be part of the workflow.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">How a business order usually runs</h2>
+      <p class="muted">Simple enough for a one-off requirement, structured enough for repeat commercial work.</p>
+    </div>
+
+    <div class="grid process-grid mt-16">
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 1</div>
+          <h3 class="h3">Send files or an RFQ brief</h3>
+          <p class="muted">Include quantity, deadline, material preference if known, and anything the part must fit or match.</p>
+        </div>
+      </div>
+
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 2</div>
+          <h3 class="h3">Agree the spec</h3>
+          <p class="muted">We confirm the best route, quote, lead time, and whether a sample, QC scope or packaging step should be included.</p>
+        </div>
+      </div>
+
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 3</div>
+          <h3 class="h3">Produce and check</h3>
+          <p class="muted">The batch is run to the agreed setup, checked visually, and measured where critical features were agreed in advance.</p>
+        </div>
+      </div>
+
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 4</div>
+          <h3 class="h3">Ship, collect or reorder</h3>
+          <p class="muted">Parts are packed for collection or UK shipping, and repeat runs can be reordered against the same confirmed setup.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="grid grid-3">
+      <div class="card callout-card">
+        <div class="card-body">
+          <div class="kicker">Commercial admin</div>
+          <h2 class="h3">Paperwork and confidentiality</h2>
+          <ul class="check-list">
+            <li>Invoices available for business orders.</li>
+            <li>PO-style ordering supported by agreement where it fits the client process.</li>
+            <li>NDA / customer NDA supported on request.</li>
+            <li>BONDAR LABS LTD is currently <strong>not VAT registered</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card callout-card">
+        <div class="card-body">
+          <div class="kicker">Quality</div>
+          <h2 class="h3">Checks that match the job</h2>
+          <ul class="check-list">
+            <li>Visual QC is standard before dispatch.</li>
+            <li>Critical dimensions can be agreed and measured with callipers.</li>
+            <li>Simple photo/table-based measurement packs can be arranged for relevant jobs.</li>
+            <li>First-article samples are recommended when a batch has real risk or tight fit requirements.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card callout-card">
+        <div class="card-body">
+          <div class="kicker">Delivery</div>
+          <h2 class="h3">Packing and fulfilment</h2>
+          <ul class="check-list">
+            <li>Collection available near Cambridge (Huntingdon area).</li>
+            <li>UK-wide shipping is standard; international by request.</li>
+            <li>Individual bagging, labels and kitting can be quoted where useful.</li>
+            <li>If the file still needs work, <a href="{{ '/services/design-support/' | url }}">design support</a> can be folded into the job.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Selected business projects</h2>
+      <p class="muted">A few examples that show the kinds of parts and order types this page is meant to attract.</p>
+    </div>
+
+    <div class="grid grid-3 mt-16">
+      <a class="card card-link" href="{{ '/case-studies/departure-board-enclosure-batch/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/projects/departure-board-enclosure-batch/cover.webp' | url }}" alt="Batch production of enclosure housings for a commercial order." loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">Repeat supply</div>
+          <h3 class="h3">Departure Boards UK enclosure run</h3>
+          <p class="muted">Hundreds of enclosure housings produced with stable settings, quality checks and orderly packing for dispatch.</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="{{ '/case-studies/branded-mini-scrapers-dreamy-cake-batch/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/cover.webp' | url }}" alt="Branded mini scrapers produced as a 220-piece commercial batch." loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">Branded batch</div>
+          <h3 class="h3">Dreamy Cake promotional insert batch</h3>
+          <p class="muted">A useful branded product run where packing and presentation were part of the commercial brief, not an afterthought.</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="{{ '/case-studies/custom-74mm-intake-flow-straightener/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/projects/custom-74mm-intake-flow-straightener/cover.webp' | url }}" alt="Custom 74 mm intake flow straighteners shown side by side." loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">Fit-critical work</div>
+          <h3 class="h3">Custom 74&nbsp;mm intake flow straightener</h3>
+          <p class="muted">A good example of a practical engineering part where measurements, specification control and function mattered more than decoration.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Common questions from teams and buyers</h2>
+      <p class="muted">Short answers to the procurement and reorder questions that usually come up first.</p>
+    </div>
+
+    <div class="faq-grid mt-16">
+      {% for item in faqItems %}
+        <div class="card faq-card">
+          <div class="card-body">
+            <h3 class="h3">{{ item.question }}</h3>
+            <p class="muted">{{ item.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-wide">
+      <div>
+        <div class="kicker">Next step</div>
+        <h2 class="h3">Ready to send an RFQ?</h2>
+        <p class="muted">Send files, quantity, deadline and any critical dimensions. If the project may repeat, say that early so the right workflow can be quoted from the start.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+        <a class="btn btn-ghost" href="{{ '/case-studies/' | url }}">View Portfolio</a>
+      </div>
+    </div>
   </div>
 </section>

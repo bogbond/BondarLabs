@@ -3,6 +3,9 @@ layout: layouts/article.njk
 title: Resin (MSLA)
 category: Resin
 summary: "High-detail resin options with a studio-grade wash → dry → UV-cure workflow included."
+description: "Resin 3D printing for grey mechanical parts, small housings, gears and precision components with crisp detail and smooth surfaces."
+image: "/assets/images/og/resin-grey-mechanical-parts.jpg"
+ogImageAlt: "Grey resin mechanical parts including housings, gears and lever components."
 intro: "Resin printing delivers smooth surfaces and crisp small features — ideal for miniatures, masters, stamps and small precision parts."
 order: 8
 ---

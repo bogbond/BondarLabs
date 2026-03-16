@@ -2,13 +2,16 @@
 layout: layouts/article.njk
 title: "Resin 3D Printing"
 description: "High-detail MSLA resin printing for miniatures, master models, stamps and precision parts — fully washed, dried and UV-cured."
+image: "/assets/images/og/resin-miniature-figure.jpg"
+ogImageAlt: "High-detail resin miniature printed with crisp small features."
 eyebrow: "Service"
 intro: "Studio-grade MSLA resin printing for small, high-detail parts — delivered fully cleaned, dried and UV-cured, ready to use or paint."
 order: 2
 serviceNav: true
 kicker: "Resin"
 summary: "High-detail resin prints with a fully included wash → dry → UV-cure workflow."
-coverImage: "/assets/images/12K-MSLA-Resin-Miniature.webp"
+coverImage: "/assets/images/services/resin-miniature-figure.webp"
+coverAlt: "High-detail resin miniature printed with crisp small features."
 ---
 
 ## At a glance

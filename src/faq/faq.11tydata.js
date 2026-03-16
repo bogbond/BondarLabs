@@ -95,7 +95,7 @@ module.exports = {
     {
       label: "Services",
       url: "/services/",
-      text: "See the main printing, design and batch-production options."
+      text: "See the main printing, design and batch & commercial order options."
     },
     {
       label: "Materials",

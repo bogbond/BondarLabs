@@ -92,4 +92,4 @@ Each part was bagged individually and packed securely for shipping.
 
 A reliable commercial workflow for repeated production: consistent enclosures delivered in volume with stable quality, QC screening, and careful packing.
 
-Related: **[Batch & Commercial Production]({{ '/services/batch-production/' | url }})**, **[FDM 3D Printing]({{ '/services/fdm/' | url }})**, **[PLA]({{ '/materials/pla/' | url }})**, **[Get a Quote]({{ '/quote/' | url }})**.
+Related: **[Batch & Commercial Orders]({{ '/services/batch-production/' | url }})**, **[FDM 3D Printing]({{ '/services/fdm/' | url }})**, **[PLA]({{ '/materials/pla/' | url }})**, **[Get a Quote]({{ '/quote/' | url }})**.

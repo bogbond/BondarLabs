@@ -8,7 +8,7 @@
         { "label": "FDM 3D Printing", "url": "/services/fdm/" },
         { "label": "Resin 3D Printing", "url": "/services/resin/" },
         { "label": "3D Design & File Support", "url": "/services/design-support/" },
-        { "label": "Batch & Commercial Production", "url": "/services/batch-production/" }
+        { "label": "Batch & Commercial Orders", "url": "/services/batch-production/" }
       ]
     },
     {

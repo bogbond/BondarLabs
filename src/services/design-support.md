@@ -2,13 +2,16 @@
 layout: layouts/article.njk
 title: "3D Design & File Support"
 description: "CAD-based file preparation and practical design support — from quick edits to replacement parts and fit-checked prototypes."
+image: "/assets/images/og/reverse-engineered-tripod-joint.jpg"
+ogImageAlt: "Reverse-engineered tripod joint recreated as a 3D printed replacement part."
 eyebrow: "Service"
 intro: "Professional file checks and CAD adjustments to make parts print reliably and fit as intended — with clear guidance and optional test-print iterations."
 order: 3
 serviceNav: true
 kicker: "Design"
 summary: "CAD-first file preparation, fit adjustments, and replacement-part modelling — optimised for FDM and resin workflows."
-coverImage: "/assets/images/Reverse-Engineered-Tripod-Joint.webp"
+coverImage: "/assets/images/services/reverse-engineered-tripod-joint.webp"
+coverAlt: "Reverse-engineered tripod joint recreated as a 3D printed replacement part."
 ---
 
 ## At a glance
@@ -104,7 +107,7 @@ Tell us what matters most (fit, strength, appearance, heat resistance), plus qua
 
 Design and file support is quoted based on complexity. Small edits and printability checks are often lightweight when included as part of a print job, while full modelling, reverse-engineering, or tight-fit iteration is priced according to time and the number of validation rounds required.
 
-For commercial work with invoices, sample approval, or confidentiality requirements, see **[Batch & Commercial Production]({{ '/services/batch-production/' | url }})**.
+For commercial work with invoices, sample approval, or confidentiality requirements, see **[Batch & Commercial Orders]({{ '/services/batch-production/' | url }})**.
 
 ---
 

@@ -81,4 +81,4 @@ Many orders were purchased as gifts, so presentation mattered. Options included 
 
 A repeatable personalised gift product with strong visual impact. Base pricing for the series started from **£12** depending on customisation and packaging.
 
-Related: **[FDM 3D Printing]({{ '/services/fdm/' | url }})**, **[PLA]({{ '/materials/pla/' | url }})**, **[Batch & Commercial Production]({{ '/services/batch-production/' | url }})**, **[Get a Quote]({{ '/quote/' | url }})**.
+Related: **[FDM 3D Printing]({{ '/services/fdm/' | url }})**, **[PLA]({{ '/materials/pla/' | url }})**, **[Batch & Commercial Orders]({{ '/services/batch-production/' | url }})**, **[Get a Quote]({{ '/quote/' | url }})**.

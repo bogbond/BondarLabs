@@ -1,6 +1,7 @@
 {#
   Page variables expected (front matter):
   - title
+  - seoTitle (optional)
   - description (optional)
   - summary / intro (optional)
   - image / coverImage (optional)
@@ -41,7 +42,8 @@
 {# Title / description fallbacks #}
 {% set baseTitle = site.defaultTitle or site.brand %}
 {% set pageTitle = baseTitle ~ " | " ~ site.brand %}
-{% if title %}{% set pageTitle = title ~ " | " ~ site.brand %}{% endif %}
+{% set titleTag = seoTitle or title %}
+{% if titleTag %}{% set pageTitle = titleTag ~ " | " ~ site.brand %}{% endif %}
 
 {% set pageDescription = description or summary or intro or site.defaultDescription %}
 {% set canonicalUrl = site.baseUrl ~ (page.url | url) %}

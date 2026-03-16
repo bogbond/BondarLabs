@@ -1,33 +1,364 @@
 ---
-layout: layouts/article.njk
-title: "Batch & Commercial Production"
-description: "Repeat production, sample approval and batch discounts — with professional QC checks before dispatch."
-eyebrow: "Service"
-intro: "Repeat runs, sample approval, and reliable delivery — ideal for small-batch commercial requirements."
+layout: layouts/base.njk
+title: "Batch & Commercial Orders"
+seoTitle: "Small-Batch 3D Printing for Business"
+description: "Small-batch 3D printing for businesses in the UK — pilot runs, repeat production, sample approval, QC options and UK-wide shipping from near Cambridge."
+image: "/assets/images/og/batch-commercial-mini-scrapers.jpg"
+ogImageAlt: "Commercial batch of pastel-coloured branded mini scrapers produced for a bakery."
+intro: "From pilot runs to repeat batches — a practical service for low-volume production without tooling."
 order: 4
 serviceNav: true
-kicker: "B2B"
-summary: "Repeat runs, sample approval, QC checks and batch discounts for commercial needs."
-coverImage: "/assets/images/Batch-Production-Example.webp"
+kicker: "Business"
+summary: "Pilot runs, repeat batches, sample approval and packaging options for commercial orders."
+coverImage: "/assets/images/services/batch-commercial-mini-scrapers.webp"
+coverAlt: "Large batch of pastel-coloured branded mini scrapers laid out in rows."
+faqItems:
+  - question: "What quantities count as a batch order?"
+    answer: "There is no hard minimum. Many batch jobs are in the tens to low hundreds of parts, though the practical range depends on part size, print time, material and finishing."
+  - question: "Can you make a sample before the full batch?"
+    answer: "Yes. A first-article or pilot run can be arranged before the main batch when the fit, finish or function needs to be confirmed first."
+  - question: "Can parts be bagged, labelled or supplied as kits?"
+    answer: "Yes. Bagging, labels, simple kitting and certain assembly steps can be quoted when agreed before production."
+  - question: "What affects batch pricing the most?"
+    answer: "Geometry, material, print time, support removal, finishing, inserts or assembly, packaging requirements and the depth of QC all affect price."
+  - question: "Where do invoices, PO workflows and repeat-order handling live?"
+    answer: "Those commercial workflow details are covered on the 3D Printing for Business page, which is the best reference for procurement-friendly ordering and repeat-supply processes."
 ---
 
-## What’s included
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Service</p>
+    <h1>Small-Batch 3D Printing for Business</h1>
+    <p class="lead">
+      A practical route for pilot runs, repeat parts and short commercial batches — with sample approval,
+      sensible lead times and options for packaging, finishing and quality checks where the job needs them.
+    </p>
 
-- Invoices provided
-- Purchase orders accepted
-- NDA available on request
-- Sample approval available
-- Repeat production supported
-- Batch discounts available
-- Quality checks before dispatch
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
+      <a class="btn btn-ghost" href="{{ '/business/' | url }}">3D Printing for Business</a>
+    </div>
 
-## Who it’s for
+    <div class="badges mt-16">
+      <span class="badge"><span class="dot"></span> Pilot runs and repeat batches</span>
+      <span class="badge"><span class="dot"></span> FDM and resin options</span>
+      <span class="badge"><span class="dot"></span> Sample approval available</span>
+      <span class="badge"><span class="dot"></span> UK-wide shipping</span>
+    </div>
+  </div>
+</section>
 
-- Small manufacturers needing quick iteration
-- Product teams prototyping and validating fits
-- Businesses requiring consistent repeat prints
+<section class="section">
+  <div class="container">
+    <div class="page-media">
+      <img src="{{ coverImage | url }}" alt="{{ coverAlt }}" loading="eager" decoding="async">
+    </div>
 
-## Scale & reliability
+    <div class="section-head">
+      <h2 class="h2">What this service is for</h2>
+      <p class="muted">
+        This page explains the mechanics of low-volume production: when a job is a good fit for batch printing,
+        how orders move from sample to repeat run, and what affects cost, lead time and consistency.
+      </p>
+    </div>
 
-We run a **professional multi-printer setup** and support repeatable production workflows — without the overhead of large bureaus.
+    <div class="info-grid mt-16">
+      <div class="card info-card">
+        <div class="card-body">
+          <div class="info-label">Typical use</div>
+          <div class="info-value">Short commercial runs, pilot batches and repeat supply</div>
+          <p class="muted">Ideal when you need tens or hundreds of parts, but not the tooling commitment of injection moulding.</p>
+        </div>
+      </div>
 
+      <div class="card info-card">
+        <div class="card-body">
+          <div class="info-label">Good candidates</div>
+          <div class="info-value">Enclosures, brackets, branded products, tooling and small precision parts</div>
+          <p class="muted">Parts that benefit from flexible iteration, lower setup cost and realistic small-batch lead times.</p>
+        </div>
+      </div>
+
+      <div class="card info-card">
+        <div class="card-body">
+          <div class="info-label">Process choices</div>
+          <div class="info-value">FDM for robust output · resin for fine detail</div>
+          <p class="muted">The process is matched to strength, finish, unit cost, geometry and post-processing needs.</p>
+        </div>
+      </div>
+
+      <div class="card info-card">
+        <div class="card-body">
+          <div class="info-label">Lead times</div>
+          <div class="info-value">Usually 3–7 business days for batches</div>
+          <p class="muted">Confirmed against print time, quantity, finishing and packaging — with sample runs scheduled where useful.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="page-split">
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">Strong fit</div>
+          <h2 class="h3">When this service is the right route</h2>
+          <ul class="check-list">
+            <li><strong>You need dozens or hundreds of parts</strong> rather than a single prototype or a tooling-scale production run.</li>
+            <li><strong>The design may still evolve</strong>, so keeping change flexibility matters more than squeezing unit cost to the absolute minimum.</li>
+            <li><strong>Speed matters</strong> and you want a production method that can start from files without mould tooling lead time.</li>
+            <li><strong>Branding, inserts, bagging or kitting</strong> are part of how the finished order needs to arrive.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">Better to know upfront</div>
+          <h2 class="h3">When another route may be better</h2>
+          <ul class="check-list">
+            <li><strong>Very high volumes</strong> where tooling-based manufacturing becomes the smarter economic choice.</li>
+            <li><strong>Strict certified production environments</strong> or compliance-heavy requirements outside the scope of studio manufacturing.</li>
+            <li><strong>Parts that demand injection-moulded cosmetics</strong> or metrology beyond a practical 3D printing workflow.</li>
+            <li><strong>Jobs that are still only sketches</strong> and need CAD work first — in that case start with <a href="{{ '/services/design-support/' | url }}">3D Design &amp; File Support</a>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Batch workflow</h2>
+      <p class="muted">Designed to make small-run production predictable without burying the job in process overhead.</p>
+    </div>
+
+    <div class="grid process-grid mt-16">
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 1</div>
+          <h3 class="h3">Brief + files</h3>
+          <p class="muted">Send the model, quantity, deadline and any notes about visible faces, fit, colour, packing or labels.</p>
+        </div>
+      </div>
+
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 2</div>
+          <h3 class="h3">Spec + quote</h3>
+          <p class="muted">We confirm the process, material, lead time and any agreed QC, finishing or packaging requirements before production.</p>
+        </div>
+      </div>
+
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 3</div>
+          <h3 class="h3">Sample approval if needed</h3>
+          <p class="muted">For larger or more sensitive runs, a first-article or pilot batch can confirm fit and finish before the full batch begins.</p>
+        </div>
+      </div>
+
+      <div class="card process-card">
+        <div class="card-body">
+          <div class="process-step">Step 4</div>
+          <h3 class="h3">Batch, QC and dispatch</h3>
+          <p class="muted">Parts are produced to the agreed setup, checked, packed and shipped — with repeat-order notes where applicable.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-split mt-16">
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">What affects price</div>
+          <h2 class="h3">The main drivers of a batch quote</h2>
+          <ul class="check-list">
+            <li><strong>Geometry and print time</strong> — especially support-heavy parts or models with many slow-to-print fine details.</li>
+            <li><strong>Material choice</strong> — everyday PLA/PETG differs from ASA, nylon or specialist resin options.</li>
+            <li><strong>Finishing and hardware</strong> — inserts, assembly, extra cleanup, sanding or painting all add labour.</li>
+            <li><strong>Packaging format</strong> — bulk packing is different from bagging, labels or kit-ready supply.</li>
+            <li><strong>QC depth</strong> — visual inspection is standard; measured checks or documentation are quoted to scope.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">Optional add-ons</div>
+          <h2 class="h3">Extras that can be built into the order</h2>
+          <ul class="check-list">
+            <li><strong>Heat-set inserts</strong>, supplied fasteners or simple assembly.</li>
+            <li><strong>Bagging, labels or kitting</strong> for easier internal handling or customer-facing packing.</li>
+            <li><strong>Colour splits and branded versions</strong> where the batch includes multiple variants.</li>
+            <li><strong>First-article samples</strong> before the main run, especially useful for fit-critical jobs.</li>
+            <li><strong>Measured checks</strong> on agreed features when the risk level justifies it.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Common batch job types</h2>
+      <p class="muted">Typical scenarios where short-run 3D printing is often a better fit than either one-off prototyping or full production tooling.</p>
+    </div>
+
+    <div class="grid grid-2 mt-16">
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">FDM batches</div>
+          <h3 class="h3">Enclosures, brackets, fixtures and branded inserts</h3>
+          <p class="muted">Good when you need practical parts, predictable output and lower setup cost. This is where most repeat FDM work sits.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">Resin batches</div>
+          <h3 class="h3">Small precision parts, masters and display-ready pieces</h3>
+          <p class="muted">Best when detail, crisp edges and surface finish matter more than large build volume or maximum throughput.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">Pilot runs</div>
+          <h3 class="h3">Short validation runs before a wider rollout</h3>
+          <p class="muted">Useful for proving packaging fit, retail response, field performance or assembly behaviour before committing to a larger repeat order.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">Versioned reorders</div>
+          <h3 class="h3">Repeat supply with spec notes carried forward</h3>
+          <p class="muted">When a part comes back as Rev B or Rev C, the order can be tied to the confirmed version instead of restarting from scratch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="callout">
+      <div class="kicker">Commercial workflow</div>
+      <h2 class="h3">Need procurement-friendly ordering, invoices or repeat-order handling?</h2>
+      <p class="muted">Those business-process details live on the dedicated <a href="{{ '/business/' | url }}">3D Printing for Business</a> page. Use it when the bigger question is how your team will order, approve, reorder and document jobs over time.</p>
+      <div class="hero-actions mt-16">
+        <a class="btn btn-primary" href="{{ '/business/' | url }}">Go to 3D Printing for Business</a>
+        <a class="btn btn-ghost" href="{{ '/quote/' | url }}">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Commercial examples</h2>
+      <p class="muted">A few real jobs that match the kind of work this page is meant to attract.</p>
+    </div>
+
+    <div class="grid grid-3 mt-16">
+      <a class="card card-link" href="{{ '/case-studies/branded-mini-scrapers-dreamy-cake-batch/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/cover.webp' | url }}" alt="Batch of branded mini scrapers produced for Dreamy Cake" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">Branded batch</div>
+          <h3 class="h3">220 mini scrapers with integrated branding</h3>
+          <p class="muted">A short-run product batch with multi-printer workflow, packing and presentation details built into the job.</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="{{ '/case-studies/departure-board-enclosure-batch/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/projects/departure-board-enclosure-batch/cover.webp' | url }}" alt="Batch production of enclosure housings" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">Repeat supply</div>
+          <h3 class="h3">Hundreds of enclosure housings</h3>
+          <p class="muted">A higher-volume business batch where material control, QC screening and packing discipline mattered more than novelty.</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="{{ '/case-studies/resin-coil-bobbins/' | url }}">
+        <div class="card-media"><img src="{{ '/assets/images/projects/resin-coil-bobbins/cover.webp' | url }}" alt="Small resin bobbin parts shown in a neat group" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="kicker">Fine detail</div>
+          <h3 class="h3">Resin coil bobbins and small functional parts</h3>
+          <p class="muted">A good example of when repeatable small-part resin work is a better fit than larger-format FDM.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="page-split">
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">Fastest route to quote</div>
+          <h2 class="h3">What to send for a batch enquiry</h2>
+          <ul class="check-list">
+            <li><strong>Files</strong> plus notes on what must not change.</li>
+            <li><strong>Quantity</strong> and whether the order is a pilot run or likely repeat supply.</li>
+            <li><strong>Deadline</strong> and any milestones that affect shipping or launch timing.</li>
+            <li><strong>Material / finish priorities</strong> or the real use case if you need guidance.</li>
+            <li><strong>Packaging requirements</strong> such as bulk, bagging, labels or kits.</li>
+            <li><strong>Critical dimensions</strong> or features that may need measured checks.</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="{{ '/quote/' | url }}">Send batch brief</a>
+            <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body prose">
+          <div class="kicker">Lead times</div>
+          <h2 class="h3">What usually changes delivery speed</h2>
+          <ul class="check-list">
+            <li><strong>Part count and print time per part</strong> set the baseline production window.</li>
+            <li><strong>Supports, finishing and inserts</strong> add labour after printing.</li>
+            <li><strong>Sample approval loops</strong> are often worth the extra time if the batch is high-risk.</li>
+            <li><strong>Colour sourcing or specialist materials</strong> can add procurement time when not already in stock.</li>
+          </ul>
+          <p class="muted">Small orders are often quicker; larger batches typically sit in the 3–7 business day range once the full scope is confirmed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Batch &amp; Commercial Orders FAQ</h2>
+      <p class="muted">Short answers for the production questions that usually come up first.</p>
+    </div>
+
+    <div class="faq-grid mt-16">
+      {% for item in faqItems %}
+        <div class="card faq-card">
+          <div class="card-body">
+            <h3 class="h4">{{ item.question }}</h3>
+            <p class="muted">{{ item.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "partials/cta-wide.njk" %}
+  </div>
+</section>

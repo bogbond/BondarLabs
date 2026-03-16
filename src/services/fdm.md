@@ -2,13 +2,16 @@
 layout: layouts/article.njk
 title: "FDM 3D Printing"
 description: "Studio-grade FDM 3D printing in PLA, PETG, ABS, ASA, TPU, nylon and carbon-fibre composites — fast turnaround, QC checks, and UK shipping."
+image: "/assets/images/og/fdm-printed-gears.jpg"
+ogImageAlt: "FDM printed gears shown close up as a functional mechanical print example."
 eyebrow: "Service"
 intro: "Studio-grade FDM printing for functional prototypes and end‑use parts — engineering filaments, dimensional checks, and fast UK turnaround."
 order: 1
 serviceNav: true
 kicker: "FDM"
 summary: "Functional prototypes and end‑use parts in engineering filaments, with QC checks and fast turnaround."
-coverImage: "/assets/images/Precision-3D-Printed-Gears.webp"
+coverImage: "/assets/images/services/fdm-printed-gears.webp"
+coverAlt: "FDM printed gears shown close up as a functional mechanical print example."
 ---
 
 ## At a glance
@@ -90,5 +93,5 @@ STL is ideal for quick quoting. We can also work with STEP and other common CAD/
 
 ## Need repeatable batches?
 
-If you need sample approval, repeat runs, invoices, or an NDA for commercial work, see **[Batch & Commercial Production]({{ '/services/batch-production/' | url }})**.
+If you need sample approval, repeat runs, invoices, or an NDA for commercial work, see **[Batch & Commercial Orders]({{ '/services/batch-production/' | url }})**.
 

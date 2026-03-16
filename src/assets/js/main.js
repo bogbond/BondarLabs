@@ -403,6 +403,12 @@
 
     const btnPrev = $('[data-carousel-prev]', carousel);
     const btnNext = $('[data-carousel-next]', carousel);
+    let pointerDown = false;
+    let dragging = false;
+    let dragStartX = 0;
+    let dragStartScroll = 0;
+    let suppressClick = false;
+    let activePointerId = null;
 
     function getStep() {
       const first = track.querySelector('.carousel-item');
@@ -411,7 +417,9 @@
       const gap = parseFloat(gapRaw) || 16;
       if (first) {
         const w = first.getBoundingClientRect().width;
-        return Math.max(120, Math.round(w + gap));
+        const full = w + gap;
+        const visible = Math.max(1, Math.floor((track.clientWidth + gap) / full));
+        return Math.max(120, Math.round(visible * full));
       }
       return Math.max(120, Math.round(track.clientWidth * 0.9));
     }
@@ -429,8 +437,62 @@
       track.scrollBy({ left: dir * getStep(), behavior: 'smooth' });
     }
 
+    function endDrag() {
+      if (!pointerDown) return;
+      pointerDown = false;
+      activePointerId = null;
+      track.classList.remove('is-pointer-down');
+      track.classList.remove('is-dragging');
+      window.setTimeout(() => {
+        dragging = false;
+      }, 0);
+    }
+
     btnPrev?.addEventListener('click', () => scrollByDir(-1));
     btnNext?.addEventListener('click', () => scrollByDir(1));
+
+    track.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'touch') return;
+      if (typeof e.button === 'number' && e.button !== 0) return;
+      pointerDown = true;
+      dragging = false;
+      suppressClick = false;
+      activePointerId = e.pointerId;
+      dragStartX = e.clientX;
+      dragStartScroll = track.scrollLeft;
+      track.classList.add('is-pointer-down');
+      track.setPointerCapture?.(e.pointerId);
+    });
+
+    track.addEventListener('pointermove', (e) => {
+      if (!pointerDown) return;
+      if (activePointerId !== null && e.pointerId !== activePointerId) return;
+      const deltaX = e.clientX - dragStartX;
+      if (!dragging && Math.abs(deltaX) > 6) {
+        dragging = true;
+        suppressClick = true;
+        track.classList.add('is-dragging');
+      }
+      if (!dragging) return;
+      e.preventDefault();
+      track.scrollLeft = dragStartScroll - deltaX;
+    });
+
+    track.addEventListener('pointerup', (e) => {
+      if (activePointerId !== null && e.pointerId !== activePointerId) return;
+      track.releasePointerCapture?.(e.pointerId);
+      endDrag();
+    });
+    track.addEventListener('pointercancel', endDrag);
+    track.addEventListener('lostpointercapture', endDrag);
+    track.addEventListener('dragstart', (e) => e.preventDefault());
+
+    track.addEventListener('click', (e) => {
+      if (!suppressClick) return;
+      e.preventDefault();
+      e.stopPropagation();
+      suppressClick = false;
+    }, true);
 
     track.addEventListener('scroll', () => {
       window.requestAnimationFrame(updateButtons);
@@ -449,5 +511,84 @@
 
     window.addEventListener('resize', updateButtons);
     updateButtons();
+  });
+
+
+  // Hero proof slider (page-by-page highlights inside the hero card)
+  $$('[data-proof-slider]').forEach((slider) => {
+    const pages = $$('[data-proof-page]', slider);
+    const btnPrev = $('[data-proof-prev]', slider);
+    const btnNext = $('[data-proof-next]', slider);
+    const dots = $$('[data-proof-dot]', slider);
+    if (!pages.length) return;
+
+    let activeIndex = Math.max(0, pages.findIndex((page) => page.classList.contains('is-active')));
+    if (activeIndex < 0) activeIndex = 0;
+
+    function update() {
+      pages.forEach((page, index) => {
+        const active = index === activeIndex;
+        page.classList.toggle('is-active', active);
+        page.setAttribute('aria-hidden', String(!active));
+      });
+
+      dots.forEach((dot, index) => {
+        const active = index === activeIndex;
+        dot.classList.toggle('is-active', active);
+        dot.setAttribute('aria-pressed', String(active));
+      });
+
+      const multiple = pages.length > 1;
+      if (btnPrev) btnPrev.hidden = !multiple;
+      if (btnNext) btnNext.hidden = !multiple;
+      slider.classList.toggle('proof-slider-single', !multiple);
+    }
+
+    function setPage(nextIndex) {
+      const count = pages.length;
+      if (!count) return;
+      activeIndex = (nextIndex + count) % count;
+      update();
+    }
+
+    btnPrev?.addEventListener('click', () => setPage(activeIndex - 1));
+    btnNext?.addEventListener('click', () => setPage(activeIndex + 1));
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => setPage(index));
+    });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    slider.addEventListener('touchstart', (e) => {
+      const touch = e.changedTouches && e.changedTouches[0];
+      if (!touch) return;
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', (e) => {
+      const touch = e.changedTouches && e.changedTouches[0];
+      if (!touch) return;
+      const deltaX = touch.clientX - touchStartX;
+      const deltaY = touch.clientY - touchStartY;
+      if (Math.abs(deltaX) < 40 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
+      if (deltaX < 0) setPage(activeIndex + 1);
+      else setPage(activeIndex - 1);
+    }, { passive: true });
+
+    slider.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        setPage(activeIndex + 1);
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        setPage(activeIndex - 1);
+      }
+    });
+
+    update();
   });
 })();

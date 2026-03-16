@@ -3,6 +3,9 @@ layout: layouts/article.njk
 title: ASA
 category: FDM
 summary: "Outdoor-ready engineering filament with excellent UV and weather resistance."
+description: "ASA 3D printing for outdoor and warm-environment parts such as intake inserts, covers, brackets and UV-stable functional components."
+image: "/assets/images/og/asa-intake-flow-straighteners.jpg"
+ogImageAlt: "Two black ASA intake flow straighteners with honeycomb cells shown close up."
 intro: "ASA is the go-to material for parts that live outside — durable, UV-stable, and built for real weather."
 order: 4
 ---
