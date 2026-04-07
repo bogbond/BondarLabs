@@ -268,7 +268,7 @@ body.nav-open .site-header{
 .header-inner{display:flex; align-items:center; gap:16px; padding:12px 0}
 .header-actions{display:flex; align-items:center; gap:10px}
 .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.06em}
-.brand-text{font-size:15px}
+.brand-text{font-size:15px; text-transform:uppercase}
 .brand-mark{
   width:34px; height:34px; border-radius:12px;
   background:var(--panel);

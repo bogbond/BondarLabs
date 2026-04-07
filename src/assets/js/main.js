@@ -437,10 +437,18 @@
       track.scrollBy({ left: dir * getStep(), behavior: 'smooth' });
     }
 
+    function removeDragListeners() {
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+      window.removeEventListener('pointercancel', onPointerCancel);
+      window.removeEventListener('blur', endDrag);
+    }
+
     function endDrag() {
-      if (!pointerDown) return;
+      if (!pointerDown && activePointerId === null) return;
       pointerDown = false;
       activePointerId = null;
+      removeDragListeners();
       track.classList.remove('is-pointer-down');
       track.classList.remove('is-dragging');
       window.setTimeout(() => {
@@ -448,23 +456,7 @@
       }, 0);
     }
 
-    btnPrev?.addEventListener('click', () => scrollByDir(-1));
-    btnNext?.addEventListener('click', () => scrollByDir(1));
-
-    track.addEventListener('pointerdown', (e) => {
-      if (e.pointerType === 'touch') return;
-      if (typeof e.button === 'number' && e.button !== 0) return;
-      pointerDown = true;
-      dragging = false;
-      suppressClick = false;
-      activePointerId = e.pointerId;
-      dragStartX = e.clientX;
-      dragStartScroll = track.scrollLeft;
-      track.classList.add('is-pointer-down');
-      track.setPointerCapture?.(e.pointerId);
-    });
-
-    track.addEventListener('pointermove', (e) => {
+    function onPointerMove(e) {
       if (!pointerDown) return;
       if (activePointerId !== null && e.pointerId !== activePointerId) return;
       const deltaX = e.clientX - dragStartX;
@@ -476,15 +468,39 @@
       if (!dragging) return;
       e.preventDefault();
       track.scrollLeft = dragStartScroll - deltaX;
+    }
+
+    function onPointerUp(e) {
+      if (activePointerId !== null && e.pointerId !== activePointerId) return;
+      endDrag();
+    }
+
+    function onPointerCancel(e) {
+      if (activePointerId !== null && e.pointerId !== activePointerId) return;
+      endDrag();
+    }
+
+    btnPrev?.addEventListener('click', () => scrollByDir(-1));
+    btnNext?.addEventListener('click', () => scrollByDir(1));
+
+    track.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'touch') return;
+      if (typeof e.button === 'number' && e.button !== 0) return;
+      if (pointerDown) return;
+      // Avoid pointer capture here: it can suppress native link clicks inside the carousel.
+      pointerDown = true;
+      dragging = false;
+      suppressClick = false;
+      activePointerId = e.pointerId;
+      dragStartX = e.clientX;
+      dragStartScroll = track.scrollLeft;
+      track.classList.add('is-pointer-down');
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup', onPointerUp);
+      window.addEventListener('pointercancel', onPointerCancel);
+      window.addEventListener('blur', endDrag);
     });
 
-    track.addEventListener('pointerup', (e) => {
-      if (activePointerId !== null && e.pointerId !== activePointerId) return;
-      track.releasePointerCapture?.(e.pointerId);
-      endDrag();
-    });
-    track.addEventListener('pointercancel', endDrag);
-    track.addEventListener('lostpointercapture', endDrag);
     track.addEventListener('dragstart', (e) => e.preventDefault());
 
     track.addEventListener('click', (e) => {
