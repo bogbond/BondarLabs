@@ -1,6 +1,7 @@
 ---
 layout: layouts/article.njk
 title: PLA
+seoTitle: "PLA 3D Printing Material Guide"
 category: FDM
 summary: "Clean-looking, cost‑effective prints for prototypes and everyday parts — with the widest colour choice."
 description: "PLA 3D printing for branded caps, prototypes and everyday parts with clean detail, wide colour choice and fast turnaround."

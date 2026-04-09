@@ -1,7 +1,10 @@
 ---
 layout: layouts/article.njk
 title: "FAQ"
-description: "Answers to common questions about 3D printing in the UK — quotes, materials, lead times, shipping, quality checks and business orders."
+seoTitle: "3D Printing FAQ"
+description: "Answers to common questions about quoting, materials, lead times, delivery, quality checks and business orders for UK 3D printing."
+image: "/assets/images/og/faq.jpg"
+ogImageAlt: "Bondar Labs FAQ OG image."
 eyebrow: "Help"
 intro: "Quick answers about quotes, materials, lead times, shipping and quality — if you don’t see your question here, just message us."
 ---

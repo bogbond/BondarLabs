@@ -11,6 +11,15 @@
   "social": {
     "github": "",
     "linkedin": "",
-    "instagram": ""
-  }
+    "instagram": "",
+    "ebay": "https://www.ebay.co.uk/usr/bondar-labs",
+    "etsy": "https://www.etsy.com/shop/DoughDistrict"
+  },
+  "addressLine1": "14 Elizabethan Way",
+  "addressLocality": "Brampton",
+  "addressRegion": "Cambridgeshire",
+  "postalCode": "PE28 4SU",
+  "addressCountry": "GB",
+  "fullAddress": "14 Elizabethan Way, Brampton, Huntingdon PE28 4SU",
+  "mapsUrl": "https://maps.app.goo.gl/HgiFnyAGDvLCw4H67"
 }

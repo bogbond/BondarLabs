@@ -151,10 +151,21 @@
   "areaServed": company.serviceArea,
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Brampton",
-    "addressRegion": "Cambridgeshire",
-    "addressCountry": "GB"
+    "streetAddress": company.addressLine1,
+    "addressLocality": company.addressLocality,
+    "addressRegion": company.addressRegion,
+    "postalCode": company.postalCode,
+    "addressCountry": company.addressCountry
   },
+  "hasMap": company.mapsUrl,
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": company.phoneE164,
+    "email": company.email,
+    "contactType": "customer service",
+    "areaServed": "GB",
+    "availableLanguage": ["en"]
+  }],
   "identifier": {
     "@type": "PropertyValue",
     "name": "Company number",

@@ -1,410 +1,694 @@
 {
   "/assets/images/3D-Printed-Microscope-Mount.webp": {
-    "width": 600,
-    "height": 450
+    "height": 450,
+    "width": 600
   },
   "/assets/images/Functional-Mechanical-Handle.webp": {
-    "width": 600,
-    "height": 450
+    "height": 450,
+    "width": 600
   },
   "/assets/images/Personalized-Wall-Desk-Plaques.webp": {
-    "width": 600,
-    "height": 450
+    "height": 450,
+    "width": 600
   },
   "/assets/images/brand/icons/icon-150.png": {
-    "width": 150,
-    "height": 150
+    "height": 150,
+    "width": 150
   },
   "/assets/images/brand/icons/icon-16.png": {
-    "width": 16,
-    "height": 16
+    "height": 16,
+    "width": 16
   },
   "/assets/images/brand/icons/icon-180.png": {
-    "width": 180,
-    "height": 180
+    "height": 180,
+    "width": 180
   },
   "/assets/images/brand/icons/icon-192.png": {
-    "width": 192,
-    "height": 192
+    "height": 192,
+    "width": 192
   },
   "/assets/images/brand/icons/icon-32.png": {
-    "width": 32,
-    "height": 32
+    "height": 32,
+    "width": 32
   },
   "/assets/images/brand/icons/icon-512.png": {
-    "width": 512,
-    "height": 512
+    "height": 512,
+    "width": 512
   },
   "/assets/images/brand/logo-dark.png": {
-    "width": 800,
-    "height": 449
+    "height": 449,
+    "width": 800
   },
   "/assets/images/brand/logo-dark.webp": {
-    "width": 800,
-    "height": 449
+    "height": 449,
+    "width": 800
   },
   "/assets/images/brand/logo.png": {
-    "width": 800,
-    "height": 449
+    "height": 449,
+    "width": 800
   },
   "/assets/images/brand/logo.webp": {
-    "width": 800,
-    "height": 449
+    "height": 449,
+    "width": 800
   },
   "/assets/images/brand/mark-dark.png": {
-    "width": 256,
-    "height": 256
+    "height": 256,
+    "width": 256
   },
   "/assets/images/brand/mark-dark.webp": {
-    "width": 256,
-    "height": 256
+    "height": 256,
+    "width": 256
   },
   "/assets/images/brand/mark.png": {
-    "width": 256,
-    "height": 256
+    "height": 256,
+    "width": 256
   },
   "/assets/images/brand/mark.webp": {
-    "width": 256,
-    "height": 256
+    "height": 256,
+    "width": 256
+  },
+  "/assets/images/favicon.ico": {
+    "height": 16,
+    "width": 16
   },
   "/assets/images/hero-background.webp": {
-    "width": 1600,
-    "height": 916
+    "height": 916,
+    "width": 1600
   },
   "/assets/images/materials/asa-intake-flow-straighteners.webp": {
-    "width": 900,
-    "height": 675
+    "height": 675,
+    "width": 900
   },
   "/assets/images/materials/carbon-fibre-asa-tray.webp": {
-    "width": 900,
-    "height": 675
+    "height": 675,
+    "width": 900
   },
   "/assets/images/materials/pla-branded-threaded-caps.webp": {
-    "width": 900,
-    "height": 675
+    "height": 675,
+    "width": 900
   },
   "/assets/images/materials/resin-grey-mechanical-parts.webp": {
-    "width": 900,
-    "height": 675
-  },
-  "/assets/images/og/armmed-designs-hanging-sign.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/asa-intake-flow-straighteners.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/aston-martin-crystal-key-buttons.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/batch-commercial-mini-scrapers.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/branded-mini-scrapers-dreamy-cake-batch.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/carbon-fibre-asa-tray.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/custom-74mm-intake-flow-straightener.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/departure-board-enclosure-batch.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/fdm-printed-gears.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/personalised-candle-jars.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/personalised-led-brake-disc-lamp.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/pla-branded-threaded-caps.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/resin-coil-bobbins.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/resin-grey-mechanical-parts.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/resin-miniature-figure.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/reverse-engineered-radio-front-cover.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/reverse-engineered-tripod-joint.jpg": {
-    "width": 1200,
-    "height": 630
-  },
-  "/assets/images/og/sunny-miami-sunny-atlantis-resin-miniatures.jpg": {
-    "width": 1200,
-    "height": 630
+    "height": 675,
+    "width": 900
   },
   "/assets/images/og-preview.jpg": {
-    "width": 1200,
-    "height": 630
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/abs.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/armmed-designs-hanging-sign.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/asa-intake-flow-straighteners.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/aston-martin-crystal-key-buttons.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/batch-commercial-mini-scrapers.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/branded-mini-scrapers-dreamy-cake-batch.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/carbon-fibre-asa-tray.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/clip-on-laptop-riser-feet.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/contact.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/custom-10-inch-rack-mount-adapters.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/custom-74mm-intake-flow-straightener.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/custom-petg-roof-vent-cowl.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/delivery.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/departure-board-enclosure-batch.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/faq.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/fdm-printed-gears.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/high-detail-resin-orc-miniatures.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/home.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/materials.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/nylon.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/personalised-candle-jars.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/personalised-led-brake-disc-lamp.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/petg.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/pla-branded-threaded-caps.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/pricing.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/privacy-policy.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/projects-examples.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/quote.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/resin-coil-bobbins.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/resin-grey-mechanical-parts.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/resin-miniature-figure.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/reverse-engineered-radio-front-cover.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/reverse-engineered-tripod-joint.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/ryobi-one-battery-removal-aid.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/services.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/sunny-miami-sunny-atlantis-resin-miniatures.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/terms.jpg": {
+    "height": 630,
+    "width": 1200
+  },
+  "/assets/images/og/tpu.jpg": {
+    "height": 630,
+    "width": 1200
   },
   "/assets/images/projects/armmed-designs-hanging-sign/02-front-hanging-light-wood.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/armmed-designs-hanging-sign/03-angled-carbon-texture.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/armmed-designs-hanging-sign/04-closeup-hidden-mounts.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/armmed-designs-hanging-sign/05-closeup-designs-lettering.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/armmed-designs-hanging-sign/cover.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
   },
   "/assets/images/projects/aston-martin-crystal-key-buttons/01-buttons-on-printer-bed.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/aston-martin-crystal-key-buttons/04-test-fit-white-buttons.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/aston-martin-crystal-key-buttons/05-installed-buttons-in-hand.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/aston-martin-crystal-key-buttons/07-rear-view-with-plungers.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/aston-martin-crystal-key-buttons/cover.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
   },
   "/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/01-220-mini-scrapers-front-batch.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/03-four-mini-scrapers-front-view.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/04-four-mini-scrapers-angled-view.webp": {
-    "width": 2000,
-    "height": 1800
+    "height": 1800,
+    "width": 2000
   },
   "/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/cover.webp": {
-    "width": 2000,
-    "height": 1800
+    "height": 1800,
+    "width": 2000
   },
   "/assets/images/projects/branded-mini-scrapers-dreamy-cake-batch/preview.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
+  },
+  "/assets/images/projects/clip-on-laptop-riser-feet/01-large-black-set-top-view.webp": {
+    "height": 1500,
+    "width": 1125
+  },
+  "/assets/images/projects/clip-on-laptop-riser-feet/02-red-set-side-view.webp": {
+    "height": 1125,
+    "width": 1500
+  },
+  "/assets/images/projects/clip-on-laptop-riser-feet/03-small-red-set-top-view.webp": {
+    "height": 1500,
+    "width": 1125
+  },
+  "/assets/images/projects/clip-on-laptop-riser-feet/04-laptop-on-red-risers-side-view.webp": {
+    "height": 1125,
+    "width": 1500
+  },
+  "/assets/images/projects/clip-on-laptop-riser-feet/05-laptop-on-black-risers-side-view.webp": {
+    "height": 1125,
+    "width": 1500
+  },
+  "/assets/images/projects/clip-on-laptop-riser-feet/06-laptop-on-red-risers-rear-angle.webp": {
+    "height": 1125,
+    "width": 1500
+  },
+  "/assets/images/projects/clip-on-laptop-riser-feet/07-black-set-side-view.webp": {
+    "height": 1125,
+    "width": 1500
+  },
+  "/assets/images/projects/clip-on-laptop-riser-feet/cover.webp": {
+    "height": 1125,
+    "width": 1500
+  },
+  "/assets/images/projects/clip-on-laptop-riser-feet/preview.webp": {
+    "height": 500,
+    "width": 800
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/01-draytek-pq1070x-cad-side-dimensions.webp": {
+    "height": 798,
+    "width": 1500
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/02-draytek-pq1070x-cad-front-dimensions.webp": {
+    "height": 433,
+    "width": 1500
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/03-tp-link-er605-cad-side-dimensions.webp": {
+    "height": 855,
+    "width": 1500
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/04-tp-link-er605-cad-front-dimensions.webp": {
+    "height": 611,
+    "width": 1500
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/05-four-adapters-on-table.webp": {
+    "height": 1500,
+    "width": 845
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/06-two-adapters-packed-top-view.webp": {
+    "height": 1500,
+    "width": 894
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/07-opening-height-measurement.webp": {
+    "height": 1500,
+    "width": 1125
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/08-opening-depth-measurement.webp": {
+    "height": 1500,
+    "width": 1125
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/09-opening-width-measurement.webp": {
+    "height": 1500,
+    "width": 1125
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/10-flame-finishing-stringing-cleanup.webp": {
+    "height": 1500,
+    "width": 1025
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/11-single-adapter-bagged-for-shipping.webp": {
+    "height": 825,
+    "width": 1211
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/cover.webp": {
+    "height": 1500,
+    "width": 845
+  },
+  "/assets/images/projects/custom-10-inch-rack-mount-adapters/preview.webp": {
+    "height": 500,
+    "width": 800
   },
   "/assets/images/projects/custom-74mm-intake-flow-straightener/01-two-flow-straighteners-front.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/custom-74mm-intake-flow-straightener/03-honeycomb-close-up.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/custom-74mm-intake-flow-straightener/04-caliper-verification-74mm.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/custom-74mm-intake-flow-straightener/05-light-through-honeycomb.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/custom-74mm-intake-flow-straightener/cover.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/custom-74mm-intake-flow-straightener/preview.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/01-finished-print-on-printer.webp": {
+    "height": 1500,
+    "width": 896
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/02-print-progress-near-completion.webp": {
+    "height": 1500,
+    "width": 854
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/03-first-print-on-table-before-testing.webp": {
+    "height": 1500,
+    "width": 1125
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/04-part-in-hand-with-support-interface.webp": {
+    "height": 1500,
+    "width": 854
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/05-client-review-screenshot.webp": {
+    "height": 834,
+    "width": 1500
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/06-cad-render.webp": {
+    "height": 1500,
+    "width": 1369
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/07-failed-first-print-after-crash-test.webp": {
+    "height": 1500,
+    "width": 1125
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/08-installed-and-painted-by-client.webp": {
+    "height": 1165,
+    "width": 1165
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/cover.webp": {
+    "height": 1165,
+    "width": 1165
+  },
+  "/assets/images/projects/custom-petg-roof-vent-cowl/preview.webp": {
+    "height": 500,
+    "width": 800
   },
   "/assets/images/projects/departure-board-enclosure-batch/01-enclosures-packed-in-box.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/departure-board-enclosure-batch/02-individually-bagged-enclosures.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/departure-board-enclosure-batch/03-colour-variants-in-bags.webp": {
-    "width": 1175,
-    "height": 980
+    "height": 980,
+    "width": 1175
   },
   "/assets/images/projects/departure-board-enclosure-batch/04-translucent-green-enclosure-printing.webp": {
-    "width": 1646,
-    "height": 938
+    "height": 938,
+    "width": 1646
   },
   "/assets/images/projects/departure-board-enclosure-batch/05-stringing-removal-flame-finishing.webp": {
-    "width": 1307,
-    "height": 910
+    "height": 910,
+    "width": 1307
   },
   "/assets/images/projects/departure-board-enclosure-batch/cover.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/01-orc-batch-group-shot-1.webp": {
+    "height": 1500,
+    "width": 844
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/02-orc-batch-group-shot-2.webp": {
+    "height": 1500,
+    "width": 844
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/03-orc-batch-group-shot-3.webp": {
+    "height": 1500,
+    "width": 844
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/04-orc-batch-group-shot-4.webp": {
+    "height": 1500,
+    "width": 844
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/05-orcs-on-resin-printer-build-plate.webp": {
+    "height": 1500,
+    "width": 844
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/06-orc-miniature-in-hand.webp": {
+    "height": 844,
+    "width": 1500
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/07-orc-miniature-on-fabric.webp": {
+    "height": 844,
+    "width": 1500
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/08-weapon-parts-in-hand.webp": {
+    "height": 1500,
+    "width": 844
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/09-orc-parts-on-cutting-mat.webp": {
+    "height": 1500,
+    "width": 1500
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/cover.webp": {
+    "height": 844,
+    "width": 1500
+  },
+  "/assets/images/projects/high-detail-resin-orc-miniatures/preview.webp": {
+    "height": 500,
+    "width": 800
   },
   "/assets/images/projects/personalised-candle-jars/02-gold-candles-row.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/personalised-candle-jars/03-blue-candle-with-lid.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/personalised-candle-jars/05-gift-packaging-grey-candle.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/personalised-candle-jars/06-black-candle-multilingual-text.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/personalised-candle-jars/cover.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
   },
   "/assets/images/projects/personalised-led-brake-disc-lamp/01-brake-disc-print-bed-with-supports.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/personalised-led-brake-disc-lamp/03-installing-brass-heat-set-inserts.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/personalised-led-brake-disc-lamp/04-test-fitting-centre-cap-and-caliper.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/personalised-led-brake-disc-lamp/05-led-strip-installation.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/personalised-led-brake-disc-lamp/06-fastening-centre-cap-on-stand.webp": {
-    "width": 1500,
-    "height": 1500
+    "height": 1500,
+    "width": 1500
   },
   "/assets/images/projects/personalised-led-brake-disc-lamp/07-finished-lamp-front-view.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/personalised-led-brake-disc-lamp/cover.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/personalised-led-brake-disc-lamp/preview.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
   },
   "/assets/images/projects/resin-coil-bobbins/01-rectangular-resin-bobbins-in-hand.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/resin-coil-bobbins/02-round-resin-bobbins-on-supports.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/resin-coil-bobbins/05-clear-resin-bobbin.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/resin-coil-bobbins/06-fdm-prototype-failed.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/resin-coil-bobbins/cover.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
   },
   "/assets/images/projects/reverse-engineered-radio-front-cover/01-old-and-new-front-comparison.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/reverse-engineered-radio-front-cover/03-broken-and-new-part-close-up.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/reverse-engineered-radio-front-cover/04-internal-structure-and-mounting-features.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/reverse-engineered-radio-front-cover/05-colour-matching-with-original-part.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/reverse-engineered-radio-front-cover/cover.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/reverse-engineered-radio-front-cover/preview.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
+  },
+  "/assets/images/projects/ryobi-one-battery-removal-aid/01-ryobi-tool-in-use.webp": {
+    "height": 1500,
+    "width": 1291
+  },
+  "/assets/images/projects/ryobi-one-battery-removal-aid/02-parts-on-printer-bed.webp": {
+    "height": 1125,
+    "width": 1500
+  },
+  "/assets/images/projects/ryobi-one-battery-removal-aid/03-parts-before-assembly.webp": {
+    "height": 1185,
+    "width": 1500
+  },
+  "/assets/images/projects/ryobi-one-battery-removal-aid/04-assembled-tool-side-view.webp": {
+    "height": 1125,
+    "width": 1500
+  },
+  "/assets/images/projects/ryobi-one-battery-removal-aid/05-assembled-tool-top-view.webp": {
+    "height": 1500,
+    "width": 1123
+  },
+  "/assets/images/projects/ryobi-one-battery-removal-aid/cover.webp": {
+    "height": 1500,
+    "width": 1291
+  },
+  "/assets/images/projects/ryobi-one-battery-removal-aid/preview.webp": {
+    "height": 500,
+    "width": 800
   },
   "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/01-sunny-atlantis-front.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/04-sunny-miami-front-view.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/05-sunny-miami-with-microsd-for-scale.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/06-individually-packed-miniatures.webp": {
-    "width": 1500,
-    "height": 2000
+    "height": 2000,
+    "width": 1500
   },
   "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/cover.webp": {
-    "width": 2000,
-    "height": 1500
+    "height": 1500,
+    "width": 2000
   },
   "/assets/images/projects/sunny-miami-sunny-atlantis-resin-miniatures/preview.webp": {
-    "width": 800,
-    "height": 500
+    "height": 500,
+    "width": 800
   },
   "/assets/images/services/batch-commercial-mini-scrapers.webp": {
-    "width": 900,
-    "height": 675
+    "height": 675,
+    "width": 900
   },
   "/assets/images/services/fdm-printed-gears.webp": {
-    "width": 900,
-    "height": 675
+    "height": 675,
+    "width": 900
   },
   "/assets/images/services/resin-miniature-figure.webp": {
-    "width": 900,
-    "height": 675
+    "height": 675,
+    "width": 900
   },
   "/assets/images/services/reverse-engineered-tripod-joint.webp": {
-    "width": 900,
-    "height": 675
+    "height": 675,
+    "width": 900
   }
 }

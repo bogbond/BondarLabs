@@ -1,8 +1,12 @@
 ---
 layout: layouts/article.njk
 title: Nylon
+seoTitle: "Nylon 3D Printing Material Guide"
 category: FDM
 summary: "A high‑performance engineering material for tough, wear‑resistant parts and mechanical components."
+description: "Nylon 3D printing for wear-resistant, fatigue-tolerant and mechanically demanding parts where durability matters more than surface cosmetics."
+image: "/assets/images/og/nylon.jpg"
+ogImageAlt: "Bondar Labs Nylon material guide OG image."
 intro: "Nylon is chosen for demanding functional parts — tough, durable, and well suited to wear and repeated stress when designed correctly."
 order: 6
 ---

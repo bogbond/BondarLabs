@@ -1,8 +1,12 @@
 ---
 layout: layouts/article.njk
 title: ABS
+seoTitle: "ABS 3D Printing Material Guide"
 category: FDM
 summary: "A classic engineering plastic for heat‑tolerant functional parts and durable housings."
+description: "ABS 3D printing for durable housings, brackets and warm-environment functional parts where toughness and finishing matter."
+image: "/assets/images/og/abs.jpg"
+ogImageAlt: "Bondar Labs ABS material guide OG image."
 intro: "ABS is a proven material for functional components — tougher than PLA and better suited to warm environments."
 order: 3
 ---

@@ -1,8 +1,12 @@
 ---
 layout: layouts/article.njk
 title: PETG
+seoTitle: "PETG 3D Printing Material Guide"
 category: FDM
 summary: "A tough, practical all‑rounder for functional parts — stronger feel than PLA with better heat tolerance."
+description: "PETG 3D printing for functional parts, enclosures, brackets and everyday components that need a durable all-round material."
+image: "/assets/images/og/petg.jpg"
+ogImageAlt: "Bondar Labs PETG material guide OG image."
 intro: "PETG is a reliable choice for functional prints: durable, moisture‑resistant, and well suited for everyday use."
 order: 2
 ---

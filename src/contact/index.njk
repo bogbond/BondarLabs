@@ -1,7 +1,10 @@
 ---
 layout: layouts/base.njk
 title: Contact
-description: "Contact Bondar Labs — Brampton, Huntingdon, Cambridgeshire. UK-wide shipping, local delivery available."
+seoTitle: "Contact Bondar Labs | 3D Printing Near Cambridge"
+description: "Contact Bondar Labs in Brampton, Huntingdon for 3D printing quotes, file support and production help. UK-wide shipping and local collection by appointment."
+image: "/assets/images/og/contact.jpg"
+ogImageAlt: "Bondar Labs contact page OG image."
 ---
 
 <section class="page-hero">
@@ -18,11 +21,13 @@ description: "Contact Bondar Labs — Brampton, Huntingdon, Cambridgeshire. UK-w
       <div class="card">
         <div class="card-body">
           <h2 class="h3">Details</h2>
-          <p class="muted">{{ company.locationShort }}</p>
+          <p class="muted">{{ company.fullAddress }}</p>
+          <p class="tiny muted" style="margin-top:8px">Visits and collections are by appointment only. <a href="{{ company.mapsUrl }}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>.</p>
           <ul class="muted">
             <li>Email: <a href="mailto:{{ company.email }}" data-track="email_click">{{ company.email }}</a></li>
             <li>Phone: <a href="tel:{{ company.phoneE164 }}" data-track="phone_click">{{ company.phone }}</a></li>
             <li><a href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">Message on WhatsApp</a></li>
+            <li><a href="{{ company.mapsUrl }}" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
           </ul>
 
           <div class="card mt-12">

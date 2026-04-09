@@ -1,7 +1,10 @@
 ---
 layout: layouts/base.njk
 title: "Custom 3D Printed Parts, Prototypes & Small-Batch Production"
+seoTitle: "Custom 3D Printing in Cambridge & Across the UK"
 description: "Custom 3D printed parts, prototypes and small-batch production for businesses and individuals. Based near Cambridge with local delivery and UK-wide shipping."
+image: "/assets/images/og/home.jpg"
+ogImageAlt: "Bondar Labs workshop with desktop 3D printers and filament spools."
 ---
 
 <section class="hero">
@@ -311,7 +314,7 @@ description: "Custom 3D printed parts, prototypes and small-batch production for
       <div class="carousel-head">
         <div class="carousel-copy">
           <h2 class="h2">Portfolio</h2>
-          <p class="muted">Selected repairs, prototype parts and repeat production work.</p>
+          <p class="muted">Selected repairs, prototype parts, detail-led resin work and repeat production.</p>
         </div>
 
         <div class="carousel-controls" aria-label="Portfolio carousel controls">
@@ -326,8 +329,7 @@ description: "Custom 3D printed parts, prototypes and small-batch production for
 
       <div class="carousel-track" data-carousel-track aria-label="Portfolio examples" tabindex="0">
         {% for cs in collections.caseStudies %}
-          {% if loop.index0 < 10 %}
-            <a class="card card-link carousel-item" href="{{ cs.url | url }}">
+          <a class="card card-link carousel-item" href="{{ cs.url | url }}">
               <div class="card-media"><img src="{{ (cs.data.listingImage or cs.data.coverImage) | url }}" alt="{{ cs.data.listingAlt or cs.data.coverAlt or cs.data.title }}" loading="lazy" decoding="async"></div>
               <div class="card-body">
                 <div class="kicker">{{ cs.data.tech }}</div>
@@ -335,7 +337,6 @@ description: "Custom 3D printed parts, prototypes and small-batch production for
                 <p class="muted">{{ cs.data.summary }}</p>
               </div>
             </a>
-          {% endif %}
         {% endfor %}
 
         <a class="card card-link carousel-item case-card-all" href="{{ '/case-studies/' | url }}" aria-label="View portfolio">

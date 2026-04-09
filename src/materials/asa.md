@@ -1,6 +1,7 @@
 ---
 layout: layouts/article.njk
 title: ASA
+seoTitle: "ASA 3D Printing Material Guide"
 category: FDM
 summary: "Outdoor-ready engineering filament with excellent UV and weather resistance."
 description: "ASA 3D printing for outdoor and warm-environment parts such as intake inserts, covers, brackets and UV-stable functional components."

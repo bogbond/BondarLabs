@@ -1,6 +1,7 @@
 ---
 layout: layouts/article.njk
 title: Resin (MSLA)
+seoTitle: "Resin 3D Printing Material Guide"
 category: Resin
 summary: "High-detail resin options with a studio-grade wash → dry → UV-cure workflow included."
 description: "Resin 3D printing for grey mechanical parts, small housings, gears and precision components with crisp detail and smooth surfaces."

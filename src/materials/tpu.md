@@ -1,8 +1,12 @@
 ---
 layout: layouts/article.njk
 title: TPU
+seoTitle: "TPU 3D Printing Material Guide"
 category: FDM
 summary: "Flexible, rubber‑like filament for grips, bumpers, gaskets and shock‑absorbing parts."
+description: "TPU 3D printing for flexible grips, bumpers, anti-slip feet, seals and shock-absorbing parts that need rubber-like behaviour."
+image: "/assets/images/og/tpu.jpg"
+ogImageAlt: "Bondar Labs TPU material guide OG image."
 intro: "TPU is the material for parts that need to bend, grip, seal, or absorb impact — from protective bumpers to flexible fittings."
 order: 5
 ---

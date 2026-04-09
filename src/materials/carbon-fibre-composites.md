@@ -1,6 +1,7 @@
 ---
 layout: layouts/article.njk
 title: Carbon-fibre composites
+seoTitle: "Carbon-Fibre Composite 3D Printing Material Guide"
 category: FDM
 summary: "Stiffer, more dimensionally stable parts for tooling, fixtures and functional components — with a premium matte finish."
 description: "Carbon-fibre composite 3D printing for stiff trays, tooling, fixtures and matte-finish functional parts where rigidity matters."
