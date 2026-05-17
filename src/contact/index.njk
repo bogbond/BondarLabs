@@ -46,11 +46,8 @@ ogImageAlt: "Bondar Labs contact page OG image."
       <div class="card">
         <div class="card-body">
           <h2 class="h3">Send a message</h2>
-          <form class="form" method="POST" action="https://formsubmit.co/{{ site.formsubmitEmail }}">
-            <input type="hidden" name="_subject" value="New message — Bondar Labs" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="{{ site.baseUrl }}{{ '/contact/thanks/' | url }}" />
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <form class="form" id="contactForm" method="POST" action="https://formly.email/submit" data-formly-relay data-formly-title="Contact form — Bondar Labs">
+            <input type="hidden" name="access_key" value="{{ site.formlyAccessKey }}" />
             <div class="field">
               <label class="label" for="c-name">Name</label>
               <input class="input" id="c-name" name="Name" type="text" autocomplete="name" autocapitalize="words" />

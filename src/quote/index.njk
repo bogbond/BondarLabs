@@ -19,11 +19,8 @@ ogImageAlt: "Bondar Labs quote page OG image."
   <div class="container">
     <div class="card">
       <div class="card-body">
-        <form class="form" method="POST" action="https://formsubmit.co/{{ site.formsubmitEmail }}" enctype="multipart/form-data">
-          <input type="hidden" name="_subject" value="New quote request — Bondar Labs" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-          <input type="hidden" name="_next" value="{{ site.baseUrl }}{{ '/quote/thanks/' | url }}" />
+        <form class="form" id="quoteForm" method="POST" action="https://formly.email/submit" enctype="multipart/form-data" data-formly-relay data-formly-title="Quote request — Bondar Labs">
+          <input type="hidden" name="access_key" value="{{ site.formlyAccessKey }}" />
 
           <div class="grid grid-2">
             <div class="field">
@@ -104,9 +101,9 @@ ogImageAlt: "Bondar Labs quote page OG image."
 
           <div class="grid grid-2">
             <div class="field">
-              <label class="label" for="q-file">Upload file (max 10MB)</label>
-              <input class="input" id="q-file" type="file" name="attachment" accept=".stl,.3mf,.step,.stp,.obj,.zip,.rar,.7z,.pdf,.png,.jpg,.jpeg" />
-              <div class="help">STL / 3MF / STEP / OBJ recommended. If the upload fails, use the link field.</div>
+              <label class="label" for="q-file">Upload one file (max 10MB)</label>
+              <input class="input" id="q-file" type="file" name="attachment" data-formly-file data-max-bytes="9961472" accept=".stl,.3mf,.step,.stp,.obj,.zip,.rar,.7z,.pdf,.png,.jpg,.jpeg" />
+              <div class="help">Attach one STL / 3MF / STEP / OBJ, archive, image or PDF up to 10MB. If your file is larger, use the link field.</div>
             </div>
             <div class="field">
               <label class="label" for="q-link">File link (Drive/Dropbox/WeTransfer)</label>
