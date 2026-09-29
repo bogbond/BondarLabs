@@ -8,7 +8,7 @@ material: PLA / PETG
 summary: "A metal decorating tool recreated in CAD and tested through three printed versions. Thin ribs and the risk of breakage led to a clear decision against production use."
 coverImage: /assets/images/projects/chocolate-decorating-tool-prototypes/cover.webp
 coverAlt: "Stainless-steel decorating tool beside a white PLA prototype surrounding a real chocolate sample."
-listingImage: /assets/images/projects/chocolate-decorating-tool-prototypes/preview.webp
+listingImage: /assets/images/projects/chocolate-decorating-tool-prototypes/card-fullbleed-1200.webp
 listingAlt: "Original metal chocolate decorating tool and a white printed prototype fitted over a chocolate sample."
 image: /assets/images/og/chocolate-decorating-tool-prototypes.jpg
 ogImageAlt: "Metal reference tool beside a white PLA chocolate decorating prototype."

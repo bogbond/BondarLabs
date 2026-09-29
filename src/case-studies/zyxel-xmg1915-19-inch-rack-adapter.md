@@ -8,7 +8,7 @@ material: PLA / PETG
 summary: "An individual rack-mount request became a repeat product: first printed and joined in two halves, then adapted for one-piece production on a larger printer."
 coverImage: /assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/cover.webp
 coverAlt: "Finished black one-piece rack adapter with an open basket and slotted front panel, viewed at an angle."
-listingImage: /assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/preview.webp
+listingImage: /assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/card-fullbleed-1200.webp
 listingAlt: "One-piece black rack adapter for a Zyxel XMG1915-10E switch."
 image: /assets/images/og/zyxel-xmg1915-19-inch-rack-adapter.jpg
 ogImageAlt: "Finished 19-inch rack adapter for the Zyxel XMG1915-10E."

@@ -8,7 +8,7 @@ material: PLA
 summary: "A six-part print request developed into a four-section kiosk enclosure with eight illuminated buttons, custom USB keyboard firmware and an integrated wiring harness."
 coverImage: /assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/cover-v2.webp
 coverAlt: "AI-assisted cover of the assembled grey kiosk with its tablet, illuminated buttons, keypad and authentication-device holder."
-listingImage: /assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/preview-v2.webp
+listingImage: /assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/card-fullbleed-1200.webp
 listingAlt: "Assembled kiosk with a fitted tablet, illuminated green buttons and a metal keypad."
 image: /assets/images/og/custom-wall-mounted-kiosk-enclosure-usb-controls-v2.jpg
 ogImageAlt: "Assembled kiosk with a fitted tablet and integrated illuminated controls; AI-assisted cover."

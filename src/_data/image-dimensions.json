@@ -1354,5 +1354,41 @@
   "/assets/images/responsive/ccc11146f067-160.webp": {
     "width": 160,
     "height": 120
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/card-fullbleed-480.webp": {
+    "width": 480,
+    "height": 300
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/card-fullbleed-960.webp": {
+    "width": 960,
+    "height": 600
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/card-fullbleed-1200.webp": {
+    "width": 1200,
+    "height": 750
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/card-fullbleed-480.webp": {
+    "width": 480,
+    "height": 300
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/card-fullbleed-960.webp": {
+    "width": 960,
+    "height": 600
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/card-fullbleed-1200.webp": {
+    "width": 1200,
+    "height": 750
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/card-fullbleed-480.webp": {
+    "width": 480,
+    "height": 300
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/card-fullbleed-960.webp": {
+    "width": 960,
+    "height": 600
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/card-fullbleed-1200.webp": {
+    "width": 1200,
+    "height": 750
   }
 }

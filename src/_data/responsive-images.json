@@ -288,5 +288,47 @@
       "src": "/assets/images/services/reverse-engineered-tripod-joint.webp",
       "width": 900
     }
+  ],
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/card-fullbleed-1200.webp": [
+    {
+      "src": "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/card-fullbleed-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/card-fullbleed-960.webp",
+      "width": 960
+    },
+    {
+      "src": "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/card-fullbleed-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/card-fullbleed-1200.webp": [
+    {
+      "src": "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/card-fullbleed-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/card-fullbleed-960.webp",
+      "width": 960
+    },
+    {
+      "src": "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/card-fullbleed-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/card-fullbleed-1200.webp": [
+    {
+      "src": "/assets/images/projects/chocolate-decorating-tool-prototypes/card-fullbleed-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/assets/images/projects/chocolate-decorating-tool-prototypes/card-fullbleed-960.webp",
+      "width": 960
+    },
+    {
+      "src": "/assets/images/projects/chocolate-decorating-tool-prototypes/card-fullbleed-1200.webp",
+      "width": 1200
+    }
   ]
 }
