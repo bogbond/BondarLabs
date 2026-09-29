@@ -16,7 +16,7 @@ eyebrow: "Projects"
 intro: "A small-format resin project where detail mattered, but so did support removal, curing and careful packing."
 order: 12
 published: "2026-04-08"
-lastmod: "2026-04-08"
+lastmod: "2026-04-09"
 ---
 
 ## Project snapshot

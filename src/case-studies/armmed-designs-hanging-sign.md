@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-13"
 layout: layouts/article.njk
 title: "Multi-layer 3D printed hanging sign for ArmMed Designs"
 description: "Custom three-layer PLA logo sign with a carbon-textured base, embedded metal rings and floating elements — designed in Fusion 360 and printed on a Bambu Lab P1S."

@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-14"
 layout: layouts/article.njk
 title: "Reverse-engineered replacement radio front cover in an oak-toned filament"
 description: "Broken radio front cover reverse-engineered from the original part and reproduced as a full-size FDM replacement with grille geometry, ribs and mounting details."

@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-13"
 layout: layouts/article.njk
 title: "Personalised 3D printed candle jars with custom names and messages"
 description: "A repeat-order gift product: ribbed PLA candle jars with raised names, two-colour lids, and multi-language customisation — printed on Bambu Lab machines with AMS/AMS Lite."

@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-13"
 layout: layouts/article.njk
 title: "Batch production of enclosure housings for Departure Boards UK"
 description: "A commercial run of hundreds of two-part PLA enclosures produced with calibrated profiles, dried filament, QC screening and individual packaging for reliable B2B supply."

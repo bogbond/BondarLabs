@@ -16,7 +16,7 @@ eyebrow: "Projects"
 intro: "A tiny but useful project: take a niche ergonomic problem, print the parts, finish them properly and send the client a ready-to-use tool."
 order: 15
 published: "2026-04-08"
-lastmod: "2026-04-08"
+lastmod: "2026-04-09"
 ---
 
 ## Project snapshot

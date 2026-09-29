@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-14"
 layout: layouts/article.njk
 title: "Sunny Miami & Sunny Atlantis resin miniatures for a client in Denmark"
 description: "Two small resin miniatures printed in grey water-washable resin, post-processed, packed individually and delivered safely to Denmark by express shipping."

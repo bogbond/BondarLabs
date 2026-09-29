@@ -15,13 +15,6 @@ function getMaterialLink(material = "") {
 
 module.exports = {
   eleventyComputed: {
-    lastmod: (data) => {
-      const order = data.order || 999;
-      if (order <= 5) return "2026-03-13";
-      if (order <= 10) return "2026-03-14";
-      if (order <= 15) return "2026-04-09";
-      return "2026-04-09";
-    },
     relatedLinks: (data) => {
       const links = [];
       const techValue = String(data.tech || "").toLowerCase();

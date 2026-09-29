@@ -16,7 +16,7 @@ eyebrow: "Projects"
 intro: "A full custom job that started with a sketch and ended with an installed, painted outdoor vent part — but only after proper testing and a print-strategy rethink."
 order: 13
 published: "2026-04-08"
-lastmod: "2026-04-08"
+lastmod: "2026-04-09"
 ---
 
 ## Project snapshot

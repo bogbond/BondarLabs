@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-13"
 layout: layouts/article.njk
 title: "Replacement buttons for an Aston Martin ‘crystal key’ fob (CAD + FDM)"
 description: "A repair-focused micro-part project: measured from the original key frame, iterated through prototypes, and printed with a 0.2 mm nozzle for clean fit and readable icons."

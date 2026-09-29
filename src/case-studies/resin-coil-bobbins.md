@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-13"
 layout: layouts/article.njk
 title: "Custom transformer and solenoid coil bobbins (resin, mm-accurate)"
 description: "Small precision coil bobbins designed from measurements and sketches, then produced in photopolymer resin for crisp detail and reliable fit after FDM trials."

@@ -16,7 +16,7 @@ eyebrow: "Projects"
 intro: "A compact pair of clip-on rear risers designed as a repeat product line for everyday laptops and chunkier gaming machines."
 order: 11
 published: "2026-04-08"
-lastmod: "2026-04-08"
+lastmod: "2026-04-09"
 ---
 
 ## Project snapshot

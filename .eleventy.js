@@ -1,6 +1,7 @@
 const { URL } = require("url");
 const site = require("./src/_data/site.json");
 const imageDimensions = require("./src/_data/image-dimensions.json");
+const responsiveImages = require("./src/_data/responsive-images.json");
 
 function normalizeImageSrc(src = "") {
   if (!src) return null;
@@ -102,6 +103,23 @@ module.exports = function (eleventyConfig) {
     });
 
     return items;
+  });
+
+  // Small homepage cards do not need the full article photograph. Keep the
+  // original as a high-density candidate and leave article images untouched.
+  eleventyConfig.addTransform("homepageResponsiveImages", function (content, outputPath) {
+    if (this.page.url !== "/" || !outputPath.endsWith(".html")) return content;
+    return content.replace(/<img\b[^>]*>/gi, (tag) => {
+      if (/\bsrcset\s*=/.test(tag)) return tag;
+      const source = tag.match(/\bsrc=(["'])(.*?)\1/);
+      if (!source) return tag;
+      const variants = responsiveImages[normalizeImageSrc(source[2])];
+      if (!variants) return tag;
+      const prefix = pathPrefix.replace(/\/$/, "");
+      const srcset = variants.map((v) => `${prefix}${v.src} ${v.width}w`).join(", ");
+      const sizes = /\bsizes\s*=/.test(tag) ? "" : ' sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 420px"';
+      return tag.replace(/<img\b/i, `<img srcset="${srcset}"${sizes}`);
+    });
   });
 
   eleventyConfig.addTransform("injectImageDimensions", function (content, outputPath) {

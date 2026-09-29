@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-14"
 layout: layouts/article.njk
 title: "Branded mini scrapers for Dreamy Cake – 220 piece batch"
 description: "Batch of 220 branded mini scrapers produced for Dreamy Cake using multi-colour FDM printing, integrated lettering, individual packing and custom presentation stickers."

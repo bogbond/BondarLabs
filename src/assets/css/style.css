@@ -914,6 +914,14 @@ h1{font-size:clamp(32px, 4.2vw, 44px); line-height:1.1; margin:0 0 14px}
 
 .prose figure{margin:1.2em 0}
 .prose figure img{border-radius:var(--radius); border:1px solid var(--border); background:var(--panel-2)}
+/* New case-study photos retain their original proportions without letterboxing. */
+.prose .photo-gallery { align-items:start; }
+.prose .photo-gallery figure { margin:0; }
+.prose .photo-gallery img,
+.prose .rack-figure img { display:block; width:100%; height:auto; max-height:none; object-fit:contain; border:0; background:transparent; border-radius:12px; }
+.prose .photo-gallery--mixed { grid-template-columns:minmax(0,1fr); }
+.prose .photo-gallery--mixed .photo-portrait,
+.prose .rack-figure.photo-portrait { width:100%; max-width:520px; margin-left:auto; margin-right:auto; }
 .prose figcaption{margin-top:.5em; font-size:.95em; color:var(--muted); line-height:1.45}
 
 /* Homepage refinements: proof slider and visible core cards */

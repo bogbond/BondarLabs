@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-14"
 layout: layouts/article.njk
 title: "Custom LED brake disc lamp with personalised centre cap"
 description: "Personalised brake disc display lamp with integrated 5V USB LED strip, multi-colour PLA FDM parts, brass inserts and full assembly for a motorsport-style finish."

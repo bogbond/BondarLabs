@@ -690,5 +690,669 @@
   "/assets/images/services/reverse-engineered-tripod-joint.webp": {
     "height": 675,
     "width": 900
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/before-support-removal.webp": {
+    "width": 2000,
+    "height": 840
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/cover.webp": {
+    "width": 2000,
+    "height": 975
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/front-cable-slots.webp": {
+    "width": 1840,
+    "height": 660
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/installation-illustration.webp": {
+    "width": 1600,
+    "height": 1199
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/joint-detail.webp": {
+    "width": 2000,
+    "height": 1500
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/one-piece-print.webp": {
+    "width": 2000,
+    "height": 1500
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/preview.webp": {
+    "width": 1200,
+    "height": 800
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/two-part-print.webp": {
+    "width": 1500,
+    "height": 2000
+  },
+  "/assets/images/projects/zyxel-xmg1915-19-inch-rack-adapter/video-poster.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/assets/images/og/zyxel-xmg1915-19-inch-rack-adapter.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/authentication-device-retainer-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/authentication-device-retainer.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/complete-button-harness-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/complete-button-harness.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/controller-harness-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/controller-harness.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/controller-soldering-960.webp": {
+    "width": 960,
+    "height": 615
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/controller-soldering.webp": {
+    "width": 1574,
+    "height": 1008
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/cover-960.webp": {
+    "width": 960,
+    "height": 728
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/cover.webp": {
+    "width": 1920,
+    "height": 1455
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/empty-assembled-rear-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/empty-assembled-rear.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/final-integration-detail-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/final-integration-detail.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/final-rear-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/final-rear.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/first-six-part-body-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/first-six-part-body.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/four-main-sections-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/four-main-sections.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/illuminated-bench-test-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/illuminated-bench-test.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/installed-keypad-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/installed-keypad.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/installing-buttons-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/installing-buttons.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/internal-wire-routing-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/internal-wire-routing.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/keypad-fit-front-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/keypad-fit-front.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/keypad-fit-rear-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/keypad-fit-rear.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/labelled-button-leads-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/labelled-button-leads.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/large-format-print-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/large-format-print.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/lighting-power-harness-960.webp": {
+    "width": 927,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/lighting-power-harness.webp": {
+    "width": 1354,
+    "height": 1402
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/m5-joint-detail-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/m5-joint-detail.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/painted-assembly-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/painted-assembly.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/preview.webp": {
+    "width": 1200,
+    "height": 800
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/surface-preparation-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/surface-preparation.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/tablet-clearance-measurement-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/tablet-clearance-measurement.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/video-poster.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/wired-enclosure-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/wired-enclosure.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/og/custom-wall-mounted-kiosk-enclosure-usb-controls.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/cover-v2.webp": {
+    "width": 1448,
+    "height": 1086
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/final-controls-closeup-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/final-controls-closeup.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/final-front-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/final-front.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/custom-wall-mounted-kiosk-enclosure-usb-controls/preview-v2.webp": {
+    "width": 1200,
+    "height": 800
+  },
+  "/assets/images/og/custom-wall-mounted-kiosk-enclosure-usb-controls-v2.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/cover-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/cover.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/metal-and-petg-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/metal-and-petg.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/metal-fit-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/metal-fit.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/petg-profile-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/petg-profile.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/pla-fit-960.webp": {
+    "width": 809,
+    "height": 960
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/pla-fit.webp": {
+    "width": 1166,
+    "height": 1383
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/pla-profile-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/pla-profile.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/preview.webp": {
+    "width": 1200,
+    "height": 800
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/reinforced-fit-960.webp": {
+    "width": 960,
+    "height": 720
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/reinforced-fit.webp": {
+    "width": 1920,
+    "height": 1440
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/reinforced-handle-960.webp": {
+    "width": 737,
+    "height": 960
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/reinforced-handle.webp": {
+    "width": 1267,
+    "height": 1651
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/rib-detail-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/rib-detail.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/separate-components-960.webp": {
+    "width": 720,
+    "height": 960
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/separate-components.webp": {
+    "width": 1440,
+    "height": 1920
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/three-heads-960.webp": {
+    "width": 711,
+    "height": 960
+  },
+  "/assets/images/projects/chocolate-decorating-tool-prototypes/three-heads.webp": {
+    "width": 1023,
+    "height": 1382
+  },
+  "/assets/images/og/chocolate-decorating-tool-prototypes.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/assembled-angle-960.webp": {
+    "width": 960,
+    "height": 679
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/assembled-angle.webp": {
+    "width": 1920,
+    "height": 1357
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/assembled-detail-960.webp": {
+    "width": 960,
+    "height": 736
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/assembled-detail.webp": {
+    "width": 1920,
+    "height": 1471
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/base-960.webp": {
+    "width": 849,
+    "height": 960
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/base.webp": {
+    "width": 1698,
+    "height": 1920
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/character-960.webp": {
+    "width": 735,
+    "height": 960
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/character.webp": {
+    "width": 1471,
+    "height": 1920
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/cover-960.webp": {
+    "width": 744,
+    "height": 960
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/cover.webp": {
+    "width": 1489,
+    "height": 1920
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/failed-print-960.webp": {
+    "width": 782,
+    "height": 960
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/failed-print.webp": {
+    "width": 1565,
+    "height": 1920
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/preview.webp": {
+    "width": 1200,
+    "height": 800
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/scenery-960.webp": {
+    "width": 812,
+    "height": 960
+  },
+  "/assets/images/projects/samus-aran-pla-statue-three-part-print/scenery.webp": {
+    "width": 1625,
+    "height": 1920
+  },
+  "/assets/images/og/samus-aran-pla-statue-three-part-print.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/cover-960.webp": {
+    "width": 960,
+    "height": 511
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/cover.webp": {
+    "width": 1920,
+    "height": 1022
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/customer-closeup-960.webp": {
+    "width": 400,
+    "height": 301
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/customer-closeup.webp": {
+    "width": 400,
+    "height": 301
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/customer-installation-960.webp": {
+    "width": 301,
+    "height": 400
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/customer-installation.webp": {
+    "width": 301,
+    "height": 400
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/fixing-holes-960.webp": {
+    "width": 960,
+    "height": 385
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/fixing-holes.webp": {
+    "width": 1920,
+    "height": 770
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/preview.webp": {
+    "width": 1200,
+    "height": 800
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/red-option-960.webp": {
+    "width": 960,
+    "height": 464
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/red-option.webp": {
+    "width": 1920,
+    "height": 928
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/screw-kit-960.webp": {
+    "width": 736,
+    "height": 960
+  },
+  "/assets/images/projects/google-tv-streamer-4k-wall-mount/screw-kit.webp": {
+    "width": 1472,
+    "height": 1920
+  },
+  "/assets/images/og/google-tv-streamer-4k-wall-mount.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/assets/images/responsive/d16a76860514-320.webp": {
+    "width": 320,
+    "height": 240
+  },
+  "/assets/images/responsive/eea18d6b2cbc-320.webp": {
+    "width": 320,
+    "height": 240
+  },
+  "/assets/images/responsive/d8cfb1bcd752-320.webp": {
+    "width": 320,
+    "height": 240
+  },
+  "/assets/images/responsive/f4d72a30aec1-320.webp": {
+    "width": 320,
+    "height": 200
+  },
+  "/assets/images/responsive/3b5b6bca17b1-320.webp": {
+    "width": 320,
+    "height": 200
+  },
+  "/assets/images/responsive/2521e2946fee-320.webp": {
+    "width": 320,
+    "height": 288
+  },
+  "/assets/images/responsive/14b1c185769e-320.webp": {
+    "width": 320,
+    "height": 213
+  },
+  "/assets/images/responsive/0c5c8cbd03e0-320.webp": {
+    "width": 320,
+    "height": 320
+  },
+  "/assets/images/responsive/f2f0e35a94f4-320.webp": {
+    "width": 320,
+    "height": 200
+  },
+  "/assets/images/responsive/0458f6c8a896-320.webp": {
+    "width": 320,
+    "height": 213
+  },
+  "/assets/images/responsive/ec9a55b38d9b-320.webp": {
+    "width": 320,
+    "height": 213
+  },
+  "/assets/images/responsive/eaca31995201-320.webp": {
+    "width": 320,
+    "height": 200
+  },
+  "/assets/images/responsive/aba0dd6ff560-320.webp": {
+    "width": 320,
+    "height": 240
+  },
+  "/assets/images/responsive/53386b505ef3-320.webp": {
+    "width": 320,
+    "height": 240
+  },
+  "/assets/images/responsive/53386b505ef3-640.webp": {
+    "width": 640,
+    "height": 480
+  },
+  "/assets/images/responsive/9aa513d512bb-320.webp": {
+    "width": 320,
+    "height": 200
+  },
+  "/assets/images/responsive/fd21bcfe706e-320.webp": {
+    "width": 320,
+    "height": 240
+  },
+  "/assets/images/responsive/e801a0c95f8a-320.webp": {
+    "width": 320,
+    "height": 240
+  },
+  "/assets/images/responsive/f3c25154dd1a-320.webp": {
+    "width": 320,
+    "height": 240
+  },
+  "/assets/images/responsive/ccc11146f067-320.webp": {
+    "width": 320,
+    "height": 240
+  },
+  "/assets/images/responsive/d16a76860514-160.webp": {
+    "width": 160,
+    "height": 120
+  },
+  "/assets/images/responsive/eea18d6b2cbc-160.webp": {
+    "width": 160,
+    "height": 120
+  },
+  "/assets/images/responsive/eea18d6b2cbc-480.webp": {
+    "width": 480,
+    "height": 360
+  },
+  "/assets/images/responsive/d8cfb1bcd752-160.webp": {
+    "width": 160,
+    "height": 120
+  },
+  "/assets/images/responsive/f4d72a30aec1-160.webp": {
+    "width": 160,
+    "height": 100
+  },
+  "/assets/images/responsive/f4d72a30aec1-480.webp": {
+    "width": 480,
+    "height": 300
+  },
+  "/assets/images/responsive/3b5b6bca17b1-160.webp": {
+    "width": 160,
+    "height": 100
+  },
+  "/assets/images/responsive/2521e2946fee-160.webp": {
+    "width": 160,
+    "height": 144
+  },
+  "/assets/images/responsive/2521e2946fee-480.webp": {
+    "width": 480,
+    "height": 432
+  },
+  "/assets/images/responsive/14b1c185769e-160.webp": {
+    "width": 160,
+    "height": 107
+  },
+  "/assets/images/responsive/0c5c8cbd03e0-160.webp": {
+    "width": 160,
+    "height": 160
+  },
+  "/assets/images/responsive/f2f0e35a94f4-160.webp": {
+    "width": 160,
+    "height": 100
+  },
+  "/assets/images/responsive/0458f6c8a896-160.webp": {
+    "width": 160,
+    "height": 107
+  },
+  "/assets/images/responsive/ec9a55b38d9b-160.webp": {
+    "width": 160,
+    "height": 107
+  },
+  "/assets/images/responsive/eaca31995201-160.webp": {
+    "width": 160,
+    "height": 100
+  },
+  "/assets/images/responsive/aba0dd6ff560-160.webp": {
+    "width": 160,
+    "height": 120
+  },
+  "/assets/images/responsive/53386b505ef3-160.webp": {
+    "width": 160,
+    "height": 120
+  },
+  "/assets/images/responsive/53386b505ef3-480.webp": {
+    "width": 480,
+    "height": 360
+  },
+  "/assets/images/responsive/9aa513d512bb-160.webp": {
+    "width": 160,
+    "height": 100
+  },
+  "/assets/images/responsive/fd21bcfe706e-160.webp": {
+    "width": 160,
+    "height": 120
+  },
+  "/assets/images/responsive/fd21bcfe706e-480.webp": {
+    "width": 480,
+    "height": 360
+  },
+  "/assets/images/responsive/e801a0c95f8a-160.webp": {
+    "width": 160,
+    "height": 120
+  },
+  "/assets/images/responsive/f3c25154dd1a-160.webp": {
+    "width": 160,
+    "height": 120
+  },
+  "/assets/images/responsive/ccc11146f067-160.webp": {
+    "width": 160,
+    "height": 120
   }
 }

@@ -1,4 +1,5 @@
 ---
+lastmod: "2026-03-14"
 layout: layouts/article.njk
 title: "Custom 74 mm intake flow straightener in ASA"
 description: "Custom 74 mm ASA intake flow straightener designed from client measurements, printed in black ASA and quality-checked to within approximately ±0.03 mm."

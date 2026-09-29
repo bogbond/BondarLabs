@@ -225,8 +225,32 @@
     return parts.join(' | ');
   }
 
-  function submitRelay(form, fileInput){
+  var pending = new Map();
+
+  function resetSubmission(form, message){
+    var state = pending.get(form);
+    if(!state) return;
+    if(state.fileInput){
+      state.fileParent.insertBefore(state.fileInput, state.fileNext);
+      state.fileInput.name = state.fileName;
+    }
+    if(state.relay) state.relay.remove();
+    state.buttons.forEach(function(item){ item.button.disabled = item.disabled; });
+    if(state.busy === null) form.removeAttribute('aria-busy');
+    else form.setAttribute('aria-busy', state.busy);
+    state.status.textContent = message || '';
+    pending.delete(form);
+  }
+
+  // Back/forward cache restores the DOM, including disabled buttons and the
+  // attachment moved into the relay. Restore these before allowing a retry.
+  window.addEventListener('pageshow', function(){
+    pending.forEach(function(state, form){ resetSubmission(form); });
+  });
+
+  function submitRelay(form, fileInput, state){
     var relay = document.createElement('form');
+    state.relay = relay;
     relay.action = FORMLY_ENDPOINT;
     relay.method = 'POST';
     relay.acceptCharset = 'UTF-8';
@@ -239,7 +263,10 @@
 
     if(fileInput && fileInput.files && fileInput.files.length){
       relay.enctype = 'multipart/form-data';
-      fileInput.setAttribute('data-original-name', fileInput.name || '');
+      state.fileInput = fileInput;
+      state.fileParent = fileInput.parentNode;
+      state.fileNext = fileInput.nextSibling;
+      state.fileName = fileInput.name;
       fileInput.name = 'file';
       relay.appendChild(fileInput);
     }
@@ -259,6 +286,10 @@
   document.addEventListener('submit', function(e){
     var form = e.target;
     if(!isFormlyForm(form)) return;
+    if(pending.has(form)){
+      e.preventDefault();
+      return;
+    }
     if(form.hasAttribute('data-formly-native')) return;
     if(e.defaultPrevented) return;
 
@@ -270,6 +301,27 @@
     }
 
     e.preventDefault();
-    submitRelay(form, fileInput);
+    if(!form.reportValidity()) return;
+    var status = form.querySelector('[data-submission-status]');
+    if(!status){
+      status = document.createElement('p');
+      status.setAttribute('data-submission-status', '');
+      status.setAttribute('role', 'status');
+      form.appendChild(status);
+    }
+    var state = { status: status, busy: form.getAttribute('aria-busy'), buttons: [] };
+    pending.set(form, state);
+    Array.prototype.forEach.call(form.elements, function(button){
+      if(button.type !== 'submit' && button.type !== 'image') return;
+      state.buttons.push({ button: button, disabled: button.disabled });
+      button.disabled = true;
+    });
+    form.setAttribute('aria-busy', 'true');
+    status.textContent = 'Sending your enquiry…';
+    try {
+      submitRelay(form, fileInput, state);
+    } catch(err){
+      resetSubmission(form, 'Your enquiry could not be sent. Please try again.');
+    }
   }, false);
 })();

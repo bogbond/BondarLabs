@@ -16,7 +16,7 @@ eyebrow: "Projects"
 intro: "A network-hardware job where stock shelves and generic brackets were not enough — the rack size, device fit, airflow and front presentation all had to work together."
 order: 14
 published: "2026-04-08"
-lastmod: "2026-04-08"
+lastmod: "2026-04-09"
 ---
 
 ## Project snapshot
