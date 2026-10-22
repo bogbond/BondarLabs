@@ -10,6 +10,7 @@
   const allowedEvents = new Set(['whatsapp_click', 'phone_click', 'email_click', 'quote_cta_click', 'form_submit_attempt']);
   let allowed = false;
   let loaded = false;
+  let returnFocus = null;
 
   function readConsent() {
     try {
@@ -66,8 +67,21 @@
   }
 
   function openSettings() {
-    if (checkbox) checkbox.checked = allowed;
-    if (modal) modal.hidden = false;
+    if (!modal || modal.open) return;
+    returnFocus = document.activeElement;
+    // These are draft preferences, not permission to load analytics.
+    const saved = readConsent();
+    if (checkbox) checkbox.checked = saved ? saved.analytics : true;
+    modal.showModal();
+    modal.querySelector('[data-cookie-close]')?.focus({ preventScroll: true });
+  }
+
+  function closeSettings() {
+    if (!modal?.open) return;
+    modal.close();
+    const target = returnFocus?.isConnected && !returnFocus.closest('[hidden]') ? returnFocus :
+      document.querySelector('[data-open-cookie-settings]');
+    target?.focus({ preventScroll: true });
   }
 
   function saveConsent(value) {
@@ -78,12 +92,14 @@
       try { localStorage.removeItem(KEY); } catch { /* Keep this document disabled if storage is read-only. */ }
       applyConsent(false, false);
       if (bar) bar.hidden = false;
-      const status = document.querySelector('[data-cookie-status]');
-      if (status) status.textContent = 'Your choice could not be saved. Analytics remains off. Please allow site storage and try again.';
+      if (checkbox) checkbox.checked = false;
+      document.querySelectorAll('[data-cookie-status]').forEach((status) => {
+        status.textContent = 'Your choice could not be saved. Analytics remains off. Please allow site storage and try again.';
+      });
       return;
     }
     if (bar) bar.hidden = true;
-    if (modal) modal.hidden = true;
+    closeSettings();
     applyConsent(value);
   }
 
@@ -101,8 +117,16 @@
   document.querySelectorAll('[data-cookie-reject]').forEach((el) => el.addEventListener('click', () => saveConsent(false)));
   document.querySelector('[data-cookie-save]')?.addEventListener('click', () => saveConsent(checkbox?.checked === true));
   document.querySelectorAll('[data-cookie-manage], [data-open-cookie-settings]').forEach((el) => el.addEventListener('click', openSettings));
-  document.querySelectorAll('[data-cookie-close]').forEach((el) => el.addEventListener('click', () => { if (modal) modal.hidden = true; }));
-  document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && modal) modal.hidden = true; });
+  document.querySelectorAll('[data-cookie-close]').forEach((el) => el.addEventListener('click', closeSettings));
+  modal?.addEventListener('cancel', (event) => { event.preventDefault(); closeSettings(); });
+  modal?.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const stops = [...modal.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), [tabindex]:not([tabindex="-1"])')]
+      .filter((el) => el.getClientRects().length > 0);
+    const first = stops[0], last = stops[stops.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+  });
 
   document.addEventListener('click', (event) => {
     const link = event.target.closest?.('a[href]');

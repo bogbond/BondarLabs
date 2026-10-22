@@ -3,26 +3,26 @@
     <div class="cookie-inner">
       <div class="cookie-copy">
         <p class="cookie-title">Cookies</p>
-        <p class="cookie-text muted">We use essential cookies to run this site. With your permission, we also use analytics to improve performance.</p>
+        <p class="cookie-text muted">We use essential cookies to run this site. With your permission, Google Analytics helps us understand how visitors use the website and improve it.</p>
+        <a class="cookie-policy" href="{{ '/privacy/' | url }}">Privacy &amp; cookie details</a>
         <p class="tiny muted" data-cookie-status role="status"></p>
       </div>
       <div class="cookie-actions">
-        <button class="btn btn-primary" type="button" data-cookie-accept>Accept</button>
-        <button class="btn btn-ghost" type="button" data-cookie-reject>Reject analytics</button>
-        <button class="btn btn-ghost" type="button" data-cookie-manage>Manage</button>
+        <button class="btn btn-primary" type="button" data-cookie-accept>Accept all</button>
+        <button class="cookie-manage" type="button" data-cookie-manage>Manage</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" data-cookie-modal hidden>
-  <div class="modal-backdrop" data-cookie-close></div>
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="cookie-title">
+<dialog class="cookie-dialog" data-cookie-modal aria-labelledby="cookie-title" aria-describedby="cookie-description">
     <div class="modal-header">
       <h2 id="cookie-title" class="h3">Cookie preferences</h2>
       <button class="icon-btn" type="button" aria-label="Close" data-cookie-close>×</button>
     </div>
     <div class="modal-body">
+      <p id="cookie-description" class="muted">Choose which optional cookies you'd like to allow, then select Save choices. Analytics starts only after you accept or save your preferences. You can change your choice at any time using Cookie settings in the footer.</p>
+      <p class="tiny muted" data-cookie-status role="status"></p>
       <div class="pref-row">
         <div>
           <div class="pref-title">Essential</div>
@@ -34,19 +34,18 @@
       <div class="pref-row">
         <div>
           <div class="pref-title">Analytics</div>
-          <div class="muted">Helps us understand usage and improve the website.</div>
+          <div class="muted" id="cookie-analytics-note">Uses Google Analytics to understand visits, contact-link clicks and enquiry-form attempts. Your messages, contact details and uploaded filenames are not included in our analytics events.</div>
         </div>
         <label class="switch">
-          <input type="checkbox" data-cookie-analytics aria-label="Allow analytics" />
+          <input type="checkbox" data-cookie-analytics aria-label="Allow analytics" aria-describedby="cookie-analytics-note" />
           <span class="slider"></span>
         </label>
       </div>
 
-      <p class="tiny muted">You can change these settings any time from the footer.</p>
+      <p class="tiny muted">To keep only essential cookies, turn Analytics off and select Save choices. Closing this window leaves your current choice unchanged. <a href="{{ '/privacy/' | url }}">Read our privacy policy</a>.</p>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-ghost" type="button" data-cookie-reject>Reject analytics</button>
-      <button class="btn btn-primary" type="button" data-cookie-save>Save</button>
+      <button class="btn btn-primary" type="button" data-cookie-accept>Accept all</button>
+      <button class="btn btn-ghost" type="button" data-cookie-save>Save choices</button>
     </div>
-  </div>
-</div>
+</dialog>
