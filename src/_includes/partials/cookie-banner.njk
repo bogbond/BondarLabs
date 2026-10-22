@@ -4,9 +4,11 @@
       <div class="cookie-copy">
         <p class="cookie-title">Cookies</p>
         <p class="cookie-text muted">We use essential cookies to run this site. With your permission, we also use analytics to improve performance.</p>
+        <p class="tiny muted" data-cookie-status role="status"></p>
       </div>
       <div class="cookie-actions">
         <button class="btn btn-primary" type="button" data-cookie-accept>Accept</button>
+        <button class="btn btn-ghost" type="button" data-cookie-reject>Reject analytics</button>
         <button class="btn btn-ghost" type="button" data-cookie-manage>Manage</button>
       </div>
     </div>
@@ -35,7 +37,7 @@
           <div class="muted">Helps us understand usage and improve the website.</div>
         </div>
         <label class="switch">
-          <input type="checkbox" data-cookie-analytics />
+          <input type="checkbox" data-cookie-analytics aria-label="Allow analytics" />
           <span class="slider"></span>
         </label>
       </div>

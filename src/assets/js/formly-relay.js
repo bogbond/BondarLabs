@@ -272,6 +272,10 @@
     }
 
     document.body.appendChild(relay);
+    // This records an attempt to send, never a confirmed delivery or lead.
+    if (window.BondarAnalytics && (form.id === 'quoteForm' || form.id === 'contactForm')) {
+      window.BondarAnalytics.track('form_submit_attempt', { form_type: form.id === 'quoteForm' ? 'quote' : 'contact' });
+    }
     relay.submit();
   }
 
