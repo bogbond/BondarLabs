@@ -1,0 +1,4 @@
+<a class="card card-link {{ serviceCardClass }} overview-card--{{ service.fileSlug }}" href="{{ service.url | url }}">
+  <div class="card-media"><img src="{{ service.data.coverImage | url }}" alt="{{ service.data.coverAlt or service.data.title }}" {% if service.data.heroWidth %}width="{{ service.data.heroWidth }}" height="{{ service.data.heroHeight }}"{% endif %} loading="lazy" decoding="async"></div>
+  <div class="card-body"><div class="kicker">{{ route.category }}</div><h3 class="h3">{{ route.label }}</h3><p class="muted">{{ route.summary }}</p></div>
+</a>

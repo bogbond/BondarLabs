@@ -7,8 +7,10 @@
         { "label": "All services", "url": "/services/" },
         { "label": "FDM 3D Printing", "url": "/services/fdm/" },
         { "label": "Resin 3D Printing", "url": "/services/resin/" },
+        { "label": "Batch & Commercial Orders", "url": "/services/batch-production/" },
         { "label": "3D Design & File Support", "url": "/services/design-support/" },
-        { "label": "Batch & Commercial Orders", "url": "/services/batch-production/" }
+        { "label": "Replacement Plastic Parts", "url": "/services/replacement-parts/" },
+        { "label": "Enclosures & Brackets", "url": "/services/custom-enclosures/" }
       ]
     },
     {

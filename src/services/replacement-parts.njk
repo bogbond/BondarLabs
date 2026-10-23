@@ -1,0 +1,86 @@
+---
+layout: layouts/task-service.njk
+title: "Replacement Plastic Parts & Reverse Engineering"
+shortTitle: "Replacement parts"
+seoTitle: "Replacement Plastic Parts & Reverse Engineering UK"
+description: "Replacement plastic parts measured, modelled and 3D printed for repairs and repeat batches. Send a broken sample, photos or a CAD file. Huntingdon, with UK shipping."
+taskService: true
+serviceClass: "task-service--replacement-parts"
+serviceType: "Replacement plastic part modelling and 3D printing"
+eyebrow: "Repair, maintenance & repeat supply"
+intro: "Need a plastic part that is broken, worn or no longer available? We measure suitable originals, recreate the geometry in CAD and 3D print replacements — from a repair sample to a repeat batch for your business."
+primaryCta: "Discuss a replacement part"
+startLabel: "What can be recreated?"
+heroImage: "/assets/images/projects/reverse-engineered-radio-front-cover/01-old-and-new-front-comparison.webp"
+heroWidth: 2000
+heroHeight: 1500
+heroAlt: "Broken original radio grille beside the replacement designed and printed by Bondar Labs."
+heroCaption: "A damaged radio grille, recreated from the original with its mounting features. Original on the left; printed replacement on the right."
+image: "/assets/images/services/task-parts/replacement-parts-social.jpg"
+ogImageAlt: "Original broken radio grille beside a 3D printed replacement."
+coverImage: "/assets/images/projects/reverse-engineered-radio-front-cover/01-old-and-new-front-comparison.webp"
+coverAlt: "Original damaged radio grille and its printed replacement."
+summary: "Recreate a suitable broken or obsolete plastic part, check a sample and produce replacements for repairs or repeat orders."
+kicker: "Replace a part"
+closingEyebrow: "A repair or a recurring requirement?"
+closingTitle: "Tell us what needs replacing."
+closingText: "Describe the part, what it does and how many you need. If it looks suitable, we will discuss the likely cost and whether to measure your original or work from the information you provide."
+otherServiceUrl: "/services/custom-enclosures/"
+otherServiceLabel: "Need a new enclosure or bracket?"
+lastmod: "2026-10-23"
+faqItems:
+  - question: "Can you help if I do not have a CAD file?"
+    answer: "Yes. Start with a description and photos of the part and where it fits. For suitable functional geometry, we can measure an original and build a CAD model. We will discuss what can be recovered if the original is incomplete or missing."
+  - question: "Do I need to post the broken part?"
+    answer: "Often, measuring the original is the simplest route. Contact us first so we can assess the job and agree what to send. Clear dimensions or drawings can also work; local handover in Brampton, Huntingdon can be arranged by appointment."
+  - question: "Can I order a sample before a batch?"
+    answer: "Yes. We recommend a sample before committing to a larger run. A simple prototype can check the geometry, followed by a sample in the proposed material for your assessment before batch approval."
+  - question: "Will the replacement be identical to the original?"
+    answer: "The agreed mounting features and dimensions guide the design. Where practical, we can discuss changes such as thicker weak sections. Printed surface texture, material behaviour and colour can differ from an original moulded part. Critical fits and checks are agreed for the job."
+  - question: "How are design work, revisions and files quoted?"
+    answer: "The quote reflects the modelling, expected iterations, material and quantity. We agree the scope before starting and discuss additional changes if requirements move beyond it. The usual deliverable is the printed part; STL, STEP or Fusion project files can be discussed separately."
+  - question: "What if a plastic replacement is unsuitable?"
+    answer: "We assess the intended use before recommending a print. In one recent enquiry, we declined a functional plastic copy of a highly loaded steel engine tool. A model for checking fit alone was offered as a separate option. Some jobs need a different material or manufacturing process."
+---
+
+<section class="section" id="starting-point">
+  <div class="container">
+    <div class="task-section-copy"><p class="eyebrow">Start with what you have</p><h2>A broken sample, a drawing or a ready file.</h2><p>We work with businesses, repair specialists and private customers. Clips, guides, handles, covers and mounting fittings can be good candidates when the geometry and intended use suit 3D printing.</p></div>
+    <div class="task-route-grid">
+      <div class="task-route"><p class="task-route-num">01 / AN ORIGINAL PART</p><h3>Measure and recreate</h3><p>Send photos first. If the job is feasible, we can measure the original and its mating features, then rebuild the part in CAD. Broken pieces can still provide useful geometry.</p></div>
+      <div class="task-route"><p class="task-route-num">02 / DIMENSIONS OR A SKETCH</p><h3>Model from your information</h3><p>We can work from drawings and supplied measurements where they describe the part sufficiently. We agree the critical dimensions and how the finished part will be checked.</p></div>
+      <div class="task-route"><p class="task-route-num">03 / AN EXISTING MODEL</p><h3>Print your replacement</h3><p>Already have an STL, STEP or other suitable file? We review it for printing, discuss the material and quantity, and quote for manufacture.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted" id="real-work">
+  <div class="container">
+    <div class="task-section-copy"><p class="eyebrow">Real replacement work</p><h2>From an original fitting to a repeat batch.</h2><p>These projects show the different amounts of measurement, development and testing a replacement can need.</p></div>
+    <article class="task-feature" aria-labelledby="hinge-title">
+      <figure class="task-photo">
+        {% set photoSlug = "shower-hinge-development" %}{% set photoAlt = "Grey original shower-door hinge beside white printed trial parts." %}{% set photoWidth = 1200 %}{% set photoHeight = 900 %}{% include "partials/task-photo.njk" %}
+        <figcaption>Original grey fittings and white trial parts used during development.</figcaption>
+      </figure>
+      <div class="task-feature-copy"><div class="task-meta"><span>Measured original</span><span>CAD + ASA batch</span></div><h3 id="hinge-title">Shower-door hinges for a hospitality business</h3><p>A business customer needed replacements for existing shower-door hinges. We measured the supplied originals, created the CAD model and made PLA trial parts to check the geometry.</p><p>Following the sample stage, the finished hinges were produced in black ASA. Print orientation was chosen with the loaded connection in mind. The customer subsequently confirmed that the parts were working well.</p><p>This is the route we discuss for repeat replacement orders: establish the fit on a sample before manufacturing the batch.</p></div>
+    </article>
+    <div class="task-project-grid">
+      <article class="task-project"><figure class="task-photo">{% set photoSlug = "radio-mounting-comparison" %}{% set photoAlt = "Rear views of the broken original radio grille and printed replacement side by side, showing ribs, screw posts and mounting features." %}{% set photoWidth = 1200 %}{% set photoHeight = 900 %}{% include "partials/task-photo.njk" %}</figure><div><div class="task-meta"><span>Reverse engineering</span></div><h3>A radio grille with the fittings recreated</h3><p>The damaged original supplied the reference for a new PLA cover, including rear ribs, fixing positions and clips. The rear views show the original and replacement together so the mounting geometry can be compared.</p><a class="task-project-link" href="{{ '/case-studies/reverse-engineered-radio-front-cover/' | url }}">See the radio-cover project <span aria-hidden="true">→</span></a></div></article>
+      <article class="task-project"><figure class="task-photo">{% set photoSlug = "cabinet-original-and-replacements" %}{% set photoAlt = "Deformed sliding-door cabinet fitting with brush strips beside the newly printed replacement components." %}{% set photoWidth = 1200 %}{% set photoHeight = 900 %}{% include "partials/task-photo.njk" %}</figure><div><div class="task-meta"><span>Reverse engineering</span></div><h3>A sliding-door cabinet fitting</h3><p>The client supplied a deformed fitting with one mounting lug broken off, along with its brush strips. We measured and remodelled the part, reconstructed the missing lug using the intact side as a reference, and reproduced both channels for the brush strips.</p></div></article>
+      <article class="task-project"><figure class="task-photo">{% set photoSlug = "campervan-handle-comparison" %}{% set photoAlt = "Broken campervan insect-screen handle between two newly printed replacement handles." %}{% set photoWidth = 1200 %}{% set photoHeight = 900 %}{% include "partials/task-photo.njk" %}</figure><div><div class="task-meta"><span>Local repair</span></div><h3>A campervan insect-screen handle</h3><p>After reviewing emailed photographs, we measured the original handle and its bolts. The replacement was modelled with extra material around the section that had broken.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+    <div class="task-section-copy"><p class="eyebrow">From sample to batch</p><h2>Agree the fit before repeating the part.</h2><p>The material and print settings depend on how the component will be used. Tell us about load, heat, moisture, chemicals, sunlight, friction and appearance.</p></div>
+    <ol class="task-process">
+      <li><h3>Describe the problem</h3><p>Share photos, what failed, the equipment involved and the quantity needed. We review feasibility and discuss a likely cost range.</p></li>
+      <li><h3>Measure and model</h3><p>We agree the reference dimensions and design scope. CAD views or drawings let you review the proposed geometry.</p></li>
+      <li><h3>Check a sample</h3><p>A prototype or a small test section can check difficult features. Where the mating assembly is available, we can check fit here; otherwise you assess the sample.</p></li>
+      <li><h3>Approve production</h3><p>For a batch, confirm the sample, material and required checks before the run. Quantity, finishing and delivery are included in the production discussion.</p></li>
+    </ol>
+    <div class="task-batch-note"><h3>Need the same part repeatedly?</h3><p>Tell us your initial quantity and likely repeat requirement. Developing a replacement once can support later batches; the practical quantity and price depend on the part and agreed specification. <a href="{{ '/services/batch-production/' | url }}">Explore batch production</a>.</p></div>
+  </div>
+</section>

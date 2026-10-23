@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+serviceOverview: true
 title: "Custom 3D Printed Parts, Prototypes & Small-Batch Production"
 seoTitle: "Custom 3D Printing in Cambridge & Across the UK"
 description: "Custom 3D printed parts, prototypes and small-batch production for businesses and individuals. Based near Cambridge with local delivery and UK-wide shipping."
@@ -179,23 +180,23 @@ ogImageAlt: "Bondar Labs workshop with desktop 3D printers and filament spools."
 
 <section class="section" id="services-overview">
   <div class="container">
-    <div class="overview">
-      <div class="section-head">
-        <h2 class="h2">Services</h2>
-        <p class="muted">From one-off replacements to repeatable commercial runs — the main ways clients typically use Bondar Labs.</p>
+    <div class="overview carousel service-carousel" data-carousel role="region" aria-label="Services">
+      <div class="carousel-head">
+        <div class="section-head">
+          <h2 class="h2">Services</h2>
+          <p class="muted">FDM and resin printing, repeat batches and CAD support — with dedicated help for replacement parts, custom enclosures and brackets.</p>
+        </div>
+        <div class="carousel-controls" aria-label="Services carousel controls">
+          <button class="carousel-btn" type="button" data-carousel-prev aria-label="Show previous services"><span aria-hidden="true">←</span></button>
+          <button class="carousel-btn" type="button" data-carousel-next aria-label="Show more services"><span aria-hidden="true">→</span></button>
+        </div>
       </div>
 
-      <div class="overview-grid">
-        {% for service in collections.services %}
-          <a class="card card-link overview-card overview-card--service overview-card--{{ service.fileSlug }}" href="{{ service.url | url }}">
-            <div class="card-media overview-card-media"><img src="{{ service.data.coverImage | url }}" alt="{{ service.data.coverAlt or service.data.title }}" loading="lazy" decoding="async"></div>
-            <div class="card-body">
-              <div class="kicker">{{ service.data.kicker }}</div>
-              <h3 class="h3">{{ service.data.title }}</h3>
-              <p class="muted">{{ service.data.summary }}</p>
-            </div>
-          </a>
-        {% endfor %}
+      <div class="carousel-track service-track" data-carousel-track tabindex="0" aria-label="Browse all services">
+        {% set serviceCardClass = "overview-card overview-card--service carousel-item" %}
+        {% for route in serviceRoutes %}{% for service in collections.all %}{% if service.url == route.url %}
+          {% include "partials/service-route-card.njk" %}
+        {% endif %}{% endfor %}{% endfor %}
       </div>
 
       <div class="overview-foot">

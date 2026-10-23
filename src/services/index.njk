@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+serviceOverview: true
 title: Services
 seoTitle: "3D Printing Services in the UK"
 description: "FDM and resin 3D printing, CAD-based file support and small-batch production for businesses and individuals across the UK."
@@ -11,31 +12,42 @@ ogImageAlt: "Bondar Labs services overview OG image with workshop background."
   <div class="container">
     <p class="eyebrow">Bondar Labs · Services</p>
     <h1>Services</h1>
-    <p class="lead">From one-off functional parts to repeat commercial runs — with engineering-grade materials and careful quality checks.</p>
+    <p class="lead">Choose a starting point for your project: a part to replace, a new design, a ready file or a repeat batch. We can combine design, prototyping and printing to suit the job.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="grid grid-2">
-      {% for s in collections.services %}
-        <a class="card card-link" href="{{ s.url | url }}">
-          <div class="card-media"><img src="{{ s.data.coverImage | url }}" alt="{{ s.data.coverAlt or s.data.title }}" loading="lazy" decoding="async"></div>
-          <div class="card-body">
-            <div class="kicker">{{ s.data.kicker }}</div>
-            <h2 class="h3">{{ s.data.title }}</h2>
-            <p class="muted">{{ s.data.summary }}</p>
-          </div>
-        </a>
-      {% endfor %}
+    <div class="section-head">
+      <h2 class="h2">Find the right starting point</h2>
+      <p class="muted service-overview-note">These services work together. A replacement or custom part may need CAD, a prototype, FDM or resin printing, and then a production batch. If you already have a suitable file, you can start with printing.</p>
     </div>
+    <div class="grid grid-2 service-route-grid">
+      {% set serviceCardClass = "" %}
+      {% for route in serviceRoutes %}{% for service in collections.all %}{% if service.url == route.url %}
+        {% include "partials/service-route-card.njk" %}
+      {% endif %}{% endfor %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">One project can use several services</h2>
+      <p class="muted">Start at the stage that matches the information you have. We agree the work needed before it begins.</p>
+    </div>
+    <ol class="service-path">
+      <li><h3>1. Define or develop the part</h3><p>We can recreate a suitable original, design around your equipment, adapt an existing model or review your finished file.</p></li>
+      <li><h3>2. Choose the print route</h3><p>Material, geometry and use guide the choice of FDM or resin. A trial print can check the critical details.</p></li>
+      <li><h3>3. Approve and manufacture</h3><p>Order the agreed parts or confirm a sample before a batch. Repeat manufacture follows the agreed specification.</p></li>
+    </ol>
 
     <div class="card mt-16">
       <div class="card-body">
-        <h2 class="h3">Extra options</h2>
+        <h2 class="h3">Delivery &amp; finishing</h2>
         <ul class="muted">
           <li><strong>Same-day local</strong>: available on request for Cambridgeshire (subject to schedule and part complexity).</li>
-          <li><strong>Reverse engineering</strong>: can be included as part of file support if you only have photos/measurements.</li>
           <li><strong>Post-processing</strong>: sanding, basic finishing and assembly support available depending on the project.</li>
         </ul>
         <div class="hero-actions">

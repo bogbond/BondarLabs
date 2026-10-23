@@ -31,6 +31,8 @@ coverAlt: "Reverse-engineered tripod joint recreated as a 3D printed replacement
 
 ## File support that makes printing predictable
 
+Have a specific task in mind? Explore [replacement plastic parts and reverse engineering]({{ '/services/replacement-parts/' | url }}) or [custom enclosures and brackets]({{ '/services/custom-enclosures/' | url }}) for real projects and the route from an initial brief to printed parts.
+
 Not every project starts with a perfect “print-ready” file. Sometimes you have an STL that needs tweaks, a broken part you want to replace, or a hand sketch with key dimensions. Our design support bridges the gap between an idea and a result you can actually use.
 
 If you also want us to print your part, we optimise the file specifically for the selected process (FDM or resin) to improve reliability, surface quality, and cost efficiency.

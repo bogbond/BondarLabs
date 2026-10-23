@@ -1,0 +1,8 @@
+[
+  { "url": "/services/fdm/", "label": "FDM 3D Printing", "category": "Filament printing", "summary": "Print functional parts and prototypes in a material selected for their use." },
+  { "url": "/services/resin/", "label": "Resin 3D Printing", "category": "Fine-detail printing", "summary": "Produce fine features and detailed models, with washing and UV curing included." },
+  { "url": "/services/batch-production/", "label": "Batch & Commercial Orders", "category": "Repeat manufacture", "summary": "Approve a sample, then produce batches and repeat orders to an agreed specification." },
+  { "url": "/services/design-support/", "label": "3D Design & File Support", "category": "CAD & preparation", "summary": "Create or adapt functional CAD and prepare your files for printing and assembly." },
+  { "url": "/services/replacement-parts/", "label": "Replacement Plastic Parts", "category": "Repair & replacement", "summary": "Recreate a broken or obsolete fitting, check a sample and make replacements." },
+  { "url": "/services/custom-enclosures/", "label": "Enclosures & Brackets", "category": "Custom parts & prototypes", "summary": "Develop a housing or mount around your equipment, or print your existing design." }
+]
