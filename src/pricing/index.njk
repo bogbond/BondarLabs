@@ -2,7 +2,8 @@
 layout: layouts/base.njk
 title: "3D Printing Pricing"
 seoTitle: "3D Printing Pricing in the UK"
-description: "How Bondar Labs pricing works for FDM, resin and design-support jobs — what affects cost, what is included and how to get a fast project quote."
+description: "See what completed Bondar Labs projects cost, from replacement parts and custom CAD to batch and resin printing, with quantities and included work explained."
+pricingExamples: true
 image: "/assets/images/og/pricing.jpg"
 ogImageAlt: "Bondar Labs pricing page OG image."
 ---
@@ -10,15 +11,15 @@ ogImageAlt: "Bondar Labs pricing page OG image."
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Bondar Labs · Pricing</p>
-    <h1>3D printing pricing — how quotes work</h1>
+    <h1>3D printing prices — examples and quotes</h1>
     <p class="lead">
-      We don’t use a fixed price list, because every part is different. Instead, we quote per project and can offer options to match
-      your priorities: lowest cost, best finish, fastest turnaround, or maximum accuracy.
+      See what completed orders cost, from a replacement part to a batch of branded items.
+      Your quote will depend on the design, material, quantity and work involved.
     </p>
 
     <div class="hero-actions">
       <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
-      <a class="btn btn-ghost" href="{{ '/services/' | url }}">Services</a>
+      <a class="btn btn-ghost" href="#real-project-prices">See real project prices</a>
     </div>
 
     <p class="muted" style="margin-top:10px">
@@ -27,71 +28,139 @@ ogImageAlt: "Bondar Labs pricing page OG image."
   </div>
 </section>
 
-<section class="section">
+<section class="section pricing-examples" id="real-project-prices" aria-labelledby="real-prices-heading">
+  <div class="container">
+    <div class="pricing-intro prose">
+      <p class="eyebrow">Completed orders</p>
+      <h2 id="real-prices-heading">What real projects cost</h2>
+      <p>Four completed projects show different types of order: replacing a broken part, designing custom adapters, making a branded batch and producing small resin components. Prices below are historical examples for the work and quantities described. Your project will be quoted individually.</p>
+    </div>
+    <div class="pricing-example-grid">
+      <article class="card pricing-example" aria-labelledby="price-radio">
+        <div class="pricing-example-heading">
+          <h3 id="price-radio">Replacing a broken part</h3>
+          <p class="pricing-project-name">Radio front cover · FDM</p>
+          <p class="pricing-amount"><strong>£40</strong><span>for one replacement cover</span></p>
+        </div>
+        <figure class="pricing-photo pricing-photo--radio">
+          <a href="{{ '/case-studies/reverse-engineered-radio-front-cover/' | url }}" aria-label="View the replacement radio front cover project">
+            <img src="{{ '/assets/images/pricing/radio-cover-960.webp' | url }}" srcset="{{ '/assets/images/pricing/radio-cover-480.webp' | url }} 480w, {{ '/assets/images/pricing/radio-cover-960.webp' | url }} 960w" sizes="(max-width: 760px) calc(100vw - 40px), 560px" width="960" height="720" alt="Broken original radio front cover beside the newly printed replacement." loading="lazy" decoding="async">
+          </a>
+          <figcaption>Original and replacement shown side by side.</figcaption>
+        </figure>
+        <div class="card-body prose pricing-example-body">
+          <p>A damaged original measured, modelled in CAD and reproduced in oak-tone PLA, including the grille, ribs and mounting details.</p>
+          <p><strong>Included:</strong> Measurement, CAD modelling and printing.</p>
+          <p class="pricing-delivery">Delivery paid separately by the customer.</p>
+          <p class="pricing-project-link"><a href="{{ '/case-studies/reverse-engineered-radio-front-cover/' | url }}">View the project <span aria-hidden="true">→</span></a></p>
+        </div>
+      </article>
+      <article class="card pricing-example" aria-labelledby="price-rack">
+        <div class="pricing-example-heading">
+          <h3 id="price-rack">Parts designed for your equipment</h3>
+          <p class="pricing-project-name">10-inch rack adapters · FDM</p>
+          <p class="pricing-amount"><strong>£80</strong><span>for four adapters across two designs</span></p>
+        </div>
+        <figure class="pricing-photo pricing-photo--rack">
+          <a href="{{ '/case-studies/custom-10-inch-rack-mount-adapters/' | url }}" aria-label="View the custom 10-inch rack adapters project">
+            <img src="{{ '/assets/images/pricing/rack-adapter-960.webp' | url }}" srcset="{{ '/assets/images/pricing/rack-adapter-480.webp' | url }} 480w, {{ '/assets/images/pricing/rack-adapter-960.webp' | url }} 960w" sizes="(max-width: 760px) calc(100vw - 40px), 560px" width="960" height="720" alt="One black custom 10-inch rack adapter with a fitted equipment opening and mounting slots." loading="lazy" decoding="async">
+          </a>
+          <figcaption>One of the four adapters supplied in this order.</figcaption>
+        </figure>
+        <div class="card-body prose pricing-example-body">
+          <p>Two adapter designs created for a customer’s TP-Link ER605 and DrayTek PQ1070X equipment, with two PLA parts produced for each design.</p>
+          <p><strong>Included:</strong> Custom CAD design and printing of all four parts.</p>
+          <p class="pricing-delivery">Delivery paid separately: approximately £3–£5 at the time.</p>
+          <p class="pricing-project-link"><a href="{{ '/case-studies/custom-10-inch-rack-mount-adapters/' | url }}">View the project <span aria-hidden="true">→</span></a></p>
+        </div>
+      </article>
+      <article class="card pricing-example" aria-labelledby="price-scrapers">
+        <div class="pricing-example-heading">
+          <h3 id="price-scrapers">A batch of branded items</h3>
+          <p class="pricing-project-name">Mini scrapers · Two-colour FDM</p>
+          <p class="pricing-amount"><strong>£0.75</strong><span>each in a batch of 220</span></p>
+        </div>
+        <figure class="pricing-photo pricing-photo--scrapers">
+          <a href="{{ '/case-studies/branded-mini-scrapers-dreamy-cake-batch/' | url }}" aria-label="View the branded mini scrapers project">
+            <img src="{{ '/assets/images/pricing/mini-scraper-batch-960.webp' | url }}" srcset="{{ '/assets/images/pricing/mini-scraper-batch-480.webp' | url }} 480w, {{ '/assets/images/pricing/mini-scraper-batch-960.webp' | url }} 960w" sizes="(max-width: 760px) calc(100vw - 40px), 560px" width="960" height="1280" alt="A large batch of pastel-coloured mini scrapers with two-colour Dreamy Cake branding." loading="lazy" decoding="async">
+          </a>
+          <figcaption>The batch of branded mini scrapers.</figcaption>
+        </figure>
+        <div class="card-body prose pricing-example-body">
+          <p>A batch of two-colour PLA mini scrapers with Dreamy Cake branding, individually packed for handover.</p>
+          <p><strong>Included:</strong> Design preparation, two-colour printing, individual packaging and stickers.</p>
+          <p class="pricing-delivery">Handed over in person.</p>
+          <p class="pricing-project-link"><a href="{{ '/case-studies/branded-mini-scrapers-dreamy-cake-batch/' | url }}">View the project <span aria-hidden="true">→</span></a></p>
+        </div>
+      </article>
+      <article class="card pricing-example" aria-labelledby="price-bobbins">
+        <div class="pricing-example-heading">
+          <h3 id="price-bobbins">Small parts with custom CAD</h3>
+          <p class="pricing-project-name">Coil bobbins · Resin</p>
+          <p class="pricing-amount"><strong>£5–£8</strong><span>per part on previous multi-part orders</span></p>
+        </div>
+        <figure class="pricing-photo pricing-photo--bobbins">
+          <a href="{{ '/case-studies/resin-coil-bobbins/' | url }}" aria-label="View the custom resin coil bobbins project">
+            <img src="{{ '/assets/images/pricing/resin-bobbins-960.webp' | url }}" srcset="{{ '/assets/images/pricing/resin-bobbins-480.webp' | url }} 480w, {{ '/assets/images/pricing/resin-bobbins-960.webp' | url }} 960w" sizes="(max-width: 760px) calc(100vw - 40px), 560px" width="960" height="1280" alt="Small rectangular resin coil bobbins held in a hand to show their scale." loading="lazy" decoding="async">
+          </a>
+          <figcaption>Examples from the series of custom resin bobbins.</figcaption>
+        </figure>
+        <div class="card-body prose pricing-example-body">
+          <p>Small coil bobbins modelled from the customer’s dimensions and produced in resin.</p>
+          <p><strong>Included:</strong> CAD modelling and resin printing in those multi-part orders.</p>
+          <p class="pricing-context">The price depended on the design and quantity ordered. A new design or a different quantity is quoted individually.</p>
+          <p class="pricing-delivery">Delivery paid separately: approximately £3–£5 at the time.</p>
+          <p class="pricing-project-link"><a href="{{ '/case-studies/resin-coil-bobbins/' | url }}">View the project <span aria-hidden="true">→</span></a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section pricing-explanation" aria-labelledby="price-differences-heading">
+  <div class="container">
+    <div class="pricing-intro prose">
+      <h2 id="price-differences-heading">Why these prices differ</h2>
+      <p>The examples cover different amounts of design and production work. Here is what to consider when comparing them with your own project.</p>
+    </div>
+    <div class="pricing-factor-grid">
+      <div class="prose">
+        <h3>Design work</h3>
+        <p>The <a href="#price-radio">radio cover</a> was recreated from a damaged original; the <a href="#price-rack">rack adapters</a> were designed for specific equipment. Send an existing model if you have one, or tell us what needs to be designed.</p>
+      </div>
+      <div class="prose">
+        <h3>Quantity</h3>
+        <p>The <a href="#price-scrapers">£0.75 scraper price</a> applied to a batch of 220. CAD was included in the <a href="#price-bobbins">resin bobbin prices</a> for orders of several parts. Neither is a price for a new one-off design.</p>
+      </div>
+      <div class="prose">
+        <h3>Geometry, material and process</h3>
+        <p>A large radio grille and small resin bobbins need different printing methods and preparation. Size alone does not determine the price: detail, supports, fit and material also matter. <a href="{{ '/materials/' | url }}">Explore materials</a>.</p>
+      </div>
+      <div class="prose">
+        <h3>Finishing and delivery</h3>
+        <p>The scraper batch included individual packaging and stickers. Other work may need different finishing or packing. Delivery is shown separately in the examples; your quote will set out the work and delivery agreed for your order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pricing-preparation" aria-labelledby="preparation-heading">
   <div class="container">
     <div class="card">
       <div class="card-body prose">
-        <h2>Why there’s no fixed price list</h2>
-        <p>
-          3D printing is custom, small-batch manufacturing. Two parts that “look similar” can have very different print time,
-          support requirements, failure risk, post-processing effort, and quality targets. Publishing a single “per gram” or
-          “per hour” rate usually makes simple jobs overpriced and complex jobs underquoted.
-        </p>
-        <p>
-          The fastest way to get an accurate price is to send your file(s) and tell us what the part needs to do. We’ll come back
-          with a clear quote — and, if useful, a couple of options (budget vs finish vs speed).
-        </p>
-
-        <h2>What affects the quote</h2>
-        <ul>
-          <li><strong>Material</strong> (PLA/PETG vs engineering filaments; resin types)</li>
-          <li><strong>Print time & geometry</strong> (supports, overhangs, small features, orientation)</li>
-          <li><strong>Quality settings</strong> (layer height / nozzle / resin layer height)</li>
-          <li><strong>Finishing</strong> (basic cleanup vs cosmetic finishing, inserts, assembly, painting)</li>
-          <li><strong>Quantity</strong> (batch planning and repeatable settings; per-unit efficiency for larger runs)</li>
-          <li><strong>Deadline</strong> (standard vs urgent scheduling)</li>
-          <li><strong>QC and documentation</strong> (critical-dimension checks, measurement report if needed)</li>
-          <li><strong>Packaging</strong> (bulk vs individual bagging/labels/kitting)</li>
-          <li><strong>Design/file support</strong> (small fixes vs re-modelling / reverse engineering)</li>
-        </ul>
-
-        <h2>What’s included (standard)</h2>
+        <h2 id="preparation-heading">Standard print preparation</h2>
+        <p>The examples list the work included in those particular orders. For print preparation, our standard process covers:</p>
         <div class="grid grid-2">
-          <div class="card">
-            <div class="card-body">
-              <div class="kicker">FDM</div>
-              <p class="muted" style="margin-top:8px">
-                Setup and slicing · sensible settings for your use case · basic support removal · safe packaging for shipping.
-              </p>
-              <p class="tiny muted">
-                Optional: inserts, hardware, bonding/assembly, cosmetic finishing, measurement reporting, individual packaging.
-              </p>
-            </div>
+          <div>
+            <h3>FDM printing</h3>
+            <p>Setup and slicing, settings for the intended use, basic support removal and protective packaging.</p>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <div class="kicker">Resin (MSLA)</div>
-              <p class="muted" style="margin-top:8px">
-                Support removal · thorough washing/cleaning · controlled drying · final UV curing · QC + safe packaging.
-              </p>
-              <p class="tiny muted">
-                Optional: hollowing/drainage optimisation (by agreement), cosmetic finishing, priming/painting.
-              </p>
-            </div>
+          <div>
+            <h3>Resin printing</h3>
+            <p>Support removal, washing, drying, final UV curing, inspection and protective packaging.</p>
           </div>
         </div>
-
-        <h2>Budget-friendly choices (when suitable)</h2>
-        <p>
-          If your priority is cost efficiency, we’ll often recommend <strong>PLA</strong> (for many prototypes and visual/functional parts)
-          or <strong>grey water-washable resin</strong> (for high-detail resin prints with excellent consistency). We’ll always match the choice
-          to your use case — strength, heat, appearance and fit requirements matter more than “the cheapest material”.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
-          <a class="btn btn-ghost" href="{{ '/materials/' | url }}">Materials</a>
-        </div>
+        <p class="muted">CAD work, additional finishing, inserts, assembly and special packaging are agreed as part of your quote. Delivery is separate from print preparation.</p>
       </div>
     </div>
   </div>
@@ -101,91 +170,11 @@ ogImageAlt: "Bondar Labs pricing page OG image."
   <div class="container">
     <div class="card">
       <div class="card-body prose">
-        <h2>Example scenarios (no fixed prices)</h2>
-        <p class="muted">
-          These are typical project types to illustrate what drives cost. Exact pricing depends on geometry, settings, finish, and deadline.
-        </p>
-      </div>
-    </div>
-
-    <div class="grid grid-3" style="margin-top:16px">
-      <div class="card">
-        <div class="card-media">
-          <img src="{{ '/assets/images/services/fdm-printed-gears.webp' | url }}" alt="Precision FDM part example">
-        </div>
-        <div class="card-body prose">
-          <div class="kicker">Budget</div>
-          <h3>Simple functional part (FDM)</h3>
-          <p>PLA or PETG, standard settings, minimal supports, basic cleanup. Great for brackets, spacers, quick prototypes.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-media">
-          <img src="{{ '/assets/images/Functional-Mechanical-Handle.webp' | url }}" alt="FDM fit and assembly example">
-        </div>
-        <div class="card-body prose">
-          <div class="kicker">Balanced</div>
-          <h3>Fit / assembly focused part (FDM)</h3>
-          <p>Clearances, holes, mating interfaces. May include test prints and measured adjustments for reliable fit.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-media">
-          <img src="{{ '/assets/images/services/resin-miniature-figure.webp' | url }}" alt="High-detail resin miniature example">
-        </div>
-        <div class="card-body prose">
-          <div class="kicker">Balanced</div>
-          <h3>High-detail small part (Resin)</h3>
-          <p>0.05 mm standard (0.03 mm for fine detail). Wash + dry + UV cure included. Ideal for miniatures, stamps, masters.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-media">
-          <img src="{{ '/assets/images/3D-Printed-Microscope-Mount.webp' | url }}" alt="Large or complex FDM part example">
-        </div>
-        <div class="card-body prose">
-          <div class="kicker">Premium</div>
-          <h3>Large or complex geometry (FDM)</h3>
-          <p>More print time, more supports, and potentially splitting + alignment features for clean assembly.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-media">
-          <img src="{{ '/assets/images/services/batch-commercial-mini-scrapers.webp' | url }}" alt="Batch production example">
-        </div>
-        <div class="card-body prose">
-          <div class="kicker">Batch</div>
-          <h3>Commercial batch (50–500+ units)</h3>
-          <p>Repeatable settings, optional first-article sample, packaging/kitting and measurement reporting by agreement.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-media">
-          <img src="{{ '/assets/images/Personalized-Wall-Desk-Plaques.webp' | url }}" alt="Cosmetic finishing example">
-        </div>
-        <div class="card-body prose">
-          <div class="kicker">Premium</div>
-          <h3>Cosmetic / display finish</h3>
-          <p>Extra clean-up, surface work, priming/painting (quoted). Chosen when appearance matters more than speed.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card mt-12">
-      <div class="card-body prose">
-        <h2>Need a fast quote?</h2>
-        <p>
-          Send your file(s), quantity, deadline, and any critical dimensions/fit requirements. If you’re unsure about material or settings,
-          just describe the use case — we’ll recommend the best option and keep the quote transparent.
-        </p>
+        <h2>What would your project cost?</h2>
+        <p>Send your files or photos, the quantity you need and what the parts will be used for. If you don’t have a model yet, we can discuss the design work as part of your quote.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="{{ '/quote/' | url }}">Get a Quote</a>
-          <a class="btn btn-ghost" href="{{ '/services/batch-production/' | url }}">Batch & Commercial Orders</a>
+          <a class="btn btn-ghost" href="{{ '/services/batch-production/' | url }}">Batch &amp; Commercial Orders</a>
         </div>
       </div>
     </div>

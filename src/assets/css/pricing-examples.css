@@ -1,0 +1,28 @@
+.pricing-intro{max-width:850px;margin-bottom:26px}
+.pricing-example-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.pricing-example{min-width:0}
+.pricing-example-heading{padding:24px 24px 20px}
+.pricing-example-heading h3{margin:0;font-size:25px;line-height:1.25;scroll-margin-top:110px}
+.pricing-project-name{margin:10px 0 18px;font-size:14px;color:var(--muted);line-height:1.5}
+.pricing-example-heading .pricing-amount{margin:0}
+.pricing-photo{margin:0;background:var(--panel-2)}
+.pricing-photo a{display:block;aspect-ratio:16/10;overflow:hidden}
+.pricing-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.pricing-photo--scrapers img{object-position:center 40%}
+.pricing-photo--bobbins img{object-position:center 35%}
+.pricing-photo figcaption{padding:10px 20px;font-size:13px;line-height:1.5;color:var(--muted)}
+.pricing-example-body{padding:24px}
+.pricing-example-body .kicker{margin:0 0 10px}
+.pricing-example-body h3{margin:0 0 18px;font-size:25px;line-height:1.25}
+.pricing-amount{display:flex;flex-direction:column;gap:4px;margin:0 0 20px}
+.pricing-amount strong{font-size:40px;line-height:1.15;letter-spacing:-.025em;color:var(--accent-ink)}
+.pricing-amount span{font-size:15px;line-height:1.5}
+.pricing-context{border-left:3px solid var(--accent);padding-left:14px}
+.pricing-delivery{font-size:14px;color:var(--muted)}
+.pricing-project-link{margin:22px 0 0}
+.pricing-factor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 36px}
+.pricing-factor-grid h3{margin:0 0 10px;font-size:21px;line-height:1.3}
+.pricing-factor-grid p{margin:0}
+.pricing-preparation h3{font-size:20px;line-height:1.3}
+@media(max-width:760px){.pricing-example-grid,.pricing-factor-grid{grid-template-columns:1fr;gap:24px}.pricing-example-body,.pricing-example-heading{padding:20px}.pricing-example-heading h3{font-size:23px}.pricing-amount strong{font-size:36px}.pricing-photo figcaption{padding:10px 20px}}
+.pricing-examples{scroll-margin-top:100px}
