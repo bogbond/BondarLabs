@@ -1,0 +1,9 @@
+<article class="card customer-review{% if reviewCompact %} carousel-item{% endif %}"{% if not reviewCompact %} id="{{ review.id }}"{% endif %}>
+  <div class="card-body">
+    <div class="review-card-top"><span class="review-platform">{{ review.source }}</span>{% if review.rating %}<span class="review-stars" aria-label="{{ review.rating }} out of 5 stars">★★★★★</span>{% else %}<span class="review-positive">Positive feedback</span>{% endif %}</div>
+    <blockquote><p>“{% if reviewCompact %}{{ review.quote }}{% else %}{{ review.detail or review.quote }}{% endif %}”</p></blockquote>
+    <div class="review-person"><strong>{{ review.name }}</strong><span class="tiny muted">{{ review.context }}</span></div>
+    <div class="review-source"><a href="{{ review.url }}" target="_blank" rel="noopener noreferrer" aria-label="{% if review.source == 'Google' %}Read the original Google review by {{ review.name }}{% else %}View eBay seller feedback for the review by {{ review.name }}{% endif %}">{% if review.source == 'Google' %}Read on Google{% else %}View eBay feedback{% endif %} <span aria-hidden="true">↗︎</span></a></div>
+    {% if review.item %}<details class="review-evidence"><summary>Find this feedback</summary><p>On eBay, search the feedback for item <strong>{{ review.item }}</strong> and look for <strong>{{ review.name }}</strong>. eBay marks this as a verified purchase.</p></details>{% endif %}
+  </div>
+</article>

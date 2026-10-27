@@ -1,0 +1,28 @@
+<section class="section section-muted customer-reviews" id="reviews" aria-labelledby="reviews-title">
+<div class="container">
+  <div class="section-head"><p class="eyebrow">Customer feedback</p><h2 class="h2" id="reviews-title">Real orders. Real feedback.</h2><p class="muted">Customer reviews alongside photos of the work — from recreated parts to custom print requests and ready-to-use mounts.</p></div>
+  {% include "partials/review-summary.njk" %}
+  <div class="review-stories">
+  {% for review in customerReviews.entries %}{% if review.photo %}
+    <article class="card review-project-story" id="{{ review.id }}">
+      <figure class="review-project-photos">
+        <a class="review-project-main-photo" href="{{ review.photo | url }}" target="_blank" rel="noopener noreferrer" aria-label="Open project photo for {{ review.name }}"><img src="{{ review.photo | url }}" width="{{ review.gallery[0].width }}" height="{{ review.gallery[0].height }}" alt="{{ review.photoAlt }}" loading="lazy" decoding="async"></a>
+        {% if review.gallery.length > 1 %}<div class="review-project-thumbs">{% for photo in review.gallery %}<a href="{{ photo.src | url }}" target="_blank" rel="noopener noreferrer" aria-label="Open photo {{ loop.index }} for {{ review.name }}"><img src="{{ photo.thumb | url }}" width="{{ photo.width }}" height="{{ photo.height }}" alt="{{ photo.alt }}" loading="lazy" decoding="async"></a>{% endfor %}</div>{% endif %}
+        <figcaption class="tiny muted">{{ review.photoCaption }}</figcaption>
+      </figure>
+      <div class="card-body">
+        <div class="review-card-top"><span class="review-platform">{{ review.source }}</span>{% if review.rating %}<span class="review-stars" aria-label="{{ review.rating }} out of 5 stars">★★★★★</span>{% else %}<span class="review-positive">Positive feedback</span>{% endif %}</div>
+        <h3 class="h3">{{ review.storyTitle }}</h3><p class="review-project-description muted">{{ review.storyText }}</p>
+        <blockquote><p>“{{ review.detail or review.quote }}”</p></blockquote>
+        <div class="review-person"><strong>{{ review.name }}</strong><span class="tiny muted">{{ review.context }}</span></div>
+        <div class="review-story-links"><a href="{{ review.url }}" target="_blank" rel="noopener noreferrer">{% if review.source == 'Google' %}Read the original Google review{% else %}View eBay feedback{% endif %} <span aria-hidden="true">↗︎</span></a>{% if review.project %}<a href="{{ review.project | url }}">See the project <span aria-hidden="true">→</span></a>{% endif %}</div>
+        {% if review.item %}<details class="review-evidence"><summary>Find this feedback</summary><p>On eBay, search item <strong>{{ review.item }}</strong> and look for <strong>{{ review.name }}</strong>. This buyer’s feedback includes two installation photos.</p></details>{% endif %}
+      </div>
+    </article>
+  {% endif %}{% endfor %}
+  </div>
+  <div class="review-grid">{% set reviewCompact = false %}{% for review in customerReviews.entries %}{% if not review.photo %}{% include "partials/review-card.njk" %}{% endif %}{% endfor %}</div>
+  <p class="review-context-note tiny muted">Workshop photos are supplied by Bondar Labs; the installation photo is attached to the buyer’s eBay feedback. Reviews describe individual past orders. Turnaround, materials and price are confirmed for each new project.</p>
+  <div class="review-footer"><p class="tiny muted">Worked with us? <a href="{{ customerReviews.mapsUrl }}" target="_blank" rel="noopener noreferrer">Share your experience on Google <span aria-hidden="true">↗︎</span></a></p><a href="{{ customerReviews.ebayUrl }}" target="_blank" rel="noopener noreferrer">All eBay feedback <span aria-hidden="true">↗︎</span></a></div>
+</div>
+</section>

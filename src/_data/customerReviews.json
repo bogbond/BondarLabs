@@ -1,0 +1,219 @@
+{
+  "checked": "26 October 2026",
+  "ebayUrl": "https://www.ebay.co.uk/fdbk/feedback_profile/bondar-labs?user_context=BUYER",
+  "mapsUrl": "https://maps.app.goo.gl/HgiFnyAGDvLCw4H67",
+  "ebayPositive": 347,
+  "ebayPercent": "99.7%",
+  "googleRating": "5.0",
+  "googleCount": 3,
+  "entries": [
+    {
+      "id": "google-samantha",
+      "source": "Google",
+      "name": "Samantha Woo",
+      "rating": 5,
+      "home": true,
+      "url": "https://maps.app.goo.gl/JTgNoWiPJzVQLDeM6",
+      "quote": "…great communication throughout and fantastic finished product. Highly recommend for any 3D printing.",
+      "detail": "Amazing service! Replacement toy part produced within 24 hours, great communication throughout and fantastic finished product. Highly recommend for any 3D printing.",
+      "context": "Toy door · reverse engineering",
+      "gallery": [
+        {
+          "src": "/assets/images/reviews/google-samantha-1.webp",
+          "thumb": "/assets/images/reviews/google-samantha-1-thumb.webp",
+          "width": 1200,
+          "height": 900,
+          "alt": "Original toy door alongside its 3D printed replacement."
+        },
+        {
+          "src": "/assets/images/reviews/google-samantha-2.webp",
+          "thumb": "/assets/images/reviews/google-samantha-2-thumb.webp",
+          "width": 1200,
+          "height": 900,
+          "alt": "Printed door components with the wood-grain texture and separate slats."
+        },
+        {
+          "src": "/assets/images/reviews/google-samantha-3.webp",
+          "thumb": "/assets/images/reviews/google-samantha-3-thumb.webp",
+          "width": 1200,
+          "height": 900,
+          "alt": "Close-up of the recreated catches and surface texture."
+        }
+      ],
+      "photo": "/assets/images/reviews/google-samantha-1.webp",
+      "photoAlt": "Original toy door alongside its 3D printed replacement.",
+      "photoCaption": "Workshop photos of this order, supplied by Bondar Labs.",
+      "photoKind": "Workshop photos",
+      "storyTitle": "A toy door, recreated from the original.",
+      "storyText": "Recreated from a supplied plastic door, with a wood-grain texture, separate slats and matching catches."
+    },
+    {
+      "id": "google-colin",
+      "source": "Google",
+      "name": "Colin Kenwright",
+      "rating": 5,
+      "home": true,
+      "url": "https://maps.app.goo.gl/tDAucLeW9RV4s5Wx9",
+      "quote": "…quality extremely good, son very happy with his bespoke item, wouldn't hesitate to order again…",
+      "detail": "Brilliant service and communication, great price, part made and delivered the same day, quality extremely good, son very happy with his bespoke item, wouldn't hesitate to order again, thank you very much Bohdan",
+      "context": "Enclosure · customer-supplied model",
+      "gallery": [
+        {
+          "src": "/assets/images/reviews/google-colin-1.webp",
+          "thumb": "/assets/images/reviews/google-colin-1-thumb.webp",
+          "width": 1200,
+          "height": 900,
+          "alt": "Printed enclosure parts and small-hole test pieces."
+        },
+        {
+          "src": "/assets/images/reviews/google-colin-2.webp",
+          "thumb": "/assets/images/reviews/google-colin-2-thumb.webp",
+          "width": 1200,
+          "height": 900,
+          "alt": "Assembled black PLA enclosure printed from a supplied model."
+        },
+        {
+          "src": "/assets/images/reviews/google-colin-3.webp",
+          "thumb": "/assets/images/reviews/google-colin-3-thumb.webp",
+          "width": 1200,
+          "height": 900,
+          "alt": "Detail of the printed small-hole test pieces."
+        }
+      ],
+      "photo": "/assets/images/reviews/google-colin-1.webp",
+      "photoAlt": "Printed enclosure parts and small-hole test pieces.",
+      "photoCaption": "Workshop photos of this order, supplied by Bondar Labs.",
+      "photoKind": "Workshop photos",
+      "storyTitle": "A multi-part enclosure, printed to fit.",
+      "storyText": "Printed in black PLA from the customer’s model, with attention to the small openings."
+    },
+    {
+      "id": "google-tony",
+      "source": "Google",
+      "name": "tony white",
+      "rating": 5,
+      "home": true,
+      "url": "https://maps.app.goo.gl/D2s2Z6Mb35ocazpUA",
+      "quote": "Bohdan is great, really friendly and helpful even advising of a better material for the parts for my 3D project…",
+      "detail": "Bohdan is great, really friendly and helpful even advising of a better material for the parts for my 3D project and easily the best price out of several quotes, some of which were three times the price for a lesser material. […] More than happy to recommend Bondar Labs which is rare for me and they will certainly be my first call for any future projects.",
+      "context": "RC parts · ASA printing",
+      "gallery": [
+        {
+          "src": "/assets/images/reviews/google-tony-1.webp",
+          "thumb": "/assets/images/reviews/google-tony-1-thumb.webp",
+          "width": 1200,
+          "height": 900,
+          "alt": "Black ASA parts produced for the customer’s RC project."
+        },
+        {
+          "src": "/assets/images/reviews/google-tony-2.webp",
+          "thumb": "/assets/images/reviews/google-tony-2-thumb.webp",
+          "width": 1200,
+          "height": 900,
+          "alt": "Inside face of a printed RC chassis component."
+        },
+        {
+          "src": "/assets/images/reviews/google-tony-3.webp",
+          "thumb": "/assets/images/reviews/google-tony-3-thumb.webp",
+          "width": 1200,
+          "height": 900,
+          "alt": "Additional black ASA brackets and trim components."
+        }
+      ],
+      "photo": "/assets/images/reviews/google-tony-1.webp",
+      "photoAlt": "Black ASA parts produced for the customer’s RC project.",
+      "photoCaption": "Workshop photos of this order, supplied by Bondar Labs.",
+      "photoKind": "Workshop photos",
+      "storyTitle": "ASA parts for an RC project.",
+      "storyText": "Black ASA parts produced for the customer’s RC car project."
+    },
+    {
+      "id": "ebay-photo",
+      "source": "eBay",
+      "name": "p***-",
+      "url": "https://www.ebay.co.uk/fdbk/feedback_profile/bondar-labs?user_context=BUYER",
+      "item": "406884714942",
+      "quote": "Great product and service thanks",
+      "context": "Google TV Streamer wall mount",
+      "photo": "/assets/images/projects/google-tv-streamer-4k-wall-mount/customer-installation.webp",
+      "photoAlt": "Customer photograph: a Google TV Streamer in its grey printed holder beside a television bracket.",
+      "photoCaption": "Photo attached to this buyer’s eBay feedback.",
+      "project": "/case-studies/google-tv-streamer-4k-wall-mount/",
+      "photoKind": "Customer installation",
+      "storyTitle": "A printed holder, put to use.",
+      "storyText": "The buyer attached this installation photo to their feedback for this wall mount.",
+      "gallery": [
+        {
+          "src": "/assets/images/projects/google-tv-streamer-4k-wall-mount/customer-installation.webp",
+          "thumb": "/assets/images/projects/google-tv-streamer-4k-wall-mount/customer-installation.webp",
+          "width": 301,
+          "height": 400,
+          "alt": "Customer photograph: a Google TV Streamer in its grey printed holder beside a television bracket."
+        }
+      ],
+      "home": true
+    },
+    {
+      "id": "ebay-scale",
+      "source": "eBay",
+      "name": "2***2",
+      "home": true,
+      "url": "https://www.ebay.co.uk/fdbk/feedback_profile/bondar-labs?user_context=BUYER",
+      "item": "407040770682",
+      "quote": "Seller printed items at requested scale and included an extra aircraft. I would thoroughly recommend this seller.",
+      "detail": "Item arrived very well packed very quickly. Seller printed items at requested scale and included an extra aircraft. I would thoroughly recommend this seller.",
+      "context": "Hawker P.1121 miniatures"
+    },
+    {
+      "id": "ebay-tray",
+      "source": "eBay",
+      "name": "1***r",
+      "home": true,
+      "url": "https://www.ebay.co.uk/fdbk/feedback_profile/bondar-labs?user_context=BUYER",
+      "item": "406945157927",
+      "quote": "The quality is amazing for printed item and at a good price - thanks",
+      "detail": "Super quick delivery, and well packaged and presented arriving in perfect condition. The quality is amazing for printed item and at a good price - thanks",
+      "context": "UniFi Cloud Gateway SSD tray"
+    },
+    {
+      "id": "ebay-holder",
+      "source": "eBay",
+      "name": "5***-",
+      "home": true,
+      "url": "https://www.ebay.co.uk/fdbk/feedback_profile/bondar-labs?user_context=BUYER",
+      "item": "406884714942",
+      "quote": "Excellent item. Well made, shipped fast and well packaged. I can highly recommend this product and seller.",
+      "detail": "Excellent item. Well made, shipped fast and well packaged. I can highly recommend this product and seller. Thank you",
+      "context": "Google TV Streamer wall mount"
+    },
+    {
+      "id": "ebay-fit",
+      "source": "eBay",
+      "name": "n***t",
+      "url": "https://www.ebay.co.uk/fdbk/feedback_profile/bondar-labs?user_context=BUYER",
+      "item": "406884714942",
+      "quote": "Good quality product, appearance exactly as described. […] Magic tape is strong and my Google 4k streamer slotted perfectly!",
+      "context": "Google TV Streamer wall mount"
+    },
+    {
+      "id": "ebay-support",
+      "source": "eBay",
+      "name": "a***a",
+      "url": "https://www.ebay.co.uk/fdbk/feedback_profile/bondar-labs?user_context=BUYER",
+      "item": "406884714942",
+      "quote": "Great customer service. Had a small issue with delivery, the seller was quick to respond and resolve the issue. Quality item too.",
+      "context": "Google TV Streamer wall mount"
+    },
+    {
+      "id": "ebay-tray-fit",
+      "source": "eBay",
+      "name": "c***l",
+      "url": "https://www.ebay.co.uk/fdbk/feedback_profile/bondar-labs?user_context=BUYER",
+      "item": "406945157927",
+      "quote": "well made fit perfectly into my UCG Fiber",
+      "context": "UniFi Cloud Gateway SSD tray"
+    }
+  ],
+  "ebayTotal": 350,
+  "ebayAutomated": 220
+}

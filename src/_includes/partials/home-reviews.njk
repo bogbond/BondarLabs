@@ -1,0 +1,25 @@
+<section class="section section-muted customer-reviews review-compact" id="customer-reviews" aria-labelledby="customer-reviews-title">
+<div class="container carousel review-carousel" data-carousel>
+  <div class="review-compact-head">
+    <div><h2 class="h2" id="customer-reviews-title">Trusted with the details.</h2>
+      <div class="review-compact-ratings" aria-label="Ratings by platform">
+        <a href="{{ customerReviews.ebayUrl }}" target="_blank" rel="noopener noreferrer"><strong>350+ eBay ratings</strong> · {{ customerReviews.ebayPercent }} positive <span aria-hidden="true">↗︎</span></a>
+        <a href="{{ customerReviews.mapsUrl }}" target="_blank" rel="noopener noreferrer"><strong>{{ customerReviews.googleRating }} / 5</strong> Google Maps reviews <span aria-hidden="true">↗︎</span></a>
+      </div>
+    </div>
+    <div class="review-compact-nav"><a class="review-more" href="{{ '/contact/' | url }}#reviews">Reviews &amp; photos <span aria-hidden="true">→</span></a><div class="carousel-controls" aria-label="Customer review carousel controls"><button class="carousel-btn" type="button" data-carousel-prev aria-label="Show previous customer reviews" aria-controls="home-review-track"><span aria-hidden="true">←</span></button><button class="carousel-btn" type="button" data-carousel-next aria-label="Show more customer reviews" aria-controls="home-review-track"><span aria-hidden="true">→</span></button></div></div>
+  </div>
+  <div class="carousel-track review-track" id="home-review-track" data-carousel-track tabindex="0" role="region" aria-label="Selected customer reviews, use arrow keys to browse">
+    {% for review in customerReviews.entries %}{% if review.home %}
+    <article class="card customer-review carousel-item{% if review.photo %} review-with-photo{% endif %}"><div class="card-body">
+      <div class="review-compact-identity{% if review.photo %} has-photo{% endif %}">{% if review.photo %}<a class="review-compact-photo" href="{{ '/contact/' | url }}#{{ review.id }}" aria-label="See the project photos for {{ review.name }}"><img src="{{ review.gallery[0].thumb | url }}" width="{{ review.gallery[0].width }}" height="{{ review.gallery[0].height }}" alt="{{ review.photoAlt }}" loading="lazy" decoding="async"></a>{% endif %}
+      <strong class="review-customer-name">{{ review.name }}</strong>
+      <div class="review-card-top"><a class="review-source-top" href="{{ review.url }}" target="_blank" rel="noopener noreferrer" aria-label="{% if review.source == 'Google' %}Read the original Google review by {{ review.name }}{% else %}View eBay seller feedback for the review by {{ review.name }}{% endif %}">{{ review.source }} <span aria-hidden="true">↗︎</span></a>{% if review.rating %}<span class="review-stars" aria-label="{{ review.rating }} out of 5 stars">★★★★★</span>{% else %}<span class="review-positive">Positive</span>{% endif %}</div></div>
+      <blockquote><p>“{{ review.quote }}”</p></blockquote>
+
+    </div></article>
+    {% endif %}{% endfor %}
+  </div>
+  <div class="review-compact-foot"><p class="tiny muted">eBay totals include automated feedback · Checked {{ customerReviews.checked }}.</p><p class="tiny muted">Worked with us? <a href="{{ customerReviews.mapsUrl }}" target="_blank" rel="noopener noreferrer">Share your experience on Google <span aria-hidden="true">↗︎</span></a></p></div>
+</div>
+</section>

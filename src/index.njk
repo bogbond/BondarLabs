@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 serviceOverview: true
+customerReviewSection: true
 title: "Custom 3D Printed Parts, Prototypes & Small-Batch Production"
 seoTitle: "Custom 3D Printing in Cambridge & Across the UK"
 description: "Custom 3D printed parts, prototypes and small-batch production for businesses and individuals. Based near Cambridge with local delivery and UK-wide shipping."
@@ -207,6 +208,58 @@ ogImageAlt: "Bondar Labs workshop with desktop 3D printers and filament spools."
   </div>
 </section>
 
+{% include "partials/home-reviews.njk" %}
+
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="carousel" data-carousel>
+      <div class="carousel-head">
+        <div class="carousel-copy">
+          <h2 class="h2">Portfolio</h2>
+          <p class="muted">Selected repairs, prototype parts, detail-led resin work and repeat production.</p>
+        </div>
+
+        <div class="carousel-controls" aria-label="Portfolio carousel controls">
+          <button class="carousel-btn" type="button" data-carousel-prev aria-label="Scroll portfolio left">
+            <span aria-hidden="true">←</span>
+          </button>
+          <button class="carousel-btn" type="button" data-carousel-next aria-label="Scroll portfolio right">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel-track" data-carousel-track aria-label="Portfolio examples" tabindex="0">
+        {% for cs in collections.caseStudies %}
+          <a class="card card-link carousel-item" href="{{ cs.url | url }}">
+              <div class="card-media"><img src="{{ (cs.data.listingImage or cs.data.coverImage) | url }}" alt="{{ cs.data.listingAlt or cs.data.coverAlt or cs.data.title }}" loading="lazy" decoding="async"></div>
+              <div class="card-body">
+                <div class="kicker">{{ cs.data.tech }}</div>
+                <h3 class="h3">{{ cs.data.title }}</h3>
+                <p class="muted">{{ cs.data.summary }}</p>
+              </div>
+            </a>
+        {% endfor %}
+
+        <a class="card card-link carousel-item case-card-all" href="{{ '/case-studies/' | url }}" aria-label="View portfolio">
+          <div class="case-card-all-media" aria-hidden="true">
+            <span class="case-card-all-arrow">→</span>
+          </div>
+          <div class="card-body">
+            <div class="kicker">Explore</div>
+            <h3 class="h3">View Portfolio</h3>
+            <p class="muted">Open the full portfolio</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="mt-16">
+        <a class="btn btn-ghost" href="{{ '/case-studies/' | url }}">View Portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section section-muted" id="how-it-works">
   <div class="container">
     <div class="section-head">
@@ -304,56 +357,6 @@ ogImageAlt: "Bondar Labs workshop with desktop 3D printers and filament spools."
       <div class="overview-foot">
         <p class="overview-note">Not sure which material fits? Tell us what the part needs to do and we’ll recommend the safest option.</p>
         <a class="btn btn-ghost" href="{{ '/materials/' | url }}">View material guide</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="portfolio">
-  <div class="container">
-    <div class="carousel" data-carousel>
-      <div class="carousel-head">
-        <div class="carousel-copy">
-          <h2 class="h2">Portfolio</h2>
-          <p class="muted">Selected repairs, prototype parts, detail-led resin work and repeat production.</p>
-        </div>
-
-        <div class="carousel-controls" aria-label="Portfolio carousel controls">
-          <button class="carousel-btn" type="button" data-carousel-prev aria-label="Scroll portfolio left">
-            <span aria-hidden="true">←</span>
-          </button>
-          <button class="carousel-btn" type="button" data-carousel-next aria-label="Scroll portfolio right">
-            <span aria-hidden="true">→</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="carousel-track" data-carousel-track aria-label="Portfolio examples" tabindex="0">
-        {% for cs in collections.caseStudies %}
-          <a class="card card-link carousel-item" href="{{ cs.url | url }}">
-              <div class="card-media"><img src="{{ (cs.data.listingImage or cs.data.coverImage) | url }}" alt="{{ cs.data.listingAlt or cs.data.coverAlt or cs.data.title }}" loading="lazy" decoding="async"></div>
-              <div class="card-body">
-                <div class="kicker">{{ cs.data.tech }}</div>
-                <h3 class="h3">{{ cs.data.title }}</h3>
-                <p class="muted">{{ cs.data.summary }}</p>
-              </div>
-            </a>
-        {% endfor %}
-
-        <a class="card card-link carousel-item case-card-all" href="{{ '/case-studies/' | url }}" aria-label="View portfolio">
-          <div class="case-card-all-media" aria-hidden="true">
-            <span class="case-card-all-arrow">→</span>
-          </div>
-          <div class="card-body">
-            <div class="kicker">Explore</div>
-            <h3 class="h3">View Portfolio</h3>
-            <p class="muted">Open the full portfolio</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="mt-16">
-        <a class="btn btn-ghost" href="{{ '/case-studies/' | url }}">View Portfolio</a>
       </div>
     </div>
   </div>
