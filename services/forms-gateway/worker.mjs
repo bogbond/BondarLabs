@@ -29,7 +29,7 @@ export function expiry(createdAt, files) {
   const last=new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth()+1,0)).getUTCDate();d.setUTCDate(Math.min(day,last));
   return d.toISOString();
 }
-function dailyAlarm(iso) {return Math.ceil(Date.parse(iso)/DAY)*DAY+6*3600000;}
+export function dailyAlarm(iso) {return Math.ceil((Date.parse(iso)-6*3600000)/DAY)*DAY+6*3600000;}
 function validatePayload(data, origin) {
   if(!data||!['contact','quote'].includes(data.type))throw new FormError(400,'Unknown enquiry form.');
   const fields=data.fields;
