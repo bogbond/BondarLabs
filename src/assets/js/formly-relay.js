@@ -19,7 +19,7 @@
   }
 
   function isFormlyForm(form){
-    return form instanceof HTMLFormElement && normaliseEndpoint(form.getAttribute('action')) === normaliseEndpoint(FORMLY_ENDPOINT);
+    return form instanceof HTMLFormElement && ['0','1'].indexOf(form.getAttribute('data-provider-mode')) !== -1;
   }
 
   function addHidden(form, name, value){
@@ -251,12 +251,13 @@
   function submitRelay(form, fileInput, state){
     var relay = document.createElement('form');
     state.relay = relay;
-    relay.action = FORMLY_ENDPOINT;
+    relay.action = form.getAttribute('data-provider-endpoint') || FORMLY_ENDPOINT;
     relay.method = 'POST';
     relay.acceptCharset = 'UTF-8';
     relay.style.display = 'none';
 
-    addHidden(relay, 'access_key', ACCESS_KEY);
+    if(form.getAttribute('data-provider-mode') === '1') addHidden(relay, 'access_key', ACCESS_KEY);
+    else addHidden(relay, '_subject', formTitle(form));
     addHidden(relay, 'name', firstValue(form, ['name']) || 'Website visitor');
     addHidden(relay, 'email', firstValue(form, ['email']) || 'info@bondarlabs.co.uk');
     addHidden(relay, 'message', buildMessage(form));

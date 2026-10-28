@@ -1,0 +1,7 @@
+{
+  "mode": 2,
+  "modes": {"0": "FormSubmit (requires a verified endpoint)", "1": "Formly (legacy, one file)", "2": "Formspark protected gateway"},
+  "gateway": "https://bondar-labs-forms.bondar-labs-forms-ux.workers.dev",
+  "turnstileSiteKey": "0x4AAAAAAFoygiyXRYim5Vfu",
+  "formsubmitEndpoint": ""
+}

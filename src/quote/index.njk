@@ -11,7 +11,7 @@ ogImageAlt: "Bondar Labs quote page OG image."
   <div class="container">
     <p class="eyebrow">Bondar Labs · Quote</p>
     <h1>Get a Quote</h1>
-    <p class="lead">Upload your file (up to 10MB) or share a link. We’ll reply fast with options and a clear quote.</p>
+    <p class="lead">Tell us what you need printed, repaired or designed. No CAD file? Start with a description, photo or sketch. We can help you choose a material.</p>
   </div>
 </section>
 
@@ -21,28 +21,29 @@ ogImageAlt: "Bondar Labs quote page OG image."
       <div class="card-body">
         <form class="form" id="quoteForm" method="POST" action="https://formly.email/submit" enctype="multipart/form-data" data-formly-relay data-formly-title="Quote request — Bondar Labs">
           <input type="hidden" name="access_key" value="{{ site.formlyAccessKey }}" />
+          <div class="form-honeypot" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off" /></label></div>
 
           <div class="grid grid-2">
             <div class="field">
               <label class="label" for="q-name">Name *</label>
-              <input class="input" id="q-name" name="Name" type="text" autocomplete="name" autocapitalize="words" required />
+              <input class="input" maxlength="1000" id="q-name" name="Name" type="text" autocomplete="name" autocapitalize="words" required />
             </div>
 
             <div class="field">
               <label class="label" for="q-email">Email *</label>
-              <input class="input" id="q-email" type="email" name="Email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required />
+              <input class="input" maxlength="1000" id="q-email" type="email" name="Email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required />
             </div>
           </div>
 
           <div class="grid grid-2">
             <div class="field">
-              <label class="label" for="q-deadline">Deadline *</label>
-              <input class="input" id="q-deadline" name="Deadline" autocomplete="off" placeholder="e.g. ASAP / by Friday / specific date" required />
+              <label class="label" for="q-deadline">When do you need it? (optional)</label>
+              <input class="input" maxlength="1000" id="q-deadline" name="Deadline" autocomplete="off" placeholder="Leave blank if your dates are flexible" />
             </div>
 
             <div class="field">
               <label class="label" for="q-qty">Quantity *</label>
-              <input class="input" id="q-qty" name="Quantity" inputmode="numeric" autocomplete="off" placeholder="e.g. 1 / 10 / 100" required />
+              <input class="input" maxlength="1000" id="q-qty" name="Quantity" autocomplete="off" placeholder="e.g. 1 / 10 / 100 / Not sure" required />
             </div>
           </div>
 
@@ -51,6 +52,7 @@ ogImageAlt: "Bondar Labs quote page OG image."
               <label class="label" for="q-material">Material *</label>
               <select class="select" id="q-material" name="Material" required>
                 <option value="">Select…</option>
+                <option>Not sure (please advise)</option>
                 <optgroup label="FDM">
                   <option>PLA</option>
                   <option>PETG</option>
@@ -66,13 +68,13 @@ ogImageAlt: "Bondar Labs quote page OG image."
                   <option>Flexible (F80 type)</option>
                   <option>Transparent (on request)</option>
                 </optgroup>
-                <option>Not sure (please advise)</option>
+
               </select>
               <div class="help">Engineering-grade materials available. If you’re unsure, choose “Not sure”.</div>
             </div>
 
             <div class="field">
-              <label class="label" for="q-delivery">Delivery option</label>
+              <label class="label" for="q-delivery">Delivery option (optional)</label>
               <select class="select" id="q-delivery" name="Delivery option">
                 <option value="">Select…</option>
                 <option>UK shipping (Royal Mail)</option>
@@ -85,35 +87,40 @@ ogImageAlt: "Bondar Labs quote page OG image."
 
           <div class="grid grid-2">
             <div class="field">
-              <label class="label" for="q-phone">Phone</label>
-              <input class="input" id="q-phone" name="Phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Optional" />
+              <label class="label" for="q-phone">Phone (optional)</label>
+              <input class="input" maxlength="1000" id="q-phone" name="Phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Optional" />
             </div>
             <div class="field">
-              <label class="label" for="q-colour">Colour</label>
-              <input class="input" id="q-colour" name="Colour" placeholder="Optional" />
+              <label class="label" for="q-colour">Colour (optional)</label>
+              <input class="input" maxlength="1000" id="q-colour" name="Colour" placeholder="Optional" />
             </div>
           </div>
 
           <div class="field">
             <label class="label" for="q-desc">Description *</label>
-            <textarea class="textarea" id="q-desc" name="Description" required placeholder="What is the part used for? Any dimensions, tolerances, finish requirements, strength/heat needs?"></textarea>
+            <textarea class="textarea" maxlength="10000" id="q-desc" name="Description" required placeholder="What do you need and what is it used for? Include any dimensions or requirements you know. It is fine if you are not sure about the material or exact details."></textarea>
           </div>
 
           <div class="grid grid-2">
             <div class="field">
-              <label class="label" for="q-file">Upload one file (max 10MB)</label>
-              <input class="input" id="q-file" type="file" name="attachment" data-formly-file data-max-bytes="9961472" accept=".stl,.3mf,.step,.stp,.obj,.zip,.rar,.7z,.pdf,.png,.jpg,.jpeg" />
-              <div class="help">Attach one STL / 3MF / STEP / OBJ, archive, image or PDF up to 10MB. If your file is larger, use the link field.</div>
+              <label class="label" for="q-file">Add files (optional, up to 3)</label>
+              <input class="input" id="q-file" type="file" name="attachment" multiple aria-describedby="q-file-help" accept=".stl,.3mf,.obj,.ply,.step,.stp,.iges,.igs,.dxf,.dwg,.fcstd,.f3d,.blend,.sldprt,.sldasm,.zip,.7z,.rar,.jpg,.jpeg,.png,.webp,.heic,.heif,.pdf" />
+              <div class="help" id="q-file-help">Up to 10 MB per file (30 MB total). Models: STL, 3MF, OBJ, PLY. CAD: STEP/STP, IGES/IGS, DXF, DWG, FCStd, F3D, Blend, SLDPRT, SLDASM. Archives: ZIP, 7Z, RAR. Photos: JPG, PNG, WebP, HEIC/HEIF. Documents: PDF. Originals are stored without conversion; archives are not unpacked.</div>
+              <ul data-file-list class="form-file-list" aria-label="Selected files"></ul>
             </div>
             <div class="field">
-              <label class="label" for="q-link">File link (Drive/Dropbox/WeTransfer)</label>
-              <input class="input" id="q-link" name="File link" type="url" autocomplete="url" inputmode="url" autocapitalize="none" spellcheck="false" placeholder="https://…" />
-              <div class="help">Optional backup if your file is larger than 10MB.</div>
+              <label class="label" for="q-link">Shared file or folder link (optional)</label>
+              <input class="input" id="q-link" name="File link" type="url" maxlength="1000" autocomplete="url" inputmode="url" autocapitalize="none" spellcheck="false" placeholder="https://…" />
+              <div class="help">Use Google Drive, OneDrive, Dropbox or WeTransfer for larger files or more than three files. Please allow us to access the link.</div>
             </div>
           </div>
+          <p class="help">Uploaded files are kept for six months. If any file is larger than 5 MB, all files in that request are kept for three months. After that their download links expire. This does not apply to files you share using your own external link.</p>
 
+          <div data-captcha class="form-captcha"></div>
+          <p data-submission-status role="status" aria-live="polite" aria-atomic="true">Loading enquiry service…</p>
+          <noscript><p>Please enable JavaScript to send this form, or email <a href="mailto:{{ company.email }}">{{ company.email }}</a>.</p></noscript>
           <div class="hero-actions">
-            <button class="btn btn-primary" type="submit">Send request</button>
+            <button class="btn btn-primary" type="submit" disabled>Send request</button>
             <a class="btn btn-ghost" href="{{ company.whatsappUrl }}" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">Message on WhatsApp</a>
           </div>
 

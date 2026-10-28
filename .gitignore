@@ -16,3 +16,7 @@ Thumbs.db
 
 # Local env
 .env
+.env.*
+.dev.vars*
+.wrangler/
+services/forms-gateway/work/
