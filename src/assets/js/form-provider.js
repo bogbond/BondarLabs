@@ -42,7 +42,7 @@
     xhr.setRequestHeader('Authorization','Bearer '+s.key);xhr.setRequestHeader('Content-Type',isFile?'application/octet-stream':'application/json');
     if(isFile&&onProgress)xhr.upload.onprogress=function(e){if(e.lengthComputable)onProgress(Math.round(e.loaded/e.total*100));};
     xhr.onload=function(){var data;try{data=JSON.parse(xhr.responseText);}catch(e){data={};}
-      if(xhr.status<200||xhr.status>=300||data.success!==true){var error=new Error(data.message||'The service could not accept the request. Your details have been kept.');error.status=xhr.status;reject(error);}else resolve(data);};
+      if(xhr.status<200||xhr.status>=300||data.success!==true){var error=new Error(data.message||'The service could not accept the request. Your details have been kept.');error.status=xhr.status;error.retryable=data.retryable===true;reject(error);}else resolve(data);};
     xhr.onerror=xhr.ontimeout=function(){var e=new Error('Connection interrupted. Your details and selected files have been kept. Please try again.');e.network=true;reject(e);};
     xhr.send(isFile?body:JSON.stringify(body||{}));
   });}
@@ -79,6 +79,7 @@
       status(form,'All selected files are saved. Sending your enquiry…',false);session.committing=true;
       data=await request(form,'submit',{});success(form,data);
     }catch(e){
+      if(e.retryable)session.committing=false;
       if(session.committing&&e.network)e.message='The response was interrupted. Your enquiry may have been accepted. Use Send again to check this same request, or contact us with reference BL-'+session.id+'.';
       throw e;
     }finally{if(!form._locked)freeze(form,false);}

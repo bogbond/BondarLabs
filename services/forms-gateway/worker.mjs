@@ -6,7 +6,7 @@ const DAY = 86400000;
 const AMBIGUOUS = 'We could not confirm acceptance. Please contact us with your request reference before submitting again.';
 export class FormError extends Error { constructor(status, message) { super(message); this.status = status; } }
 function json(status, data) { return Response.json(data, {status, headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}}); }
-function fail(error) { return json(error instanceof FormError ? error.status : 502, {success:false,message:error instanceof FormError ? error.message : 'The enquiry service is temporarily unavailable. Your form has been kept. Please try again.'}); }
+function fail(error) { return json(error instanceof FormError ? error.status : 502, {success:false,retryable:error.retryable===true,message:error instanceof FormError ? error.message : 'The enquiry service is temporarily unavailable. Your form has been kept. Please try again.'}); }
 async function limited(request, max) {
   if (Number(request.headers.get('Content-Length')) > max) throw new FormError(413,'The upload is too large. Each file must be 10 MB or smaller.');
   if (!request.body) throw new FormError(400,'The request is empty.');
@@ -149,14 +149,16 @@ export class EnquirySession {
     try {const formId=this.env[p.type==='quote'?'FORMSPARK_QUOTE_FORM_ID':'FORMSPARK_CONTACT_FORM_ID']||this.env.FORMSPARK_FORM_ID;
       response=await timed(`https://submit-form.com/${formId}`,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(submission)},25000);}
     catch {session.state='uncertain';await this.ctx.storage.put('session',session);throw new FormError(502,AMBIGUOUS+' Reference: BL-'+id);}
-    const result=await response.json().catch(()=>null);
+    const responseText=await response.text(); const result=(()=>{try{return JSON.parse(responseText)}catch{return null}})();
     if(!response.ok||!result||result.error){
       // Only explicit client/quota rejections are safely retryable. Other outcomes
       // may have reached Formspark; don't silently spend a second submission.
       session.state=([400,401,403,404,413,422,429].includes(response.status))?'draft':'uncertain';
       if(session.state==='draft')session.payload=p;
       await this.ctx.storage.put('session',session);
-      throw new FormError(502,session.state==='draft'?'The enquiry service could not accept this request. Your details and uploads have been kept. Please contact us or try again later.':AMBIGUOUS+' Reference: BL-'+id);
+      const spam=response.status===403&&responseText.trim()==='Rejected by spam protection';
+      const rejection=new FormError(spam?422:502,session.state==='draft'?(spam?'Your message was flagged by the email service\'s spam filter. Your details have been kept. Please revise the message or contact us by email.':'The enquiry service could not accept this request. Your details and uploads have been kept. Please contact us or try again later. Support code: F'+response.status+'.'):AMBIGUOUS+' Reference: BL-'+id);
+      rejection.retryable=session.state==='draft';throw rejection;
     }
     session.state='accepted';delete session.payload;await this.ctx.storage.put('session',session);
     await this.ctx.storage.setAlarm(session.uploads.length?dailyAlarm(session.expiresAt):Date.now()+DAY);
