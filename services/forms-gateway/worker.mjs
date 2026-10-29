@@ -142,9 +142,14 @@ export class EnquirySession {
     const p=session.payload;
     const submission={name:p.fields.Name||'Website visitor',email:p.fields.Email,subject:`Bondar Labs ${p.type==='quote'?'quote request':'contact enquiry'}`,
       Form:p.type,'Page URL':p.page,'Submission ID':'BL-'+id,'Submitted at':session.createdAt,message:Object.entries(p.fields).filter(([,v])=>v).map(([k,v])=>`${k}: ${v}`).join('\n\n')};
-    if(p.type==='contact'){
-      submission.Message=p.fields.Message;
-      submission._email={from:'Bondar Labs',subject:'Bondar Labs | Message from '+(p.fields.Name||'a website visitor').replace(/[\r\n]+/g,' ').slice(0,120)};
+    submission.Message=p.type==='quote'?p.fields.Description:p.fields.Message;
+    const reference='BL-'+id.replaceAll('-','').slice(0,12);
+    submission._email={from:'Bondar Labs',subject:'Bondar Labs | '+(p.type==='quote'?'Quote request':'Contact enquiry')+(p.fields.Name?' — '+p.fields.Name.replace(/[\r\n]+/g,' ').slice(0,80):'')+' ['+reference+']'};
+    if(p.type==='quote'){
+      submission.Quote=Object.fromEntries(Object.entries(p.fields).filter(([k,v])=>v&&!['Name','Email','Description','File link'].includes(k)));
+      submission['Shared file link']=p.fields['File link']||'';
+      submission.Files=p.files.map((file,i)=>({name:file.name,url:session.uploads[i].url}));
+      if(p.files.length)submission['File expiry date']=session.expiresAt.slice(8,10)+'/'+session.expiresAt.slice(5,7)+'/'+session.expiresAt.slice(0,4)+' (UTC)';
     }
     p.files.forEach((file,i)=>{submission[`File ${i+1} name`]=file.name;submission[`File ${i+1} URL`]=session.uploads[i].url;});
     if(p.files.length)submission['Files available until']=session.expiresAt;

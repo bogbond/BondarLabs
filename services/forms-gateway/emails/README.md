@@ -1,10 +1,14 @@
-# Bondar Labs Contact notification
+# Bondar Labs email notifications
 
-First pilot only: Formspark form `Tp0MAK00i`, workspace `VVckLKghq`, recipient `info@bondarlabs.co.uk`. The Quote and Dreamy Cake templates are not part of this change.
+Workspace `VVckLKghq`: Contact form `Tp0MAK00i` → info@bondarlabs.co.uk; Quote form `AI2hlw9tt` → quotes@bondarlabs.co.uk. Dreamy Cake templates remain separate and unchanged.
 
-`contact.html` is the source of the published Postcraft code template `C53QWzYbzkbbhvLcxhZvG`, named **Bondar Labs — Contact notification**. The template subject is `Bondar Labs | Message from {{data.name}}`. The Worker also sets the subject through `_email.subject`, which takes precedence, and the display sender name through `_email.from = Bondar Labs`. The technical sender address remains Formspark's.
+Published Postcraft code templates: `contact.html` → `C53QWzYbzkbbhvLcxhZvG` (**Bondar Labs — Contact notification**); `quote.html` → `vtUOPHF18MEQDVYbsoOCR` (**Bondar Labs — Quote notification**). Both use a compact clickable logo, one heading and no promotional footer. Fallback template subjects: `Bondar Labs | Contact enquiry — {{data.name}}` and `Bondar Labs | Quote request — {{data.name}}`.
 
-The gateway adds `Message` only for Contact notifications. Existing `email` continues to set Reply-To. `name` falls back to `Website visitor` when optional Name is blank. Existing aggregate `message` remains for the dashboard and as a template fallback. The layout uses escaped Handlebars values and the documented `nl2br` helper for line breaks; do not introduce unescaped triple-brace interpolation for visitor data. The public PNG logo is hosted on bondarlabs.co.uk; some email clients may require the reader to enable external images.
+The Worker sets `_email.from = Bondar Labs` and `_email.subject`, which takes precedence. Subjects use Contact enquiry or Quote request, optional client name and a short reference `[BL-<first 12 UUID hex digits>]`. This is readable in replies and distinguishes multiple enquiries from one client. The technical sender address remains Formspark's; submitted `email` supplies Reply-To. Blank optional Name falls back to Website visitor in the body.
+
+`Message` contains only the contact message or quote description. Quote supplies a filtered `Quote` object of non-empty details, a `Files` array of original file names/URLs, optional `Shared file link`, and `File expiry date` in DD/MM/YYYY (UTC). Existing aggregate message, per-file fields and ISO expiry remain for the dashboard and compatibility. Upload and retention rules are unchanged. The layout escapes visitor values and uses documented `nl2br` and `sanitizeUrl` helpers; never introduce unescaped triple braces. The public PNG logo is on bondarlabs.co.uk; some mail apps require enabling external images.
+
+Email threading (grouping every notification from a form) is off for both Contact and Quote, following the owner's explicit approval for each form. Every submission starts a separate conversation; replies are handled by the receiving mail app. Preserve recipients and spam protection when editing presentation.
 
 Publish changes using the form's **Settings → Emails → Notifications → Open template** link. Updating a draft alone does not change delivered email: press **Publish**, verify the published state and send one clearly labelled, authorised test. No autoresponder is enabled by this notification template.
 

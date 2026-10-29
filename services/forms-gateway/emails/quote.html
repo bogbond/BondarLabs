@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bondar Labs — Quote request</title></head>
+<body style="margin:0;padding:0;background-color:#f4f5f7;color:#18202c;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f5f7;"><tr><td align="center" style="padding:20px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background-color:#ffffff;border:1px solid #e1e5ea;border-top:5px solid #ff6b00;border-radius:12px;">
+<tr><td style="padding:22px 24px 16px;">
+<a href="https://bondarlabs.co.uk/" style="text-decoration:none;"><img src="https://bondarlabs.co.uk/assets/images/brand/logo.png" width="128" height="72" alt="Bondar Labs" style="display:block;width:128px;height:72px;border:0;"></a>
+<h1 style="margin:16px 0 0;font-size:24px;line-height:1.25;color:#18202c;">Quote request</h1>
+</td></tr>
+<tr><td style="padding:0 24px 22px;">
+<div style="padding-top:0;">
+<p style="margin:0 0 5px;font-size:17px;line-height:1.5;font-weight:bold;color:#18202c;">{{data.name}}</p>
+<p style="margin:0;font-size:15px;line-height:1.5;overflow-wrap:anywhere;"><a href="mailto:{{data.email}}" style="color:#a84300;text-decoration:underline;">{{data.email}}</a></p>
+</div>
+<p style="margin:20px 0 8px;color:#536174;font-size:12px;font-weight:bold;letter-spacing:.8px;">DESCRIPTION</p>
+<div style="padding:16px;background-color:#f6f7f9;border:1px solid #e7eaee;border-radius:8px;font-size:16px;line-height:1.6;color:#18202c;overflow-wrap:anywhere;">{{#if data.Message}}{{nl2br data.Message}}{{else}}{{nl2br data.message}}{{/if}}</div>
+{{#if data.Quote}}
+<p style="margin:22px 0 10px;color:#536174;font-size:12px;font-weight:bold;letter-spacing:.8px;">REQUEST DETAILS</p>
+{{#each data.Quote}}<p style="margin:0 0 7px;font-size:14px;line-height:1.6;color:#18202c;"><span style="color:#536174;">{{@key}}:</span> {{this}}</p>{{/each}}
+{{/if}}
+{{#if data.Files}}
+<p style="margin:22px 0 10px;color:#536174;font-size:12px;font-weight:bold;letter-spacing:.8px;">FILES</p>
+{{#each data.Files}}<p style="margin:0 0 9px;font-size:14px;line-height:1.6;overflow-wrap:anywhere;"><a href="{{sanitizeUrl this.url}}" style="color:#a84300;text-decoration:underline;">{{this.name}}</a></p>{{/each}}
+<p style="margin:10px 0 0;font-size:12px;line-height:1.6;color:#536174;">Download links available until {{lookup data "File expiry date"}}.</p>
+{{/if}}
+{{#if (lookup data "Shared file link")}}
+<p style="margin:22px 0 8px;color:#536174;font-size:12px;font-weight:bold;letter-spacing:.8px;">SHARED FILE OR FOLDER</p>
+<p style="margin:0;font-size:14px;line-height:1.6;"><a href="{{sanitizeUrl (lookup data "Shared file link")}}" style="color:#a84300;text-decoration:underline;">Open shared file or folder</a></p>
+{{/if}}
+
+</td></tr>
+<tr><td style="padding:16px 24px 20px;border-top:1px solid #e1e5ea;">
+<p style="margin:0 0 7px;color:#536174;font-size:12px;line-height:1.6;overflow-wrap:anywhere;">Reference: {{lookup data "Submission ID"}}</p>
+<p style="margin:0;color:#536174;font-size:12px;line-height:1.6;"><a href="https://bondarlabs.co.uk/quote/" style="color:#536174;text-decoration:underline;">bondarlabs.co.uk/quote</a> · Website quote form</p>
+</td></tr>
+</table>
+</td></tr></table>
+</body></html>
