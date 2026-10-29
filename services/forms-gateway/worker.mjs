@@ -142,6 +142,10 @@ export class EnquirySession {
     const p=session.payload;
     const submission={name:p.fields.Name||'Website visitor',email:p.fields.Email,subject:`Bondar Labs ${p.type==='quote'?'quote request':'contact enquiry'}`,
       Form:p.type,'Page URL':p.page,'Submission ID':'BL-'+id,'Submitted at':session.createdAt,message:Object.entries(p.fields).filter(([,v])=>v).map(([k,v])=>`${k}: ${v}`).join('\n\n')};
+    if(p.type==='contact'){
+      submission.Message=p.fields.Message;
+      submission._email={from:'Bondar Labs',subject:'Bondar Labs | Message from '+(p.fields.Name||'a website visitor').replace(/[\r\n]+/g,' ').slice(0,120)};
+    }
     p.files.forEach((file,i)=>{submission[`File ${i+1} name`]=file.name;submission[`File ${i+1} URL`]=session.uploads[i].url;});
     if(p.files.length)submission['Files available until']=session.expiresAt;
     session.state='sending';delete session.payload;await this.ctx.storage.put('session',session);
