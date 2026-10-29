@@ -6,7 +6,7 @@
   var MAX=10000000;
   var extensions=['stl','3mf','obj','ply','step','stp','iges','igs','dxf','dwg','fcstd','f3d','blend','sldprt','sldasm','zip','7z','rar','jpg','jpeg','png','webp','heic','heif','pdf'];
   var config, mode=null, captchaReady;
-  function status(form,message,error){var el=form.querySelector('[data-submission-status]');el.textContent=message;el.classList.toggle('form-error',!!error);if(error){el.setAttribute('tabindex','-1');el.focus();}}
+  function status(form,message,error){var el=form.querySelector('[data-submission-status]');el.textContent=message;el.classList.remove('form-success');el.classList.toggle('form-error',!!error);if(error){el.setAttribute('tabindex','-1');el.focus();}}
   function enable(form,value){form.querySelector('[type="submit"]').disabled=!value;}
   function loadScript(src){return new Promise(function(resolve,reject){var s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=function(){reject(new Error('The enquiry service could not load. Please check your connection and reload this page.'));};document.head.appendChild(s);});}
   function randomHex(){return Array.from(crypto.getRandomValues(new Uint8Array(32)),function(b){return b.toString(16).padStart(2,'0');}).join('');}
@@ -46,11 +46,15 @@
     xhr.onerror=xhr.ontimeout=function(){var e=new Error('Connection interrupted. Your details and selected files have been kept. Please try again.');e.network=true;reject(e);};
     xhr.send(isFile?body:JSON.stringify(body||{}));
   });}
-  function freeze(form,value){form._busy=value;form.setAttribute('aria-busy',String(value));Array.from(form.querySelectorAll('input:not([type="hidden"]),select,textarea,button')).forEach(function(el){el.disabled=value||!!form._locked;});renderFiles(form);}
+  function freeze(form,value){form._busy=value;form.setAttribute('aria-busy',String(value));Array.from(form.querySelectorAll('input:not([type="hidden"]),select,textarea,button')).forEach(function(el){el.disabled=value;});var button=form.querySelector('[type="submit"]');button.textContent=value?'Sending…':form._submitLabel;renderFiles(form);}
   function success(form,data){
-    form._locked=true;freeze(form,false);form.querySelector('[data-captcha]').hidden=true;
-    status(form,'Your '+(form.id==='quoteForm'?'quote request':'message')+' has been accepted. Reference: '+data.id+'. We will reply by email. This confirms acceptance of your enquiry; email notifications may arrive later.',false);
-    var box=form.querySelector('[data-submission-status]');box.setAttribute('tabindex','-1');box.focus();
+    form.reset();form._files=[];form._session=null;form._locked=false;resetCaptcha(form);freeze(form,false);
+    var box=form.querySelector('[data-submission-status]');box.replaceChildren();box.classList.remove('form-error');box.classList.add('form-success');
+    var title=document.createElement('strong'),message=document.createElement('span'),reference=document.createElement('span');
+    title.textContent=form.id==='quoteForm'?'Quote request sent successfully':'Message sent successfully';
+    message.textContent='Thank you — we have received your '+(form.id==='quoteForm'?'request':'message')+'. We will reply by email. You do not need to send it again.';
+    reference.textContent='Reference: '+data.id;reference.className='form-success-reference';box.append(title,message,reference);
+    box.setAttribute('tabindex','-1');box.focus();
   }
   async function send(form){
     var fields=values(form),files=filesFor(form);validateFiles(files);
@@ -82,10 +86,10 @@
       if(e.retryable)session.committing=false;
       if(session.committing&&e.network)e.message='The response was interrupted. Your enquiry may have been accepted. Use Send again to check this same request, or contact us with reference BL-'+session.id+'.';
       throw e;
-    }finally{if(!form._locked)freeze(form,false);}
+    }finally{freeze(form,false);}
   }
   forms.forEach(function(form){
-    form._files=[];
+    form._files=[];form._submitLabel=form.querySelector('[type="submit"]').textContent;
     form.addEventListener('submit',function(e){
       if(mode===0||mode===1)return;
       e.preventDefault();if(form._busy||form._locked)return;

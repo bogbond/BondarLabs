@@ -1104,4 +1104,8 @@ h1{font-size:clamp(32px, 4.2vw, 44px); line-height:1.1; margin:0 0 14px}
 .form-file-list button{flex-shrink:0;padding:6px 10px}
 [data-submission-status]{overflow-wrap:anywhere}
 .form-error{color:var(--text);border-inline-start:3px solid #e66767;padding-inline-start:12px}
-.form button:disabled{opacity:.6;cursor:wait}
+.form-success{display:grid;gap:8px;padding:20px;border:2px solid #36a36b;border-radius:14px;background:var(--panel);color:var(--text);scroll-margin-block:120px}
+.form-success strong{font-size:1.2em;line-height:1.35}
+.form-success-reference{font-size:.85em;color:var(--muted)}
+.form button:disabled{opacity:.6;cursor:not-allowed}
+.form[aria-busy="true"] button:disabled{cursor:wait}
