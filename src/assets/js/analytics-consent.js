@@ -7,7 +7,7 @@
   const bar = document.querySelector('[data-cookie]');
   const modal = document.querySelector('[data-cookie-modal]');
   const checkbox = document.querySelector('[data-cookie-analytics]');
-  const allowedEvents = new Set(['whatsapp_click', 'phone_click', 'email_click', 'quote_cta_click', 'form_submit_attempt']);
+  const allowedEvents = new Set(['whatsapp_click', 'phone_click', 'email_click', 'quote_cta_click', 'form_submit_attempt', 'generate_lead']);
   let allowed = false;
   let loaded = false;
   let returnFocus = null;

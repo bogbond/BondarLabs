@@ -6,6 +6,7 @@
   var MAX=10000000;
   var extensions=['stl','3mf','obj','ply','step','stp','iges','igs','dxf','dwg','fcstd','f3d','blend','sldprt','sldasm','zip','7z','rar','jpg','jpeg','png','webp','heic','heif','pdf'];
   var config, mode=null, captchaReady;
+  var measuredEnquiries=new Set();
   function status(form,message,error){var el=form.querySelector('[data-submission-status]');el.textContent=message;el.classList.remove('form-success');el.classList.toggle('form-error',!!error);if(error){el.setAttribute('tabindex','-1');el.focus();}}
   function enable(form,value){form.querySelector('[type="submit"]').disabled=!value;}
   function loadScript(src){return new Promise(function(resolve,reject){var s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=function(){reject(new Error('The enquiry service could not load. Please check your connection and reload this page.'));};document.head.appendChild(s);});}
@@ -48,6 +49,12 @@
   });}
   function freeze(form,value){form._busy=value;form.setAttribute('aria-busy',String(value));Array.from(form.querySelectorAll('input:not([type="hidden"]),select,textarea,button')).forEach(function(el){el.disabled=value;});var button=form.querySelector('[type="submit"]');button.textContent=value?'Sending…':form._submitLabel;renderFiles(form);}
   function success(form,data){
+    // Acceptance is a lead, not proof of email delivery or a paid order.
+    // Keep request IDs only in this document to deduplicate recovered responses.
+    if(data.state==='accepted'&&typeof data.id==='string'&&!measuredEnquiries.has(data.id)){
+      measuredEnquiries.add(data.id);
+      try{if(window.BondarAnalytics)window.BondarAnalytics.track('generate_lead',{form_type:form.id==='quoteForm'?'quote':'contact'});}catch(e){/* Measurement must never interrupt a successful enquiry. */}
+    }
     form.reset();form._files=[];form._session=null;form._locked=false;resetCaptcha(form);freeze(form,false);
     var box=form.querySelector('[data-submission-status]');box.replaceChildren();box.classList.remove('form-error');box.classList.add('form-success');
     var title=document.createElement('strong'),message=document.createElement('span'),reference=document.createElement('span');
