@@ -26,7 +26,7 @@
 {{/if}}
 {{#if (lookup data "Shared file link")}}
 <p style="margin:22px 0 8px;color:#536174;font-size:12px;font-weight:bold;letter-spacing:.8px;">SHARED FILE OR FOLDER</p>
-<p style="margin:0;font-size:14px;line-height:1.6;"><a href="{{sanitizeUrl (lookup data "Shared file link")}}" style="color:#a84300;text-decoration:underline;">Open shared file or folder</a></p>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#18202c;overflow-wrap:anywhere;word-break:break-word;">{{lookup data "Shared file link"}}</p>
 {{/if}}
 
 </td></tr>
